@@ -9,7 +9,7 @@ This repository holds the source code for the full-stack e-commerce platform "No
 1. DevPinda (Parminder Singh)
 2. kaziarham (Kazi Arham)
 3. rabiafatima1 (Fatima Rabia)
-4. Aishaarwo (Aisha Arwo)
+4. AishaArwo (Aisha Arwo)
 5. DaanyaalChughtai (Daanyaal Chughtai)
 6. FreshPrinceTom (Thomas Merricks)
 7. HassanAliCS1 (Hassan Ali)
