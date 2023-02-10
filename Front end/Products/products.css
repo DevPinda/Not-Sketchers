@@ -1,0 +1,15 @@
+.products-header {
+    text-align: center;
+}
+
+.product-filter-sidebar {
+    height: 100%;
+    width: 200px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    background-color: rgb(8, 142, 8);
+    overflow-x: hidden;
+}
