@@ -42,6 +42,8 @@
 .product-filter-sidebar .product-sidebar-subcategories label {
     padding-left: 10px;
     padding-right: 10px;
+    color: white;
+    font-weight: bold;
 }
 
 .product-filter-sidebar .product-sidebar-categories {
