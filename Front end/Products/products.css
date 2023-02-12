@@ -8,7 +8,7 @@
 /* Header for the products page */
 .products-header {
     text-align: center;
-    background-color: black;
+    background-color: rgb(8, 142, 8);
     color: white;
     padding-top: 30px;
     padding-bottom: 30px;
@@ -26,10 +26,11 @@
     position: relative;
     left: 0;
     top: 0;
-    padding-top: 20px;
+    padding-top: 10px;
     padding-bottom: 15%;
     background-color: rgb(8, 142, 8);
     overflow-x: hidden;
+    border: 2.5px solid black;
 }
 
 .product-filter-sidebar .product-sidebar-subcategories {
@@ -39,6 +40,14 @@
 }
 
 .product-filter-sidebar .product-sidebar-subcategories label {
-    padding-left: 12px;
-    padding-right: 12px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.product-filter-sidebar .product-sidebar-categories {
+    background-color: white;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border: 1px solid black;
 }
