@@ -19,6 +19,30 @@
     padding-bottom: 20px;
 }
 
+/* Search bar to search products */
+.search-section {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.searchbar {
+    padding-left: 100px;
+    padding-right: 100px;
+    width: 100%;
+}
+
+.searchbar input[type=search] {
+    margin: auto;
+    display: block;
+    width: 1300px;
+    padding: 9px;
+    margin-top: 8px;
+    margin-right: 16px;
+    border: 2px solid black;
+    border-radius: 25px;
+    font-size: 17px;
+}
+
 /* Sidebar for the products page to filter out products */
 .product-filter-sidebar {
     height: 100%;
