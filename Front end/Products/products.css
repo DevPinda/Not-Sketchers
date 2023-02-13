@@ -11,50 +11,34 @@
     background-color: rgb(8, 142, 8);
     color: white;
     padding-top: 30px;
-    padding-bottom: 30px;
+    padding-bottom: 100px;
 }
 
 .products-header h1 {
-    padding-top: 20px;
+    padding-top: 5px;
     padding-bottom: 20px;
-}
-
-/* Search bar to search products */
-.search-section {
-    padding-top: 30px;
-    padding-bottom: 30px;
-}
-
-.searchbar {
-    padding-left: 100px;
-    padding-right: 100px;
-    width: 100%;
-}
-
-.searchbar input[type=search] {
-    margin: auto;
-    display: block;
-    width: 1300px;
-    padding: 9px;
-    margin-top: 8px;
-    margin-right: 16px;
-    border: 2px solid black;
-    border-radius: 25px;
-    font-size: 17px;
+    font-size: 22px;
 }
 
 /* Sidebar for the products page to filter out products */
 .product-filter-sidebar {
     height: 100%;
-    width: 200px;
+    width: 300px;
     position: relative;
     left: 0;
     top: 0;
     padding-top: 10px;
     padding-bottom: 15%;
-    background-color: rgb(8, 142, 8);
+    background-color: rgb(66, 66, 66);
     overflow-x: hidden;
     border: 2.5px solid black;
+}
+
+.product-filter-sidebar h2 {
+    color: white;
+    padding-left: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 .product-filter-sidebar .product-sidebar-subcategories {
@@ -64,16 +48,17 @@
 }
 
 .product-filter-sidebar .product-sidebar-subcategories label {
-    padding-left: 10px;
+    padding-left: 15px;
     padding-right: 10px;
     color: white;
     font-weight: bold;
 }
 
 .product-filter-sidebar .product-sidebar-categories {
-    background-color: white;
-    text-align: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    border: 1px solid black;
+    background-color: rgb(66, 66, 66);
+    color: white;
+    padding-left: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 2px solid white;
 }
