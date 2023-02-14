@@ -23,7 +23,7 @@
 .products-banner {
     background-color: black;
     width: 100%;
-    height: 150px;
+    height: 250px;
 }
 
 /* Sidebar for the products page to filter out products */
@@ -32,7 +32,7 @@
     width: 300px;
     position: relative;
     left: 0;
-    top: 140px;
+    top: 0;
     padding-top: 10px;
     padding-bottom: 15%;
     background-color: rgb(66, 66, 66);
