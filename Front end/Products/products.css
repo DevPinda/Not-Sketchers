@@ -47,11 +47,40 @@
     padding-bottom: 30px;
 }
 
-.product-filter-sidebar .product-sidebar-subcategories label {
-    padding-left: 15px;
-    padding-right: 10px;
+/* Buttons to filter the categories */
+.product-filter-sidebar .product-sidebar-subcategories .filter-buttons {
+    padding-left: 20px;
+    padding-right: 20px;
     color: white;
+    background-color: rgb(66, 66, 66);
+    border: 2px white solid;
     font-weight: bold;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.product-filter-sidebar .product-sidebar-subcategories .filter-buttons:hover {
+    background-color: white;
+    color: rgb(66, 66, 66);
+    transition-duration: 0.5s;
+}
+
+#size5-btn, #size6-btn, #size7-btn, #size8-btn, #size9-btn, #size10-btn {
+    width: 100px;
+}
+
+.product-sidebar-subcategories {
+    padding-left: 40px;
+}
+
+#£50_to_£100-btn, #£100_to_£200-btn, #men-btn, #women-btn {
+    width: 200px;
+}
+
+#men-btn, #women-btn {
+    text-transform: uppercase;
 }
 
 .product-filter-sidebar .product-sidebar-categories {
@@ -60,5 +89,6 @@
     padding-left: 15px;
     padding-top: 15px;
     padding-bottom: 15px;
-    border: 2px solid white;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
 }
