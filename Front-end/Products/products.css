@@ -20,10 +20,31 @@
     font-size: 22px;
 }
 
+/* Banner for products page */
 .products-banner {
     background-color: black;
+    background-image: url('Product_Page_Image.png');
+    background-repeat: no-repeat;
+    background-position: 135px;
+    background-size: 1250px;
     width: 100%;
-    height: 250px;
+    height: 400px;
+}
+
+.products-banner h1 {
+    color: white;
+    padding-top: 190px;
+    text-transform: uppercase;
+    text-decoration: underline;
+    font-size: 28px;
+}
+
+.products-banner #men-label {
+    padding-left: 600px;
+}
+
+.products-banner #women-label {
+    padding-left: 200px;
 }
 
 /* Sidebar for the products page to filter out products */
