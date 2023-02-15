@@ -206,9 +206,15 @@
     height: auto;
 }
 
-.top-picks h1 {
+.top-picks-heading {
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.top-picks-heading h1 {
+    text-align: center;
     color: rgb(8, 142, 8);
-    padding-left: 45%;
     text-transform: uppercase;
     font-weight: bold;
 }
