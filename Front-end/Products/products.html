@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="products.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" /> -->
     <title>Products | !Sketchers</title>
 </head>
 <body>
@@ -22,7 +22,7 @@
     <div class="product-container">
         <!-- Sidebar to filter the categories -->
         <div class="product-filter-sidebar">
-            <h2>View All (0)</h2>
+            <h2>View All (1)</h2>
 
             <!-- Shoe Sizes -->
             <div class="product-sidebar-categories">
@@ -71,11 +71,21 @@
         <!-- Products section -->
         <div class="products">
             <div class="container">
-                <h1>View All Products</h1>
-                <div class="row">
-                    <div class="column">
-                        <div class="product-cell">
-                            
+                <h1 id="view-all-heading">View All (1)</h1>
+                <div class="product-cell">
+                    <!-- NOTE: The !Sketchers Logo Image is used as a placeholder image but will be changed to shoe images -->
+                    <div class="product-img">
+                        <img src="temp-image-1.png" alt="Placeholder Image">
+                    </div>
+                    <div class="product-info">
+                        <h2>!Sketchers Air</h2>
+                        <br>
+                        <p>Women's</p>
+                        <p>1 Colour</p>
+                        <p><b>£120</b></p>
+                        <br>
+                        <div class="basket-btn">
+                            <a href="#"><button class="add-to-basket-btn">Add To Basket</button></a>
                         </div>
                     </div>
                 </div>

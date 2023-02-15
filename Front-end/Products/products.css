@@ -101,7 +101,7 @@
 .product-filter-sidebar .product-sidebar-subcategories .filter-buttons:hover {
     background-color: white;
     color: rgb(66, 66, 66);
-    transition-duration: 0.5s;
+    transition-duration: 0.3s;
 }
 
 #size5-btn, #size6-btn, #size7-btn, #size8-btn, #size9-btn, #size10-btn {
@@ -142,18 +142,13 @@
     float: right;
 }
 
-.column {
-    background-color: gray;
-    float: left;
-    width: 33.33%;
-    padding: 10px;
-    height: 320px;
+.products h1 {
+    padding-bottom: 70px;
 }
 
-.row::after {
-    content: "";
-    display: table;
-    clear: both;
+#view-all-heading {
+    text-transform: uppercase;
+    padding-left: 50px;
 }
 
 .product-cell {
@@ -161,7 +156,45 @@
     display: flex;
     flex-wrap: wrap;
     width: 300px;
-    height: 300px;
+    height: 400px;
     padding: 10px;
     border-bottom: black solid 2px;
+}
+
+.product-img {
+    width: 100%;
+    height: 200px;
+}
+
+.product-img img {
+    width: 100%;
+    height: 200px;
+}
+
+.product-info {
+    width: 100%;
+}
+
+.basket-btn {
+    padding-left: 70px;
+    padding-right: 50px;
+}
+
+.add-to-basket-btn {
+    padding: 10px 0;
+    color: black;
+    outline: none;
+    background-color: rgb(8, 142, 8);
+    border: 2px solid black;
+    width: 150px;
+    cursor: pointer;
+    font-size: 15px;
+    border-radius: 30px;
+    font-weight: bold;
+}
+
+.add-to-basket-btn:hover {
+    background-color: white;
+    color: black;
+    transition-duration: 0.3s;
 }
