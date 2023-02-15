@@ -47,10 +47,20 @@
     padding-left: 200px;
 }
 
+/* Container for the products page */
+.product-container {
+    display: flex;
+    width: auto;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
 /* Sidebar for the products page to filter out products */
 .product-filter-sidebar {
     height: 100%;
-    width: 300px;
+    width: 20%;
     position: relative;
     left: 0;
     top: 0;
@@ -102,7 +112,7 @@
     padding-left: 40px;
 }
 
-#£50_to_£100-btn, #£100_to_£200-btn, #men-btn, #women-btn {
+#fifty-to-hundred-pounds-btn, #hundred-to-twohundred-pounds-btn, #men-btn, #women-btn {
     width: 200px;
 }
 
@@ -118,4 +128,40 @@
     padding-bottom: 15px;
     border-top: 2px solid white;
     border-bottom: 2px solid white;
+}
+
+/* Section to display products */
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 20px;
+    padding-top: 50px;
+    background-color: whitesmoke;
+    width: 80%;
+    height: auto;
+    float: right;
+}
+
+.column {
+    background-color: gray;
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+    height: 320px;
+}
+
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.product-cell {
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    width: 300px;
+    height: 300px;
+    padding: 10px;
+    border-bottom: black solid 2px;
 }
