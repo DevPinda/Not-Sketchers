@@ -198,3 +198,17 @@
     color: black;
     transition-duration: 0.3s;
 }
+
+.top-picks {
+    background-color: black;
+    display: flex;
+    width: auto;
+    height: auto;
+}
+
+.top-picks h1 {
+    color: rgb(8, 142, 8);
+    padding-left: 45%;
+    text-transform: uppercase;
+    font-weight: bold;
+}
