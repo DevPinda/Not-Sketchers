@@ -199,17 +199,19 @@
     transition-duration: 0.3s;
 }
 
-.top-picks {
+div.top-picks {
     background-color: black;
     display: flex;
-    width: auto;
+    flex-direction: column;
+    width: 100vw;
     height: auto;
 }
 
 .top-picks-heading {
-    width: 100%;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    width: 100vw;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+    flex-direction: row !important;
 }
 
 .top-picks-heading h1 {
@@ -217,4 +219,47 @@
     color: rgb(8, 142, 8);
     text-transform: uppercase;
     font-weight: bold;
+}
+
+#images-container {
+    display: flex;
+    justify-content: space-around;
+    width: 100vw;
+    height: auto;
+    overflow: hidden;
+    margin-top: 1.75vw;
+}
+
+div.top-pick-container {
+    display: flex;
+    flex-direction: column !important;
+    width: 15vw;
+    height: auto;
+    overflow: hidden;
+}
+
+img.top-pick-container {
+    display: flex;
+    flex-direction: row !important;
+    overflow: hidden;
+}
+
+h2.top-pick-container {
+    display: flex;
+    color: white;
+    font-size: 1.5vw;
+    margin-top: 0.4vw;
+    margin-bottom: 0.375vw;
+}
+
+p.top-pick-container {
+    color: white;
+    font-size: 0.95vw;
+}
+
+#price {
+    display: flex;
+    color: white;
+    text-decoration: solid;
+    font-size: 1.55vw;
 }
