@@ -1,0 +1,48 @@
+body {
+    margin:0;
+    padding:0;
+}
+
+.navbar {
+    background-color: black;
+    color:white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pages ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.pages li a{
+    display: block;
+    padding: 1rem;
+    color:white;
+}
+
+.pages li:hover {
+    background-color: white;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+@media (max-width:50px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+.pages {
+    width: fit-content;
+}
+
+.pages ul{
+    flex-direction: column;
+    width: 100%;
+}
+}
