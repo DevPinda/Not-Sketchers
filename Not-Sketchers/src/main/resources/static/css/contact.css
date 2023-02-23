@@ -41,7 +41,7 @@ h1 {
 .column {
   width: 100%;
   height: 100vh;
-  background-image: url(img/Background.png);
+  background-image: url(../img/Background.png);
   background-position: absolute;
   width: 739px;
   height: 948px;
