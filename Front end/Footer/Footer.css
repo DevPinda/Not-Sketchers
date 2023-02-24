@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+
 body {
     line-height: 1.5;
     font-family: 'Tilt Neon', cursive;
@@ -20,28 +21,35 @@ hr {
     width: 69%;
     margin-left: 0;
 }
+
 .single-content {
 	text-align: center;
 	padding: 115px 0;
 }
+
 .single-box p {
 	color: #fff;
+    font-size: 22px;
 	line-height: 1.9;
 }
+
 .single-box h3 {
 	font-size: 20px;
 	font-weight: 700;
 	color: #fff;
 }
+
 .single-box .card-area i {
 	color: #ffffff;
 	font-size: 32px;
 	margin-right: 10px;
 }
+
 .single-box ul {
 	list-style: none;
 	padding: 0;
 }
+
 .single-box ul li a {
 	text-decoration: none;
 	color: #ffffff;
@@ -52,29 +60,24 @@ hr {
     display: block;
     transition: all 0.3s ease;
 }
+
 .single-box h2 {
 	color: #fff;
 	font-size: 32px;
 	font-weight: 700;
-}
-#basic-addon2 {
-	background: #50c460;
-	color: #fff;
-}
-.socials i {
-	font-size: 18px;
-	margin-right: 15px;
 }
 
 .single-box ul li a:hover {
     color: #ffffff;
     padding-left: 10px;
 }
+
 @media (max-width: 767px) {
 	.single-box {
 		margin-bottom: 50px;
 	}
 }
+
 @media (min-width: 768px) and (max-width: 991px) {
 	.single-box {
 		margin-bottom: 50px;
