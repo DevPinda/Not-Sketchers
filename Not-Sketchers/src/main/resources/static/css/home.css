@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+*{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body{
+    background-color: black;
+    color: white;
+    margin: 0%;
+    padding: 0%;
+}
+
+.main-display-box{
+   display: flex;
+   width: 70%;
+   margin: auto;
+   align-items: center;
+   align-content: center;
+   justify-content: center;
+   justify-items: center;
+   margin-top: 6vmax;
+}
+#green-color{
+   margin-top: -2.3vmax;
+   color: rgb(5, 139, 5);
+}
+.display-paragraph p{
+   font-size: 2vmax;
+   font-weight: 900;
+   margin: none;
+   padding: none;
+   font-family: 'Inter', sans-serif;
+
+}
+.main-display-box div{
+   padding: 4vmax 4vmax;
+}
+.display-image{
+   border: 1px solid white;
+   height: 13vmax;
+   width: 25vmax;
+
+}
+.display-image img{
+   margin-bottom: 2vmax;
+   padding-bottom: 2vmax;
+}
+.display-paragraph button{
+   width: 8vmax;
+   height: 3vmax;
+   background-color:rgb(5, 139, 5) ;
+   color: black;
+   border-radius: 2vmax;
+   font-weight: 900;
+   font-family: 'Inter', sans-serif;
+}
+.trending-container{
+   display: flex;
+   align-items: center;
+   align-content: center;
+   justify-content: center;
+   justify-items: center;
+   width: 70%;
+   margin: auto;
+   flex-direction: column;
+   margin-top: 15vmax;
+   text-align: left;
+   background-color: rgb(28, 27, 27);
+   border-radius: 0.5vmax;
+   
+}
+.trending-container div{
+   text-align: left;
+   display: flex;
+   align-items: center;
+   align-content: center;
+   justify-content: left;
+   justify-items: center;
+   font-family: 'Inter', sans-serif;
+   font-weight: 900;
+}
+.trending-container div p{
+   font-size: 1.6vmax;
+   padding-right: 42vmax;
+   padding-left: 5vmax;
+   text-transform: uppercase;
+   letter-spacing: 0.2vmax;
+}
+.trending-product-imgs{
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+}
+.trending-product-imgs img{
+   width: 13vmax;
+   height: 15vmax;
+   padding: 1vmax 5vmax;
+}
+.collection-container{
+   width: 60%;
+}
+.collection-container-div{
+   display: flex;
+   align-items: center;
+   align-content: center;
+   justify-content: center;
+   justify-items: center;
+}
+.collection-container-div div{
+   margin-left:4vmax ;
+   margin-right: 4vmax;
+   background-color: rgba(131, 130, 130, 0.64);
+   padding: 1vmax 2vmax;
+}
+.collection-container-mini{
+   display: flex;
+   flex-direction: column;
+   
+ 
+}
+.collection-container img{
+    width: 13vmax;
+   height: 15vmax;
+}
+.collection-container-mini button{
+   min-width: 6vmax;
+   max-width: fit-content;
+   padding: 0.5vmax 0.5vmax;
+   padding-left:0.3vmax ;
+   padding-right:0.3vmax ;
+   height: 2vmax;
+   font-size: 0.8vmax;
+   margin-right: 7vmax;
+   margin-top: 1vmax;
+  
+   background-color:rgb(5, 139, 5) ;
+   color: rgb(247, 244, 244);
+   border: none;
+   border-radius: 2vmax;
+   font-weight: 500;
+   font-family: 'Inter', sans-serif;
+}
