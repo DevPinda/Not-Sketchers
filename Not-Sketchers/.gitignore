@@ -3,9 +3,6 @@ target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
-Not-Sketchers/src/main/resources/application.properties
-Not-Sketchers/src/test/java/com/cs2tp/notsketchers/DatabaseConnectionTest.java
-Not-Sketchers/src/test/java/com/cs2tp/notsketchers/MySqlIntegrationTest.java
 
 ### STS ###
 .apt_generated
