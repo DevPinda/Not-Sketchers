@@ -1,0 +1,3 @@
+Not-Sketchers/src/main/resources/application.properties
+Not-Sketchers/src/test/java/com/cs2tp/notsketchers/DatabaseConnectionTest.java
+Not-Sketchers/src/test/java/com/cs2tp/notsketchers/MySqlIntegrationTest.java
