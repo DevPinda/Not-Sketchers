@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 div.mainHeading{
@@ -76,7 +76,7 @@ img.imageContainer{
     font-family: 'Inter', sans-serif;
 }
 
-#wrapperContainer{
+#wrapperContainer {
     width: fit-content;
     height: fit-content;
     display: flex;
@@ -85,7 +85,7 @@ img.imageContainer{
     margin-bottom: 2vw;
 }
 
-div.titleContainer{
+div.titleContainer, #titleContainer {
     display: flex;
     width: 26.25vw;
     height: auto;
@@ -93,7 +93,7 @@ div.titleContainer{
     padding: .5vw;
 }
 
-p.titleContainer{
+#itemTitle, #sizeTitle, #quantityTitle {
     display: flex;
     color: black;
     font-size: 1vw;
@@ -101,7 +101,7 @@ p.titleContainer{
     line-height: 3vw;
 }
 
-div.resultContainer{
+div.resultContainer, #resultContainer {
     width: 26.25vw;
     height: auto;
     display: flex;
@@ -109,7 +109,7 @@ div.resultContainer{
     padding: .5vw;
 }
 
-p.resultContainer{
+#priceResult, #sizeResult, #quantityResult {
     display: flex;
     color: black;
     font-size: 1vw;
