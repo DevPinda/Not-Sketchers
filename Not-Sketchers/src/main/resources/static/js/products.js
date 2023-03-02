@@ -71,6 +71,8 @@ window.onload = function () {
         
         const json = JSON.parse(stringJSON);
         const ids = json.map(item => item.id);
+
+        const productContainer = document.getElementById("productContainer");
         
         // Displays the products on the console
         json.forEach((item) => {
@@ -85,59 +87,75 @@ window.onload = function () {
         ids.forEach((id) => {
             const item = json.find((item) => item.id === id);
 
+            // Wrapper container
+            const wrapperContainer = document.createElement("div");
+            wrapperContainer.id = "wrapperContainer";
+            productContainer.appendChild(wrapperContainer);
+
             // Title container
             const titleContainer = document.createElement("div");
             titleContainer.classList.add("titleContainer");
+            titleContainer.id = "titleContainer";
+            wrapperContainer.appendChild(titleContainer);
 
             // Product Name
             const itemTitle = document.createElement("p");
             itemTitle.classList.add("titleContainer");
             itemTitle.textContent = item.gender_style;
+            itemTitle.id = "itemTitle";
             titleContainer.appendChild(itemTitle);
 
             // Size
             const sizeTitle = document.createElement("p");
             sizeTitle.classList.add("titleContainer");
             sizeTitle.textContent = "Size";
+            sizeTitle.id = "sizeTitle";
             titleContainer.appendChild(sizeTitle);
 
             // Quantity
             const quantityTitle = document.createElement("p");
             quantityTitle.classList.add("titleContainer");
             quantityTitle.textContent = "Quantity";
+            quantityTitle.id = "quantityTitle";
             titleContainer.appendChild(quantityTitle);
-
-            document.body.appendChild(titleContainer)
+    
 
             // Result container
             const resultContainer = document.createElement("div");
             resultContainer.classList.add("resultContainer");
+            resultContainer.id = "resultContainer";
+            wrapperContainer.appendChild(resultContainer);
 
+            // Price Result
             const priceResult = document.createElement("p");
             priceResult.classList.add("resultContainer");
             priceResult.textContent = item.price;
+            priceResult.id = "priceResult";
             resultContainer.appendChild(priceResult);
 
+            // Size Result
             const sizeResult = document.createElement("p");
             sizeResult.classList.add("resultContainer");
             sizeResult.textContent = item.size;
+            sizeResult.id = "sizeResult";
             resultContainer.appendChild(sizeResult);
 
+            // Quantity Result
             const quantityResult = document.createElement("p");
             quantityResult.classList.add("resultContainer");
             quantityResult.textContent = item.number_of_items;
+            quantityResult.id = "quantityResult";
             resultContainer.appendChild(quantityResult);
 
-            document.body.appendChild(resultContainer);
+            wrapperContainer.appendChild(resultContainer);
 
             const buttonsContainer = document.createElement("div");
             buttonsContainer.classList.add("buttonsContainer");
+            wrapperContainer.appendChild(buttonsContainer);
 
             const button = document.createElement("button");
             button.classList.add("buttonsContainer");
             buttonsContainer.appendChild(button);
-
-            document.body.appendChild(buttonsContainer);
         });
     }
 }
