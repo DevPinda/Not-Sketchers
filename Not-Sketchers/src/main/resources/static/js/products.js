@@ -10,7 +10,7 @@ window.onload = function () {
     var products_list = []
 
     // Functionality to click the 'Add To Basket' button from the products page
-    basket_btn.addEventListener("click", function (e) {
+    basket_btn.addEventListener("click", function () {
         basketItemsAmount += 1;
         console.log(basketItemsAmount);
 
