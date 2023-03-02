@@ -219,6 +219,10 @@ p.product-info {
     font-size: 1.2vw;
 }
 
+#product-price {
+    font-weight: bold;
+}
+
 .basket-btn {
     padding-left: 70px;
     padding-right: 50px;
