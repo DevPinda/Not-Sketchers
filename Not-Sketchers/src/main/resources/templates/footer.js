@@ -1,18 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Footer</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="../static/css/footer.css">
-</head>
-
-<body>
-    <footer>
+        <footer>
         <div class="container-fluid pt-5 pb-5">
             <div class="row">
                 <div class="col-md-2">
@@ -24,7 +10,6 @@
 
                 <div class="col-md-3">
                     <div class="single-box">
-                        <img src="../static/img/SK smaller FOOTER.png" class="img-fluid rounded mw-100" alt="logo">
                         <p>Offering the most stylish and comfortable footwear.</p>
                         <h3>We Accept</h3>
                         <div class="card-area">
@@ -59,15 +44,8 @@
                     </div>
                 </div>
                 
-                
             </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy;2023 !SKECTHERS. All Rights Reserved </p>
-        </div>
-        
     </footer>
 
-</body>
 
-</html>

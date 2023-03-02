@@ -6,9 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="..\static\css\products.css">
     <script src="../static/js/products.js" async></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script> 
+        $(function(){
+          $("#footer").load("footer.html"); 
+        });
+        </script>
     <title>Products | !Sketchers</title>
 </head>
 <body>
+    <main>
     <!-- Product page header -->
     <div class="products-header">
         <h1>Free Shipping And 30-Day Return</h1>
@@ -282,5 +289,9 @@
             </div>
         </div>
     </div>
+</main>
+<footer>
+    <div id="footer"></div>
+</footer>
 </body>
 </html>

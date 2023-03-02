@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-body {
+main {
     height: 100vh;
     display: flex;
     align-items: center;

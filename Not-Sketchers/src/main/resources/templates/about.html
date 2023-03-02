@@ -7,7 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
     <link rel="stylesheet" type="text/css" href="..\static\css\about.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script> 
+        $(function(){
+          $("#footer").load("footer.html"); 
+        });
+        </script> 
+
 </head>
+<main>
 <body>
     <div class="section">
         <div class="container">
@@ -31,6 +39,11 @@
             </div>
         </div>
     </div>
+</main>
+
+<footer>
+    <div id="footer"></div>
+</footer>
 
 </body>
 </html>

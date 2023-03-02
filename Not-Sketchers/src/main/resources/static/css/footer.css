@@ -1,15 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
 
 body {
-    line-height: 1.5;
-    font-family: 'Tilt Neon', cursive;
-}
-footer {
-	background: #101010;
-	padding: 86px 0;
+	min-height: 100vh;
 }
 
-h1 {
+footer {
+	background: #101010;
+	padding: 20px 0;
+	line-height: 1.5;
+    font-family: 'Tilt Neon', cursive;
+	position: sticky;
+	top: 100%;
+}
+
+h6 {
     writing-mode: vertical-rl;
     font-size: 70px;
     transform: rotate(180deg);
@@ -72,14 +76,9 @@ hr {
     padding-left: 10px;
 }
 
-@media (max-width: 767px) {
-	.single-box {
-		margin-bottom: 50px;
-	}
+.footer-bottom p{
+	color: #fff;
+	text-align: center;
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
-	.single-box {
-		margin-bottom: 50px;
-	}
-}
+
