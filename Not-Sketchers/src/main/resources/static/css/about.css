@@ -40,3 +40,15 @@ p {
 	font-size: 20px;
 	margin-bottom: 20px;
 }
+.box {
+    background-color: #f2f2f2;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-right: 20px;
+}
+h2{
+    font-size: 100px;
+}
+ul{
+    font-size: 20px;
+}
