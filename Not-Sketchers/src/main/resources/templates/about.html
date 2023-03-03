@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>About Us - Footwear Company</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="..\static\css\about.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-    <script> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/css/about.css}">
+    <script th:src="@{https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js}"></script>
+    <script th:inline="javascript">
+        /* Load footer.html using jQuery */
         $(function(){
-          $("#footer").load("footer.html"); 
+            $("#footer").load("/footer");
         });
-        </script> 
-
+    </script>
 </head>
 <main>
 <body>
@@ -31,7 +31,7 @@
             <p>Thank you for choosing !Sketchers for your footwear needs. We look forward to serving you.</p>
         </div>
         </div>
-    <img src="../static/img/location.jpg" alt="Map of location" class="right-image">
+    <img th:src="@{/img/location.jpg}"  alt="Map of location" class="right-image">
 </div>
 <div class="faq-box box">
     <h2>FAQ</h2>

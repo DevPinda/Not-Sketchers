@@ -1,64 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> </title>
-    <link rel="stylesheet" href="..\static\css\home.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-    <script> 
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> </title>
+        <link rel="stylesheet" th:href="@{/css/home.css}">
+        <script th:src="@{https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js}"></script>
+        <script th:inline="javascript">
         $(function(){
-          $("#footer").load("footer.html"); 
+            $("#footer").load("footer.html");
         });
         </script> 
-</head>
-<body>
-    <main>
-    <div class="main-display-box">
-        <div class="display-paragraph">
-            <p>Step Into Comfort,</p>
-            <p id="green-color">Stay In Style.</p>
-            <center><button>Buy Now</button></center>
-            
-        </div>
-        <div class="display-image">
-            <img src="..\static\img\homeshoe.JPG" alt="homeshoe">
-        </div>
-    </div>
-
-    <div class="trending-container">
-        <div>
-            <p>Trending This Week</p>
-        </div>
-        
-        <div class="trending-product-imgs">
-            <img src="..\static\img\homeshoe.JPG" alt="">
-            <img src="..\static\img\homeshoe.JPG" alt="">
-            <img src="..\static\img\homeshoe.JPG" alt="">
-        </div>
-    </div>
-    <div class="trending-container collection-container">
-        <div>
-            <p>Collections</p>
-        </div>
-        
-        <div class="collection-container-div">
-            <div class="collection-container-mini">
-                <img src="homeshoe.jpeg" alt="">
-                <button>SHOP MEN</button>
+    </head>
+    <body>
+        <main>
+            <div class="main-display-box">
+                <div class="display-paragraph">
+                    <p>Step Into Comfort,</p>
+                    <p id="green-color">Stay In Style.</p>
+                    <center><button>Buy Now</button></center>
+                </div>
+                <div class="display-image">
+                    <img th:src="@{/img/homeshoe.JPG}" alt="homeshoe">
+                </div>
             </div>
-            <div class="collection-container-mini">
-                <img src="homeshoe.jpeg" alt="">
-                <button>SHOP WOMEN</button>
+            <div class="trending-container">
+                <div>
+                    <p>Trending This Week</p>
+                </div>
+                <div class="trending-product-imgs">
+                    <img th:src="@{/img/homeshoe.JPG}" alt="homeshoe">
+                    <img th:src="@{/img/homeshoe.JPG}" alt="homeshoe">
+                    <img th:src="@{/img/homeshoe.JPG}" alt="homeshoe">
+                </div>
             </div>
-            
-            
-        </div>
-    </div>
-</main>
-</body>
-<footer>
-    <div id="footer"></div>
-</footer>
+            <div class="trending-container collection-container">
+                <div>
+                    <p>Collections</p>
+                </div> 
+                <div class="collection-container-div">
+                    <div class="collection-container-mini">
+                        <img th:src="@{/img/homeshoe.JPG}" alt="">
+                        <button>SHOP MEN</button>
+                    </div>
+                    <div class="collection-container-mini">
+                        <img th:src="@{/img/homeshoe.JPG}" alt="">
+                        <button>SHOP WOMEN</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+    <footer>
+        <div id="footer"></div>
+    </footer>
 </html>

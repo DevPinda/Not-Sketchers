@@ -1,19 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
     <head>
         <title>Basket Page</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="../static/css/basket.css">
+        <link rel="stylesheet" th:href="@{/css/basket.css}">
         <link href="https://fonts.cdnfonts.com/css/inter" rel="stylesheet">
-        <script src="../static/js/products.js" async></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-        <script> 
-            $(function(){
-              $("#footer").load("footer.html"); 
-            });
-            </script> 
+        <script th:src="@{/js/products.js}" async></script>
+        <script th:src="@{https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js}"></script>
+        <script th:inline="javascript">
+        /* Load footer.html using jQuery */
+        $(function(){
+            $("#footer").load("footer.html");
+        });
+        </script>
     </head>
+
     <body>
         <main>
         <div class="mainHeading">
