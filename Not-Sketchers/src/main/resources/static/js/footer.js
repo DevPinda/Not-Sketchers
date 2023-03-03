@@ -24,11 +24,11 @@
                     <div class="single-box">
                         <h2>Get Help</h2><hr/>
                         <ul>
-                            <li><a href="#">Order Status</a></li>
-                            <li><a href="#">Shipping & Delivery</a></li>
-                            <li><a href="#">Returns</a></li>
-                            <li><a href="#">Payment Option</a></li>
-                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="templates#">Order Status</a></li>
+                            <li><a href="templates#">Shipping & Delivery</a></li>
+                            <li><a href="templates#">Returns</a></li>
+                            <li><a href="templates#">Payment Option</a></li>
+                            <li><a href="templates#">Contact Us</a></li>
                         </ul>
                     </div>
                 </div>
@@ -36,10 +36,10 @@
                     <div class="single-box">
                         <h2>About !Sketchers</h2><hr/>
                         <ul>
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Site Map</a></li>
-                            <li><a href="#">Terms & Conditions</a></li>
-                            <li><a href="#">warranty</a></li>
+                            <li><a href="templates#">About Us</a></li>
+                            <li><a href="templates#">Site Map</a></li>
+                            <li><a href="templates#">Terms & Conditions</a></li>
+                            <li><a href="templates#">warranty</a></li>
                         </ul>
                     </div>
                 </div>
