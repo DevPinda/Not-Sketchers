@@ -15,9 +15,9 @@ public class DatabaseConnectionTest {
          *  Replace "your_username" and "your_password" with your Localhost PHPMyAdmin
          *  username and password.
          */
-        String url = "jdbc:mysql://your_url/your_db";
-        String username = "your_username";
-        String password = "your_password";
+        String url = "jdbc:mysql://localhost:3306/Not_Sketchers_DB";
+        String username = "phpmyadmin";
+        String password = "jXOMztUkcBffvrS";
 
         //Creates a connection using the DriverManager and the arguments provided above
         Connection connection = DriverManager.getConnection(url, username, password);

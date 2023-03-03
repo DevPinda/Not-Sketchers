@@ -8,6 +8,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class LoginController{
     @GetMapping("/loginaccount")
     public String returnLogin(){
-        return "login";
+        return "loginaccount";
     }
 }

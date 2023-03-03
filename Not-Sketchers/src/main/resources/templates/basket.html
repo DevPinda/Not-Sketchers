@@ -10,13 +10,21 @@
         <script th:src="@{https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js}"></script>
         <script th:inline="javascript">
         /* Load footer.html using jQuery */
+
+        $(function() {
+
+        $("#navbar").load("/nav");
+
+        });
+        
         $(function(){
-            $("#footer").load("footer.html");
+            $("#footer").load("/footer");
         });
         </script>
     </head>
 
     <body>
+        <div id="navbar"></div>
         <main>
         <div class="mainHeading">
             <h1 class="mainHeading">Your Basket</h1>

@@ -4,9 +4,22 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title> </title>
+
+        <title> Home</title>
         <link rel="stylesheet" th:href="@{/css/home.css}">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+
+$(function() {
+
+$("#navbar").load("/nav");
+
+});
+
+</script> 
         <script th:src="@{https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js}"></script>
+        
         <script th:inline="javascript">
         $(function(){
             $("#footer").load("footer.html");
@@ -15,6 +28,7 @@
     </head>
     <body>
         <main>
+            <div id="navbar"></div> 
             <div class="main-display-box">
                 <div class="display-paragraph">
                     <p>Step Into Comfort,</p>

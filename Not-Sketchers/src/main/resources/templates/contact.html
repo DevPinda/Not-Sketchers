@@ -9,47 +9,69 @@
         <script th:src="@{https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js}"></script>
         <script th:inline="javascript">
         /* Load footer.html using jQuery */
-        $(function(){
-            $("#footer").load("/footer");
+
+        $(function() {
+
+            $("#navbar").load("/nav");
+
         });
+
+       
         </script> 
     </head>
-    <body>
-        <main>
-            <!--Contact Us Section--> 
-            <div class="column">
-                <h1>Contact Us</h1>
-                <h2>Where Looking Forward To Hearing From You! <font-size: 16px;></font-size:> </h2>
-                <form>
-                    <div class="collection">
-                        <input type="text" id="fname" placeholder="First Name..."required>
-                        <label for="fname"></label>
-                    </div>
-                    <div class="collection">
-                        <input type="text" id="lname" placeholder="Last Name..."required>
-                        <label for="lname"></label>
-                    </div>
-                    <div class="collection">
-                        <input type="email" id="email"placeholder="Your Email..." required>
-                        <label for="email"></label>
-                    </div>
-                    <div class="collection">
-                        <input type="number" id="number" placeholder="Your Phone Number..."required>
-                        <label for="number"></label>
-                    </div>
-                    <div class="collection">
-                        <textarea id="message" rows="8" placeholder="Enter message here..."></textarea>
-                        <label for="message"> </label>
-                    </div>
-                    <button type= "submit" > Submit </button>
-                </form> 
+
+
+<body>
+
+
+<!--Contact Us Section--> 
+<div id="navbar"></div> 
+    <div class="column">
+        <h1>Contact Us</h1>
+        <h2>Where Looking Forward To Hearing From You! <font-size: 16px;></font-size:> </h2>
+        <form>
+            <div class="collection">
+            <input type="text" id="fname" placeholder="First Name..."required>
+            <label for="fname"></label>
             </div>
-        </main>
-        <footer>
-            <div id="footer"></div>
-        </footer>
-    </body>
+
+            <div class="collection">
+            <input type="text" id="lname" placeholder="Last Name..."required>
+            <label for="lname"></label>
+            </div>
+            <div class="collection">
+            <input type="email" id="email"placeholder="Your Email..." required>
+            <label for="email"></label>
+            </div>
+            <div class="collection">
+                <input type="number" id="number" placeholder="Your Phone Number..."required>
+                <label for="number"></label>
+                </div>
+            <div class="collection">
+            <textarea id="message" rows="8" placeholder="Enter message here..."></textarea>
+            <label for="message"> </label>
+            </div>
+           
+            <button type= "submit" > Submit </button>
+
+            </form> 
+
+            
+            
+        
+</div>
+
 </html>
+</body>
+<footer>
+    <div id="footer"></div>
+</footer>
+</html>
+
+
+
+
+
 
 
 
