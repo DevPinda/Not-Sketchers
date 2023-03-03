@@ -1,28 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="..\static\css\products.css">
-    <script src="../static/js/products.js" async></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-    <script> 
+    <link rel="stylesheet" th:href="@{/css/products.css}">
+    <script th:src="@{/js/products.js}" async></script>
+    <script th:src="@{https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js}"></script>
+    <script th:inline="javascript">
         $(function(){
-          $("#footer").load("footer.html"); 
+            $("#footer").load("/footer");
         });
-        </script>
+    </script>
     <title>Products | !Sketchers</title>
 </head>
 <body>
     <main>
     <!-- Product page header -->
     <div class="products-header">
-        <h1>Free Shipping And 30-Day Return</h1>
+        <h1 class="products-header">Free Shipping And 30-Day Return</h1>
     </div>
 
     <div class="products-banner">
-        <h1><b id="men-label">Men</b><b id="women-label">Women</b></h1>
+        <h1 class="products-banner"><b id="men-label">Men</b><b id="women-label">Women</b></h1>
     </div>    
 
     <!-- Product page container -->
@@ -78,170 +78,18 @@
         <!-- Products section -->
         <div class="products">
             <div class="container">
-                <div class="product-cell">
+                <div th:each="product : ${products}" class="product-cell">
                     <!-- Product Information -->
                     <div class="product-img">
-                        <img class="product-img" src="../static/img/flip-flops-shoe-1.jpg" alt="Placeholder Image">
+                        <img class="product-img" th:src="@{${product.productImageFilePath}}" alt="Placeholder Image">
                     </div>
                     <div class="product-info">
-                        <h2 class="product-info" id="product-name">!Sketchers Air</h2>
-                        <p class="product-info" id="gender">Women's</p>
-                        <p class="product-info" id="colour">1 Colour</p>
-                        <p class="product-info" id="shoe-size">UK 7</p>
+                        <h2 class="product-info" th:text="${product.productName}" id="product-name"></h2>
+                        <p class="product-info" th:text="${product.productCategory}"  id="gender"></p>
+                        <p class="product-info" id="colour"></p>
+                        <p class="product-info" id="shoe-size"></p>
                         <br>
-                        <p class="product-info" id="product-price">£120</p>
-                        <br>
-                        <div class="basket-btn">
-                            <button class="add-to-basket-btn basket-button">Add To Basket</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product-cell">
-                    <!-- NOTE: The !Sketchers Logo Image is used as a placeholder image but will be changed to shoe images -->
-                    <div class="product-img">
-                        <img class="product-img" src="../static/img/flip-flops-shoe-2.jpg" alt="Placeholder Image">
-                    </div>
-                    <div class="product-info">
-                        <h2 class="product-info" id="product-name">!Sketchers Air</h2>
-                        <p class="product-info" id="gender">Women's</p>
-                        <p class="product-info" id="colour">1 Colour</p>
-                        <p class="product-info" id="shoe-size">UK 7</p>
-                        <br>
-                        <p class="product-info" id="product-price">£120</p>
-                        <br>
-                        <div class="basket-btn">
-                            <button class="add-to-basket-btn basket-button">Add To Basket</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product-cell">
-                    <!-- NOTE: The !Sketchers Logo Image is used as a placeholder image but will be changed to shoe images -->
-                    <div class="product-img">
-                        <img class="product-img" src="../static/img/flip-flops-shoe-3.jpg" alt="Placeholder Image">
-                    </div>
-                    <div class="product-info">
-                        <h2 class="product-info" id="product-name">!Sketchers Air</h2>
-                        <p class="product-info" id="gender">Women's</p>
-                        <p class="product-info" id="colour">1 Colour</p>
-                        <p class="product-info" id="shoe-size">UK 7</p>
-                        <br>
-                        <p class="product-info" id="product-price">£120</p>
-                        <br>
-                        <div class="basket-btn">
-                            <button class="add-to-basket-btn basket-button">Add To Basket</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product-cell">
-                    <!-- NOTE: The !Sketchers Logo Image is used as a placeholder image but will be changed to shoe images -->
-                    <div class="product-img">
-                        <img class="product-img" src="../static/img/flip-flops-shoe-4.jpg" alt="Placeholder Image">
-                    </div>
-                    <div class="product-info">
-                        <h2 class="product-info" id="product-name">!Sketchers Air</h2>
-                        <p class="product-info" id="gender">Women's</p>
-                        <p class="product-info" id="colour">1 Colour</p>
-                        <p class="product-info" id="shoe-size">UK 7</p>
-                        <br>
-                        <p class="product-info" id="product-price">£120</p>
-                        <br>
-                        <div class="basket-btn">
-                            <button class="add-to-basket-btn basket-button">Add To Basket</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product-cell">
-                    <!-- NOTE: The !Sketchers Logo Image is used as a placeholder image but will be changed to shoe images -->
-                    <div class="product-img">
-                        <img class="product-img" src="../static/img/flip-flops-shoe-5.jpg" alt="Placeholder Image">
-                    </div>
-                    <div class="product-info">
-                        <h2 class="product-info" id="product-name">!Sketchers Air</h2>
-                        <p class="product-info" id="gender">Women's</p>
-                        <p class="product-info" id="colour">1 Colour</p>
-                        <p class="product-info" id="shoe-size">UK 7</p>
-                        <br>
-                        <p class="product-info" id="product-price">£120</p>
-                        <br>
-                        <div class="basket-btn">
-                            <button class="add-to-basket-btn basket-button">Add To Basket</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product-cell">
-                    <!-- NOTE: The !Sketchers Logo Image is used as a placeholder image but will be changed to shoe images -->
-                    <div class="product-img">
-                        <img class="product-img" src="../static/img/football-boots-1.jpg" alt="Placeholder Image">
-                    </div>
-                    <div class="product-info">
-                        <h2 class="product-info" id="product-name">!Sketchers Air</h2>
-                        <p class="product-info" id="gender">Women's</p>
-                        <p class="product-info" id="colour">1 Colour</p>
-                        <p class="product-info" id="shoe-size">UK 7</p>
-                        <br>
-                        <p class="product-info" id="product-price">£120</p>
-                        <br>
-                        <div class="basket-btn">
-                            <button class="add-to-basket-btn basket-button">Add To Basket</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product-cell">
-                    <!-- NOTE: The !Sketchers Logo Image is used as a placeholder image but will be changed to shoe images -->
-                    <div class="product-img">
-                        <img class="product-img" src="../static/img/football-boots-2.jpg" alt="Placeholder Image">
-                    </div>
-                    <div class="product-info">
-                        <h2 class="product-info" id="product-name">!Sketchers Air</h2>
-                        <p class="product-info" id="gender">Women's</p>
-                        <p class="product-info" id="colour">1 Colour</p>
-                        <p class="product-info" id="shoe-size">UK 7</p>
-                        <br>
-                        <p class="product-info" id="product-price">£120</p>
-                        <br>
-                        <div class="basket-btn">
-                            <button class="add-to-basket-btn basket-button">Add To Basket</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product-cell">
-                    <!-- NOTE: The !Sketchers Logo Image is used as a placeholder image but will be changed to shoe images -->
-                    <div class="product-img">
-                        <img class="product-img" src="../static/img/football-boots-3.jpg" alt="Placeholder Image">
-                    </div>
-                    <div class="product-info">
-                        <h2 class="product-info" id="product-name">!Sketchers Air</h2>
-                        <p class="product-info" id="gender">Women's</p>
-                        <p class="product-info" id="colour">1 Colour</p>
-                        <p class="product-info" id="shoe-size">UK 7</p>
-                        <br>
-                        <p class="product-info" id="product-price">£120</p>
-                        <br>
-                        <div class="basket-btn">
-                            <button class="add-to-basket-btn basket-button">Add To Basket</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product-cell">
-                    <!-- NOTE: The !Sketchers Logo Image is used as a placeholder image but will be changed to shoe images -->
-                    <div class="product-img">
-                        <img class="product-img" src="../static/img/football-boots-4.jpg" alt="Placeholder Image">
-                    </div>
-                    <div class="product-info">
-                        <h2 class="product-info" id="product-name">!Sketchers Air</h2>
-                        <p class="product-info" id="gender">Women's</p>
-                        <p class="product-info" id="colour">1 Colour</p>
-                        <p class="product-info" id="shoe-size">UK 7</p>
-                        <br>
-                        <p class="product-info" id="product-price">£120</p>
+                        <p class="product-info" th:text="'£' + ${product.productPrice}" id="product-price"></p>
                         <br>
                         <div class="basket-btn">
                             <button class="add-to-basket-btn basket-button">Add To Basket</button>
@@ -259,7 +107,7 @@
 
         <div id="images-container">
             <div class="top-pick-container">
-                <img class="top-pick-container" src="../static/img/football-boots-5.jpg" alt="">
+                <img class="top-pick-container" th:src="@{/img/football-boots-5.jpg}" alt="">
                 <h2 class="top-pick-container">!Sketchers Air</h2>
                 <p class="top-pick-container">Women's</p>
                 <p class="top-pick-container">1 Colour</p>
@@ -269,7 +117,7 @@
             </div>
 
             <div class="top-pick-container">
-                <img class="top-pick-container" src="../static/img/flip-flops-shoe-4.jpg" alt="">
+                <img class="top-pick-container" th:src="@{/img/football-boots-3.jpg}" alt="">
                 <h2 class="top-pick-container">!Sketchers Air</h2>
                 <p class="top-pick-container">Women's</p>
                 <p class="top-pick-container">1 Colour</p>
@@ -279,7 +127,7 @@
             </div>
 
             <div class="top-pick-container">
-                <img class="top-pick-container" src="../static/img/football-boots-2.jpg" alt="">
+                <img class="top-pick-container" th:src="@{/img/football-boots-1.jpg}" alt="">
                 <h2 class="top-pick-container">!Sketchers Air</h2>
                 <p class="top-pick-container">Women's</p>
                 <p class="top-pick-container">1 Colour</p>

@@ -12,45 +12,54 @@ body {
 }
 
 /* Header for the products page */
-.products-header {
-    text-align: center;
+div.products-header {
+    width: 100vw;
+    display: flex;
     background-color: rgb(8, 142, 8);
-    color: white;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 2.25vh;
+    padding-bottom: 2.25vh;
+    justify-content: center;
 }
 
-.products-header h1 {
-    padding-top: 5px;
-    padding-bottom: 20px;
-    font-size: 22px;
+h1.products-header {
+    display: flex;
+    font-size: 1.25vw;
+    color: white;
 }
 
 /* Banner for products page */
 .products-banner {
+    display: flex;
     background-color: black;
     background-image: url('../img/Product_Page_Image.png');
     background-repeat: no-repeat;
-    background-position: 7.5vw;
-    background-size: 1250px;
-    width: 100%;
+    background-position: center center;
+    background-size: 65vw;
+    width: 100vw;
     height: 50vh;
+    justify-content: center;
+    align-items: center;
 }
 
-.products-banner h1 {
+h1.products-banner {
+    display: flex;
     color: white;
-    padding-top: 190px;
+    text-align: center;
     text-transform: uppercase;
     text-decoration: underline;
-    font-size: 28px;
+    font-size: 1.75vw;
+    text-align: center;
 }
 
-.products-banner #men-label {
-    padding-left: 600px;
+#men-label {
+    margin-top: 4vw;
+    margin-left: 5vw;
+    margin-right: 5vw;
 }
 
-.products-banner #women-label {
-    padding-left: 200px;
+#women-label {
+    margin-top: 4vw;
+    margin-left: 5vw;
 }
 
 /* Container for the products page */

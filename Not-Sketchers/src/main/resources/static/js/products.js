@@ -1,8 +1,8 @@
 window.onload = function () {
     var currentUrl = window.location.href;
-    if (currentUrl.indexOf("products.html") !== -1) {
+    if (currentUrl.indexOf("products.html") !== -1 || currentUrl.indexOf("products") !== -1  ) {
         onLoadFunction1();
-    } else if (currentUrl.indexOf("basket.html") !== -1) {
+    } else if (currentUrl.indexOf("basket.html") !== -1 || currentUrl.indexOf("basket") !== -1 ) {
         onLoadFunction2();
     } else {
         window.alert('Failed to find URL to HTML file');
