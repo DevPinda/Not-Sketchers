@@ -1,127 +1,101 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" lang="en">
-<!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" th:href="@{/css/admin.css}" />
-    <title>My Website</title>
-    <link rel="stylesheet" th:href="@{/css/style.css}" />
-    <script th:src="@{https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js}"></script>
-    <link rel="icon" th:href="@{/favicon.ico}" type="image/x-icon" />
-    <script th:src="@{/js/jquery.min.js}"></script>
-    <script>
-
-      $(function() {
-
-          $("#navbar").load("/nav");
-
-      });
-      </script>
-
-    <script>
-      $(function(){
-        $("#footer").load("/footer");
-      });
-    </script>
-  </head>
-
-  <body>
-    <div id="navbar"></div>
-    <main>
-    
-
-        <!--Side Bar/Page Title-->
-        <nav>
-          <h2 class="title">Admin Profile</h2>
-          <div id="mySidebar" class="sidebar">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
-              >×</a
-            >
-
-            <a href="#">View Order Summary</a>
-            <a href="#">Manage Inventory</a>
-          </div>
-
-          <div id="main">
-            <button class="openbtn" onclick="openNav()">☰</button>
-          </div>
-
-          <script>
-            function openNav() {
-              document.getElementById("mySidebar").style.width = "250px";
-              document.getElementById("main").style.marginLeft = "250px";
-            }
-
-            function closeNav() {
-              document.getElementById("mySidebar").style.width = "0";
-              document.getElementById("main").style.marginLeft = "0";
-            }
-          </script>
-        </nav>
-
-        <!--Admin Table-->
-        <div class="filter"></div>
-        <table>
-          <tr>
-            <th>Image</th>
-            <th>Category</th>
-            <th>Order ID</th>
-            <th>Product Name</th>
-            <th>Product Code</th>
-            <th>Quantity</th>
-            <th>Date</th>
-          </tr>
-          <tr>
-            <td><img src="img/Productimg.png" /></td>
-            <td>Women's</td>
-            <td>056789</td>
-            <td>!Sketchers Air</td>
-            <td>088897</td>
-            <td>1</td>
-            <td>29/02/23</td>
-            <td></td>
-          </tr>
-
-          <tr>
-            <td><img src="img/Productimg.png" /></td>
-            <td>men's</td>
-            <td>098785</td>
-            <td>!Sketchers Pro</td>
-            <td>087646</td>
-            <td>2</td>
-            <td>30/02/23</td>
-            <td></td>
-          </tr>
-
-          <tr>
-            <td><img src="img/Productimg.png" /></td>
-            <td>Women's</td>
-            <td>065968</td>
-            <td>!Sketchers Pro</td>
-            <td>076453</td>
-            <td>1</td>
-            <td>01/3/23</td>
-            <td></td>
-          </tr>
-
-          <tr>
-            <td><img src="img/Productimg.png" /></td>
-            <td>Men's</td>
-            <td>078356</td>
-            <td>!Sketchers Catch</td>
-            <td>085367</td>
-            <td>3</td>
-            <td>03/03/23</td>
-            <td></td>
-          </tr>
-        </table>
-
-  </main>
-  
-<!--Footer-->
-
-  </body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" th:href="@{/css/admin.css}" />
+        <title>My Website</title>
+        <link rel="stylesheet" th:href="@{/css/style.css}" />
+        <script th:src="@{https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js}"></script>
+        <link rel="icon" th:href="@{/favicon.ico}" type="image/x-icon" />
+        <script th:src="@{/js/jquery.min.js}"></script>
+        <script>
+            $(function() {
+              $("#navbar").load("/nav");
+            });
+            $(function(){
+              $("#footer").load("/footer");
+            });
+        </script>
+    </head>
+    <body>
+        <div id="navbar"></div>
+        <main>
+            <!--Side Bar/Page Title-->
+            <nav>
+                <div id="mySidebar" class="sidebar">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                    <a class="sidebar" href="#">View Order Summary</a>
+                    <a class="sidebar" href="#">Manage Inventory</a>
+                </div>
+                <div id="main">
+                    <button class="openbtn" onclick="openNav()">☰</button>
+                </div>
+                <script>
+                    function openNav() {
+                      document.getElementById("mySidebar").style.width = "15vw";
+                      document.getElementById("main").style.marginLeft = "15vw";
+                    }
+                    
+                    function closeNav() {
+                      document.getElementById("mySidebar").style.width = "0";
+                      document.getElementById("main").style.marginLeft = "0";
+                    }
+                </script>
+            </nav>
+            <!--Admin Table-->
+            <div class="filter"></div>
+            <table>
+                <tr style="background: #404040;   margin-bottom: 1vh;">
+                    <th>Image</th>
+                    <th>Category</th>
+                    <th>Order ID</th>
+                    <th>Product Name</th>
+                    <th>Product Code</th>
+                    <th>Quantity</th>
+                    <th>Date</th>
+                </tr>
+                </div>
+                <tr>
+                    <td><img id="tableImage" src="img/Productimg.png" /></td>
+                    <td>Women</td>
+                    <td>056789</td>
+                    <td>!Sketchers Air</td>
+                    <td>088897</td>
+                    <td>1</td>
+                    <td>29/02/23</td>
+                </tr>
+                <tr>
+                    <td><img id="tableImage" src="img/Productimg.png" /></td>
+                    <td>Men</td>
+                    <td>098785</td>
+                    <td>!Sketchers Pro</td>
+                    <td>087646</td>
+                    <td>2</td>
+                    <td>30/02/23</td>
+                </tr>
+                <tr>
+                    <td><img id="tableImage" src="img/Productimg.png" /></td>
+                    <td>Women</td>
+                    <td>065968</td>
+                    <td>!Sketchers Pro</td>
+                    <td>076453</td>
+                    <td>1</td>
+                    <td>01/3/23</td>
+                </tr>
+                <tr>
+                    <td><img id="tableImage" src="img/Productimg.png" /></td>
+                    <td>Men</td>
+                    <td>078356</td>
+                    <td>!Sketchers Catch</td>
+                    <td>085367</td>
+                    <td>3</td>
+                    <td>03/03/23</td>
+                </tr>
+            </table>
+        </main>
+        <!--Footer-->
+        <div id="footer"></div>
+    </body>
 </html>

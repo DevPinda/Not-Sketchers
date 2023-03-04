@@ -1,25 +1,22 @@
 * {
-  box-sizing: border-box;
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
 }
 
 nav {
+  display: flex;
   background-color: #1d5f00;
-  padding: 1px;
-  height: 100px;
-  width: 1435px;
+  align-self: center;
+  height: fit-content;
+  padding-top: 1.4vh;
+  padding-bottom: 1vh;
+  width: 100vw;
 }
 
-h2 {
-  text-align: center;
-  font-size: 20px;
-  position: fixed;
-  top: 35px;
-  min-inline-size: 100%;
-  color: #f7f9f6;
-}
-
-.sidebar {
-  height: 100%;
+div.sidebar {
+  display: flex;
+  height: 100vh;
   width: 0;
   position: fixed;
   z-index: 1;
@@ -28,37 +25,45 @@ h2 {
   background-color: #111;
   overflow-x: hidden;
   transition: 0.5s;
-  padding-top: 60px;
+  flex-direction: column;
+  padding-top: 5vh;
 }
 
-.sidebar a {
-  padding: 8px 8px 8px 32px;
+a.sidebar {
+  display: flex;
+  padding: 0.5vw 0.5vw 0.5vw 1.45vw;
   text-decoration: none;
-  font-size: 19px;
-  color: #ffffff;
-  display: block;
+  font-size: 1vw;
+  color: white;
   transition: 0.3s;
+  word-wrap: break-word;
 }
-.sidebar a:hover {
+
+a.sidebar:hover {
   color: #1d5f00;
 }
 
 .sidebar .closebtn {
+  display: flex;
   position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
+  overflow: hidden;
+  top: 0.75vh;
+  right: 1.25vw;
+  font-size: 2vw;
   color: white;
 }
 
 .openbtn {
-  font-size: 30px;
+  display: flex;
+  overflow: hidden;
+  font-size: 1.5vw;
   cursor: pointer;
   background-color: #1d5f00;
   color: rgb(249, 244, 244);
-  padding: 5px 30px;
   border: none;
+  margin-left: 1.5vw;
+  padding: 0;
+  height: fit-content;
 }
 
 .openbtn:hover {
@@ -66,20 +71,12 @@ h2 {
 }
 
 #main {
+  display: flex;
   transition: margin-left 0.5s;
-  padding: 16px;
+  overflow: hidden;
+  align-self: center;
 }
 
-/* Change height on smaller screens*/
-@media screen and (max-height: 450px) {
-  .sidebar {
-    padding-top: 15px;
-  }
-
-  .sidebar a {
-    font-size: 18px;
-  }
-}
 .heading {
   text-align: center;
   color: white;
@@ -88,29 +85,61 @@ h2 {
 .filter {
   text-align: center;
 }
+
 table {
-  float: left;
-  min-width: 100%;
-  padding: 30px;
-  min-height: 1000px;
+  display: flex;
+  width: 100vw;
+  height: fit-content;
   text-align: center;
   border-collapse: collapse;
   border-spacing: 0;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  flex-direction: column;
 }
+
+tr {
+  display: flex;
+  width: 100vw;
+  height: fit-content;
+  justify-content:space-evenly;
+}
+
 th {
+  display: flex;
   background: #404040;
   color: white;
+  justify-content: space-evenly;
+  padding: 0.4vh;
+  width: 14.28%;
+  height: fit-content;
+  text-align: left;
+  font-size: 1vw;
+  padding-top: .5vw;
+  padding-bottom: .5vw;
 }
+
+td {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width:14.28%;
+  text-align: left;
+  font-size: 1vw;
+  margin-top: 1vh;
+  font-weight: 500;
+  margin-bottom: 1vh;
+}
+
 .rows:after {
   content: "";
   display: table;
   clear: both;
 }
-@media screen and (max-width: 2000px) {
-  .columns {
-    width: 100%;
-  }
-  nav {
-    width: 100%;
-  }
+
+#tableImage{
+  display: flex;
+  width: 8.5vw;
+  height: 18.5vh;
 }
