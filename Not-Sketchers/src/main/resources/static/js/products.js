@@ -87,6 +87,15 @@ window.onload = function () {
         ids.forEach((id) => {
             const item = json.find((item) => item.id === id);
 
+            const productHeadingContainer = document.createElement("div");
+            productHeadingContainer.id = "productHeadingContainer";
+            productContainer.appendChild(productHeadingContainer);
+
+            const productHeading = document.createElement("h1");
+            productHeading.id = "productHeading";
+            productHeading.textContent = item.title;
+            productHeadingContainer.appendChild(productHeading);
+
             // Wrapper container
             const wrapperContainer = document.createElement("div");
             wrapperContainer.id = "wrapperContainer";
@@ -147,8 +156,7 @@ window.onload = function () {
             quantityResult.id = "quantityResult";
             resultContainer.appendChild(quantityResult);
 
-            wrapperContainer.appendChild(resultContainer);
-
+            // Buttons Container
             const buttonsContainer = document.createElement("div");
             buttonsContainer.classList.add("buttonsContainer");
             wrapperContainer.appendChild(buttonsContainer);
