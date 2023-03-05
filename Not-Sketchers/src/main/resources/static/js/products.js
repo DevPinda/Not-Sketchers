@@ -15,6 +15,7 @@ window.onload = function () {
         let colour = document.getElementById('colour').textContent;
         let shoe_size = document.getElementById('shoe-size').textContent;
         let product_price = document.getElementById('product-price').textContent;
+        let product_image = document.getElementById('product-image').src;
         basket_btn = document.getElementsByClassName('basket-button');
 
         var basketItemsAmount = 0;
@@ -35,6 +36,7 @@ window.onload = function () {
                         shoe_colour: colour,
                         size: shoe_size,
                         price: product_price,
+                        image: product_image,
                         number_of_items: 1
                     };
 
@@ -62,7 +64,6 @@ window.onload = function () {
         }
     }
 
-
     // Basket page onload
     function onLoadFunction2() {        
         let basket_data = localStorage.getItem("shoe_items");
@@ -87,10 +88,12 @@ window.onload = function () {
         ids.forEach((id) => {
             const item = json.find((item) => item.id === id);
 
+            // Product heading container
             const productHeadingContainer = document.createElement("div");
             productHeadingContainer.id = "productHeadingContainer";
             productContainer.appendChild(productHeadingContainer);
 
+            // Product name heading
             const productHeading = document.createElement("h1");
             productHeading.id = "productHeading";
             productHeading.textContent = item.title;

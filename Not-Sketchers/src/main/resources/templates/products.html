@@ -88,7 +88,7 @@
                 <div th:each="product : ${products}" class="product-cell">
                     <!-- Product Information -->
                     <div class="product-img">
-                        <img class="product-img" th:src="@{${product.productImageFilePath}}" alt="Placeholder Image">
+                        <img class="product-img" id="product-image" th:src="@{${product.productImageFilePath}}" alt="Placeholder Image">
                     </div>
                     <div class="product-info">
                         <h2 class="product-info" th:text="${product.productName}" id="product-name"></h2>
