@@ -125,7 +125,6 @@ window.onload = function () {
             quantityTitle.id = "quantityTitle";
             titleContainer.appendChild(quantityTitle);
     
-
             // Result container
             const resultContainer = document.createElement("div");
             resultContainer.classList.add("resultContainer");
