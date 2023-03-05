@@ -15,7 +15,7 @@ public class DatabaseConnectionTest {
          *  Replace "your_username" and "your_password" with your Localhost PHPMyAdmin
          *  username and password.
          */
-        String url = "jdbc:mysql://localhost:3306/not_sketches_db";
+        String url = "jdbc:mysql://localhost:3306/not_sketchers_db";
         String username = "root";
         String password = "";
 
