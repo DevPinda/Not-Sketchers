@@ -64,12 +64,14 @@ window.onload = function () {
         let basket_data = localStorage.getItem("shoe_items");
         let parsedData = JSON.parse(basket_data);
         let stringJSON = JSON.stringify(parsedData);
-
+        let total_price = 0;
+        
         const json = JSON.parse(stringJSON);
         const ids = json.map(item => item.id);
 
         const productContainer = document.getElementById("productContainer");
-
+        const totalPrice = document.querySelector("h1.totalContainer");
+        
         // Displays the products on the console
         json.forEach((item) => {
             for (const key in item) {
@@ -82,6 +84,11 @@ window.onload = function () {
         // Displays the products on the basket page
         ids.forEach((id) => {
             const item = json.find((item) => item.id == id);
+            const preFormattedPrice = item.price;
+            const formattedPrice = parseFloat(preFormattedPrice.slice(1));
+
+            // Total Price Expression
+            total_price += formattedPrice * item.number_of_items;            
 
             // Product heading container
             const productHeadingContainer = document.createElement("div");
@@ -98,6 +105,17 @@ window.onload = function () {
             const wrapperContainer = document.createElement("div");
             wrapperContainer.id = "wrapperContainer";
             productContainer.appendChild(wrapperContainer);
+
+            // Image container
+            const imageContainer = document.createElement("div");
+            imageContainer.classList.add("imageContainer");
+            wrapperContainer.appendChild(imageContainer);
+
+            // Image element
+            const img = document.createElement("img");
+            img.classList.add("imageContainer");
+            img.setAttribute('src', item.image);
+            imageContainer.appendChild(img);
 
             // Title container
             const titleContainer = document.createElement("div");
@@ -161,6 +179,9 @@ window.onload = function () {
             const button = document.createElement("button");
             button.classList.add("buttonsContainer");
             buttonsContainer.appendChild(button);
+
+            // Total Container
+            totalPrice.textContent = "Total Price: £" + total_price.toFixed(2);
         });
     }
 }
