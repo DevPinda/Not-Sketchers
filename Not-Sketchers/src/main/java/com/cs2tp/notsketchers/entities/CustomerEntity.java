@@ -8,72 +8,84 @@ public class CustomerEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "Customer_ID")
-    public int Customer_ID;
+    private int customerId;
 
     @Column(name = "Customer_Forename")
-    public String Customer_Forename;
+    private String customerForename;
 
     @Column(name = "Customer_Lastname")
-    public String Customer_Lastname;
+    private String customerLastname;
 
     @Column(name = "Customer_PhoneNumber")
-    public String Customer_PhoneNumber;
+    private String customerPhoneNumber;
 
     @Column(name = "Customer_Email")
-    public String Customer_Email;
+    private String customerEmail;
 
     @Column(name = "Customer_Password")
-    public String Customer_Password;
+    private String customerPassword;
 
     @Column(name = "Customer_AddressLine1")
-    public String Customer_AddressLine1;
+    private String customerAddressLine1;
 
     @Column(name = "Customer_AddressLine2")
-    public String Customer_AddressLine2;
+    private String customerAddressLine2;
 
     @Column(name = "Customer_Postcode")
-    public String Customer_Postcode;
+    private String customerPostcode;
 
     @Column(name = "Customer_IsAdmin")
-    public int Customer_IsAdmin;
+    private int customerIsAdmin;
 
     public int getCustomerId(){
-        return Customer_ID;
+        return customerId;
     }
 
     public String getCustomerForeName(){
-        return Customer_Forename;
+        return customerForename;
     }
 
     public String getCustomerLastName(){
-        return Customer_Lastname;
+        return customerLastname;
     }
 
     public String getCustomerPhoneNumber(){
-        return Customer_PhoneNumber;
+        return customerPhoneNumber;
     }
 
     public String getCustomerEmail(){
-        return Customer_Email;
+        return customerEmail;
     }
 
-    public String getCustomer_Password(){
-        return Customer_Password;
+    public String getCustomerPassword(){
+        return customerPassword;
     }
 
     public String getCustomerAddressLine1(){
-        return Customer_AddressLine1;
+        return customerAddressLine1;
     }
 
     public String getCustomerAddressLine2(){
-        return Customer_AddressLine2;
+        return customerAddressLine2;
     }
 
     public String getCustomer_Postcode(){
-        return Customer_Postcode;
+        return customerPostcode;
     }
 
     public int getCustomerIsAdmin(){
-        return Customer_IsAdmin;
+        return customerIsAdmin;
+    }
+
+    public boolean isCustomerIsAdmin() {
+        Boolean isAdmin = false;
+        if (customerIsAdmin == 1) {
+            isAdmin = true;
+        } else if (customerIsAdmin == 0) {
+            isAdmin = false;
+        } else {
+            isAdmin = false;
+        }
+        return isAdmin;
     }
 }
