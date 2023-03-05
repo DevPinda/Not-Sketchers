@@ -41,16 +41,6 @@ h1.products-header {
     align-items: center;
 }
 
-h1.products-banner {
-    display: flex;
-    color: white;
-    text-align: center;
-    text-transform: uppercase;
-    text-decoration: underline;
-    font-size: 1.75vw;
-    text-align: center;
-}
-
 #men-label {
     margin-top: 4vw;
     margin-left: 5vw;
@@ -91,6 +81,11 @@ h1.products-banner {
     padding-left: 20px;
     padding-top: 30px;
     padding-bottom: 30px;
+    font-size: 2vw;
+}
+
+.product-sidebar-categories h3 {
+    font-size: 1.5vw;
 }
 
 .product-filter-sidebar .product-sidebar-subcategories {
@@ -110,7 +105,7 @@ h1.products-banner {
     padding-top: 20px;
     padding-bottom: 20px;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 15px;
 }
 
 .product-filter-sidebar .product-sidebar-subcategories .filter-buttons:hover {
@@ -120,7 +115,11 @@ h1.products-banner {
 }
 
 #size5-btn, #size6-btn, #size7-btn, #size8-btn, #size9-btn, #size10-btn {
-    width: 100px;
+    width: 90px;
+}
+
+#size5-btn, #size7-btn, #size9-btn {
+    margin-right: 1.5vw;
 }
 
 .product-sidebar-subcategories {
