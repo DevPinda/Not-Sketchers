@@ -10,12 +10,6 @@ window.onload = function () {
 
     // Products Page onload
     function onLoadFunction1() {
-        let product_name = document.getElementById('product-name').textContent;
-        let gender = document.getElementById('gender').textContent;
-        let colour = document.getElementById('colour').textContent;
-        let shoe_size = document.getElementById('shoe-size').textContent;
-        let product_price = document.getElementById('product-price').textContent;
-        let product_image = document.getElementById('product-image').src;
         basket_btn = document.getElementsByClassName('basket-button');
 
         var basketItemsAmount = 0;
@@ -23,20 +17,20 @@ window.onload = function () {
 
         // Functionality to click the 'Add To Basket' button from the products page
         for (let i = 0; i < basket_btn.length; i++) {
-            basket_btn[i].addEventListener("click", function () {
+            basket_btn[i].addEventListener("click", function (e) {
                 basketItemsAmount += 1;
                 console.log(basketItemsAmount);
-
+                
                 // Using JSON and local storage to store the product in local storage
                 if (typeof(Storage) !== 'undefined') {
                     let shoe_item = {
                         id: i + 1,
-                        title: product_name,
-                        gender_style: gender,
-                        shoe_colour: colour,
-                        size: shoe_size,
-                        price: product_price,
-                        image: product_image,
+                        title: e.target.parentElement.parentElement.children[0].textContent,
+                        gender_style: e.target.parentElement.parentElement.children[1].textContent,
+                        shoe_colour: e.target.parentElement.parentElement.children[2].textContent,
+                        size: e.target.parentElement.parentElement.children[3].textContent,
+                        price: e.target.parentElement.parentElement.children[5].textContent,
+                        image: e.target.parentElement.parentElement.parentElement.children[0].children[0].src,
                         number_of_items: 1
                     };
 
