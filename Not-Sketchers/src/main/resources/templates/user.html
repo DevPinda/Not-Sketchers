@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" th:href="@{/css/user.css}">
+    <script th:src="@{/js/jquery.min.js}"></script>
+    <script>
+        $(function() {
+          $("#navbar").load("/nav");
+        });
+        $(function(){
+          $("#footer").load("/footer");
+        });
+    </script>
+    
+</head>
+<body>
+    <div id="navbar"></div>
+    <div class="main-dashboard-cotnainer">
+        <div class="main-dashboard-sub-container">
+            <div class="avatar-container">
+                <img th:src="@{/img/adminStockImg.svg}"  alt=""> <span> Hi Customer!</span>
+
+            </div>
+            <div class="function-list">
+                <div class="function">
+                    <a href="">Details</a> 
+                </div>
+                <div class="function">
+                    <a href="">My Orders</a>
+                </div>
+            </div>
+
+        </div>
+        
+        <div class="main-dashboard-sub-container main-dashboard-sub-container-down">
+            <center><div class="Customer-dashboard">
+                Customer Dashboard
+            </div></center>
+            <div class="display-picture">
+                <img src="avatar-3814049_1280.png" alt=""> 
+            </div>
+            <div class="description-container-cus">
+                <div class="description-container-sub">
+                    <label for="firstname">First Name</label>
+                    <input type="text" value="Rabia" id="firstname">
+                    <label for="dob">Date of Birth</label>
+                    <input type="text" value="03/04/2002" id="dob">
+                    <label for="address">Address (optional)</label>
+                    <input type="text" value="Birmingham" id="address">
+                </div>
+                <div class="description-container-sub">
+                    <label for="lastname">Last Name</label>
+                    <input type="text" value="Fatima" id="lastname">
+                    <label for="gender">Gender(Optional)</label>
+                    <input type="text" value="female" id="gender">
+                    <label for="mobilenumber">Mobile Number (optional)</label>
+                    <input type="text" value="07467494739" id="mobilenumber">
+                </div>
+            </div>
+            <div class="description-container-cus-login-details">
+                <div class="login-details-heading">
+                        SIGN-IN DETAILS
+                </div>
+                <div class="login-details-description">
+                    <label for="email" margin="0%">Email</label>
+                    <input type="text" value="Rabia" id="email">
+                    <label for="dob">Password</label>
+                    <input type="password" value="19/02/2003" id="dob">
+                </div>
+            </div>
+            <div class="logout-button">
+                <button>Log Out</button>
+            </div>
+        </div>
+</div>
+<div id="footer"></div>
+    
+</body>
+</html>

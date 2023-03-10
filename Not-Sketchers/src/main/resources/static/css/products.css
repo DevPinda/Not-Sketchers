@@ -84,8 +84,9 @@ h1.products-header {
     font-size: 2vw;
 }
 
-.product-sidebar-categories h3 {
+div.product-sidebar-categories h3 {
     font-size: 1.5vw;
+    text-align: center;
 }
 
 .product-filter-sidebar .product-sidebar-subcategories {
@@ -99,7 +100,7 @@ h1.products-header {
     padding-left: 20px;
     padding-right: 20px;
     color: white;
-    background-color: black;
+    background-color: rgb(8, 142, 8);
     border: 2px white solid;
     font-weight: bold;
     padding-top: 20px;
@@ -112,6 +113,7 @@ h1.products-header {
     background-color: white;
     color: black;
     transition-duration: 0.3s;
+    box-shadow: 0 5px 25px rgb(8, 142, 8);
 }
 
 #size5-btn, #size6-btn, #size7-btn, #size8-btn, #size9-btn, #size10-btn {
@@ -135,7 +137,7 @@ h1.products-header {
 }
 
 .product-filter-sidebar .product-sidebar-categories {
-    background-color: black;
+    background-color: rgb(8, 142, 8);
     color: white;
     padding-left: 15px;
     padding-top: 15px;
@@ -231,6 +233,7 @@ p.product-info {
     font-weight: bold;
 }
 
+/* Add To Basket Button div */
 .basket-btn {
     padding-left: 70px;
     padding-right: 50px;
@@ -238,7 +241,7 @@ p.product-info {
 
 .add-to-basket-btn {
     padding: 10px 0;
-    color: black;
+    color: white;
     outline: none;
     background-color: rgb(8, 142, 8);
     border: 2px solid black;
@@ -253,6 +256,7 @@ p.product-info {
     background-color: white;
     color: black;
     transition-duration: 0.3s;
+    box-shadow: 0 3.5px 15px rgb(8, 142, 8);
 }
 
 /* Our Top Picks Section */
