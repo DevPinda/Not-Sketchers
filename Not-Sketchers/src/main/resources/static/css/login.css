@@ -26,8 +26,8 @@
     position: absolute;
     top: 160px;
     left: 50%;
-    width: 700px;
-    transform: translateX(-50%);
+    width: 100px;
+    
     text-align: center;
   }
   h3 {
