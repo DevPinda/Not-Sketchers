@@ -20,13 +20,15 @@ function ready(){
 }
 
 function removeCartItem(event){
-
+// function removes cart item
     var buttonClicked = event.target
     buttonClicked.parentElement.parentElement.remove()
     updateCartTotal()
 }
 
 function updateCartTotal(){
+    // function updates the cart total price once item is removed
+    //variable below is the products container
     var cartItemContainer = document.getElementsByClassName('productContainer')[0]
     cartItemContainer.getElementsByClassName('wrapperContainer')
     var total = 0
