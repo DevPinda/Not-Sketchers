@@ -2,6 +2,7 @@ window.onload = function () {
     var currentUrl = window.location.href;
     if (currentUrl.indexOf("products.html") !== -1 || currentUrl.indexOf("products") !== -1) {
         onLoadFunction1();
+        filterProducts();
     } else if (currentUrl.indexOf("basket.html") !== -1 || currentUrl.indexOf("basket") !== -1) {
         onLoadFunction2();
     } else {
@@ -184,4 +185,32 @@ window.onload = function () {
             totalPrice.textContent = "Total Price: £" + total_price.toFixed(2);
         });
     }
+    
+    function filterProducts() {
+        const productCells = document.querySelectorAll('.product-cell');
+      
+        // Get the selected price range
+        const priceFilter = document.getElementById('filter-price').value;
+      
+        productCells.forEach((productCell) => {
+          const productPrice = productCell.querySelector('#product-price');
+          const priceText = productPrice.textContent;
+          const shoe_price = parseFloat(priceText.replace('£', ''));
+      
+          // Show or hide product cells based on the selected price range
+          if (priceFilter === 'all' || (priceFilter === '0-50' && shoe_price <= 50) || (priceFilter === '50-100' && shoe_price > 50 && shoe_price <= 100)) {
+            productCell.style.display = '';
+          } else {
+            productCell.style.display = 'none';
+          }
+        });
+      }
+      
+      // Add event listener to the select element
+      const filterPrice = document.getElementById('filter-price');
+      filterPrice.addEventListener('change', filterProducts);
+      
+      // Call the filterProducts function initially to apply the default filter
+      filterProducts();
+      
 }

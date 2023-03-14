@@ -18,7 +18,8 @@
             $("#footer").load("/footer");
         });
     </script>
-    <title>Products | !Sketchers</title>
+    <title>Products | SoleSource</title>
+    
 </head>
 <body>
     <div id="navbar"></div>
@@ -43,16 +44,15 @@
                 <h3>Size</h3>
             </div>
             <div class="product-sidebar-subcategories">
-                <button class="filter-buttons" id="size5-btn">UK 5</button>
-                <button class="filter-buttons" id="size6-btn">UK 6</button>
-                <br>
-                <br>
-                <button class="filter-buttons" id="size7-btn">UK 7</button>
-                <button class="filter-buttons" id="size8-btn">UK 8</button>
-                <br>
-                <br>
-                <button class="filter-buttons" id="size9-btn">UK 9</button>
-                <button class="filter-buttons" id="size10-btn">UK 10</button>
+                <select class="filter-buttons">
+                <option class="filter-buttons" id="size5-btn">UK 5</option>
+                <option class="filter-buttons" id="size6-btn">UK 6</option>
+                <option class="filter-buttons" id="size7-btn">UK 7</option>
+                <option class="filter-buttons" id="size8-btn">UK 8</option>
+                <option class="filter-buttons" id="size9-btn">UK 9</option>
+                <option class="filter-buttons" id="size10-btn">UK 10</option>
+                <option class="filter-buttons" id="all-size-btn">All Sizes</option>
+                </select>
             </div>
 
             <br>
@@ -62,10 +62,11 @@
                 <h3>Price</h3>
             </div>
             <div class="product-sidebar-subcategories">
-                <button class="filter-buttons" id="zero-to-fifty-pounds-btn">£0 - £50</button>
-                <br>
-                <br>
-                <button class="filter-buttons" id="fifty-to-hundred-pounds-btn">£50 - £100</button>
+                <select class="filter-buttons" id="filter-price">
+                    <option class="filter-buttons" value="0-50">£0 - £50</option>
+                    <option class="filter-buttons" value="50-100">£50 - £100</option>
+                    <option class="filter-buttons" value="all">All Prices</option>
+                </select>
             </div>
 
             <br>
@@ -75,10 +76,11 @@
                 <h3>Gender</h3>
             </div>
             <div class="product-sidebar-subcategories">
-                <button class="filter-buttons" id="men-btn">Men</button>
-                <br>
-                <br>
-                <button class="filter-buttons" id="women-btn">Women</button>
+                <select class="filter-buttons">
+                <option class="filter-buttons">Men</option>
+                <option class="filter-buttons">Women</option>
+                <option class="filter-buttons">Both</option>
+                </select>
             </div>
         </div>
 
