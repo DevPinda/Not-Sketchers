@@ -7,7 +7,7 @@ if (document.readyState == 'loading' ){
 // function ready only activates once the html doc has loaded
 function ready(){
 // finds the remove button
-    const removeCartItemButton = document.querySelectorAll('buttonsContainer')
+    const removeCartItemButton = document.querySelectorAll('button.buttonsContainer')
     // prints remove button onto log, so it shows if it's the correct one
     console.log(removeCartItemButton)
 
@@ -21,6 +21,7 @@ function ready(){
 
 function removeCartItem(event){
 // function removes cart item
+    window.alert(test1)
     var buttonClicked = event.target
     buttonClicked.parentElement.parentElement.remove()
     updateCartTotal()
