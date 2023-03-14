@@ -7,12 +7,12 @@ if (document.readyState == 'loading' ){
 // function ready only activates once the html doc has loaded
 function ready(){
 // finds the remove button
-    var removeCartItemButton = document.getElementsByClassName('buttonsContainer')
+    const removeCartItemButton = document.querySelectorAll('buttonsContainer')
     // prints remove button onto log, so it shows if it's the correct one
     console.log(removeCartItemButton)
 
     // for each remove button has an event listener so if button is pressed then it removes product
-    for (var i = 0; i < removeCartItemButton.length; i++){
+    for (let i = 0; i < removeCartItemButton.length; i++){
         var button = removeCartItemButton[i]
         button.addEventListener('click',removeCartItem)
     }
@@ -29,18 +29,18 @@ function removeCartItem(event){
 function updateCartTotal(){
     // function updates the cart total price once item is removed
     //variable below is the products container
-    var cartItemContainer = document.getElementsByClassName('productContainer')[0]
-    cartItemContainer.getElementsByClassName('wrapperContainer')
+    var cartItemContainer = document.querySelectorAll('.productContainer')[0]
+    cartItemContainer.querySelectorAll('.wrapperContainer')
     var total = 0
     for (var i = 0; i < wrapperContainer.length; i++){
         var wrapperContainer = wrapperContainer[i]
-        var priceElement = wrapperContainer.getElementsByClassName('priceResult.resultContainer')[0]
-        var quantityElement = wrapperContainer.getElementsByClassName('quantityResult.resultContainer')[0]
+        var priceElement = wrapperContainer.querySelectorAll('priceResult.resultContainer')[0]
+        var quantityElement = wrapperContainer.querySelectorAll('quantityResult.resultContainer')[0]
 
         var price = parseFloat(priceElement.innerText.replace('£', ' '))
         var quantity = quantityElement.value
         total = total + (price * quantity)
     }
-    document.getElementsByClassName('h1.totalContainer')[0].innerText = '£' + total
+    document.querySelectorAll('h1.totalContainer')[0].innerText = '£' + total
 
 }
