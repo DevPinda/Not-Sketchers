@@ -174,7 +174,7 @@ window.onload = function () {
 
             // Buttons Container
             const buttonsContainer = document.createElement("div");
-            buttonsContainer.classList.add("buttonsContainer1");
+            buttonsContainer.classList.add("buttonsContainer");
             wrapperContainer.appendChild(buttonsContainer);
 
             const button = document.createElement("button");
