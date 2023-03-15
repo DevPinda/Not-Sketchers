@@ -1,78 +1,121 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
-    <head>
-        <link rel="stylesheet" th:href="@{/css/contact.css}">
-        <title>Contact Page</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" th:href="@{https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css}">
-        <script th:src="@{https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js}"></script>
-        <script th:inline="javascript">
-        /* Load footer.html using jQuery */
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>My Website</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="contact.css" />
+    <link
+      rel="stylesheet"
+      th:href="@{https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css}"
+    />
+    <script
+      th:src="@{https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js}"
+    ></script>
+    <script th:inline="javascript">
+      /* Load footer.html using jQuery */
 
-        $(function() {
-
-            $("#navbar").load("/nav");
-
-        });
-
-       
-        </script> 
-    </head>
-
-
-<body>
-
-
-<!--Contact Us Section--> 
-<div id="navbar"></div> 
-    <div class="column">
-        <h1>Contact Us</h1>
-        <h2>Where Looking Forward To Hearing From You! <font-size: 16px;></font-size:> </h2>
+      $(function () {
+        $("#navbar").load("/nav");
+      });
+    </script>
+  </head>
+  <body>
+    <section class="contact">
+      <div class="content">
+        <h2>Contact Us</h2>
+        <p>
+          We're here to help! Contact us by filling out the form, calling, or
+          visiting us in person. Our team is dedicated to providing you with
+          exceptional customer service and we'll get back to you promptly.
+        </p>
+      </div>
+      <div class="contain">
+        <div class="contactData">
+          <div class="box">
+            <div class="icon">
+              <i class="fa fa-map-marker" aria-hidden="true"></i>
+            </div>
+            <div class="text">
+              <h3>Address</h3>
+              <p>Aston St, Birmingham B4 7ET, United Kingdom</p>
+            </div>
+          </div>
+          <div class="box">
+            <div class="icon">
+              <i class="fa fa-phone" aria-hidden="true"></i>
+            </div>
+            <div class="text">
+              <h3>Phone</h3>
+              <p>0121 204 3000</p>
+            </div>
+          </div>
+          <div class="box">
+            <div class="icon">
+              <i class="fa fa-envelope-o" aria-hidden="true"></i>
+            </div>
+            <div class="text">
+              <h3>Email</h3>
+              <p>enquiry@solesource.co.uk</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="column">
         <form>
-            <div class="collection">
-            <input type="text" id="fname" placeholder="First Name..."required>
+          <div class="collection">
+            <input
+              type="text"
+              id="fname"
+              placeholder="First Name..."
+              required
+            />
             <label for="fname"></label>
-            </div>
-
-            <div class="collection">
-            <input type="text" id="lname" placeholder="Last Name..."required>
+          </div>
+          <div class="collection">
+            <input type="text" id="lname" placeholder="Last Name..." required />
             <label for="lname"></label>
-            </div>
-            <div class="collection">
-            <input type="email" id="email"placeholder="Your Email..." required>
+          </div>
+          <div class="collection">
+            <input
+              type="email"
+              id="email"
+              placeholder="Your Email..."
+              required
+            />
             <label for="email"></label>
-            </div>
-            <div class="collection">
-                <input type="number" id="number" placeholder="Your Phone Number..."required>
-                <label for="number"></label>
-                </div>
-            <div class="collection">
-            <textarea id="message" rows="8" placeholder="Enter message here..."></textarea>
-            <label for="message"> </label>
-            </div>
-           
-            <button type= "submit" > Submit </button>
-
-            </form> 
-
-            
-            
-        
-</div>
-
-</html>
-</body>
-<footer>
+          </div>
+          <div class="collection">
+            <input
+              type="number"
+              id="number"
+              placeholder="Your Phone Number..."
+              required
+            />
+            <label for="number"></label>
+          </div>
+          <div class="collection">
+            <textarea
+              id="message"
+              rows="8"
+              placeholder="Enter message here..."
+            ></textarea>
+            <label for="message"></label>
+          </div>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </section>
+  </body>
+  <footer>
     <div id="footer"></div>
-</footer>
+  </footer>
 </html>
-
-
-
-
-
-
 
 
 

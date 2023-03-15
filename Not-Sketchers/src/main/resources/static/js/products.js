@@ -5,6 +5,7 @@ window.onload = function () {
         filterProducts();
     } else if (currentUrl.indexOf("basket.html") !== -1 || currentUrl.indexOf("basket") !== -1) {
         onLoadFunction2();
+        removeBasket();
     } else {
         window.alert("Failed to find URL to HTML file");
     }
@@ -66,19 +67,19 @@ window.onload = function () {
         let parsedData = JSON.parse(basket_data);
         let stringJSON = JSON.stringify(parsedData);
         let total_price = 0;
-        
+
         const json = JSON.parse(stringJSON);
         const ids = json.map(item => item.id);
 
         const productContainer = document.getElementById("productContainer");
         const totalPrice = document.querySelector("h1.totalContainer");
-        
+
         // Displays the products on the console
         json.forEach((item) => {
             for (const key in item) {
-              if (key !== 'id') {
-                console.log(key + ': ' + item[key]);
-              }
+                if (key !== 'id') {
+                    console.log(key + ': ' + item[key]);
+                }
             }
         });
 
@@ -89,7 +90,7 @@ window.onload = function () {
             const formattedPrice = parseFloat(preFormattedPrice.slice(1));
 
             // Total Price Expression
-            total_price += formattedPrice * item.number_of_items;            
+            total_price += formattedPrice * item.number_of_items;
 
             // Product heading container
             const productHeadingContainer = document.createElement("div");
@@ -144,7 +145,7 @@ window.onload = function () {
             quantityTitle.textContent = "Quantity";
             quantityTitle.id = "quantityTitle";
             titleContainer.appendChild(quantityTitle);
-    
+
             // Result container
             const resultContainer = document.createElement("div");
             resultContainer.classList.add("resultContainer");
@@ -174,7 +175,7 @@ window.onload = function () {
 
             // Buttons Container
             const buttonsContainer = document.createElement("div");
-            buttonsContainer.classList.add("buttonsContainer1");
+            buttonsContainer.classList.add("buttonsContainer");
             wrapperContainer.appendChild(buttonsContainer);
 
             const button = document.createElement("button");
@@ -185,32 +186,69 @@ window.onload = function () {
             totalPrice.textContent = "Total Price: £" + total_price.toFixed(2);
         });
     }
-    
+
+    function removeBasket() {
+        const removeCartItemButton = document.querySelectorAll('button.buttonsContainer')
+        // prints remove button onto log, so it shows if it's the correct one
+
+        // for each remove button has an event listener so if button is pressed then it removes product
+        for (let i = 0; i < removeCartItemButton.length; i++){
+            var button = removeCartItemButton[i]
+            button.addEventListener('click',removeCartItem)
+        }
+
+        function removeCartItem(event){
+            // function removes cart item
+            window.alert('FuncRemoveCartItemWorks')
+            var buttonClicked = event.target
+            buttonClicked.parentElement.parentElement.remove()
+            updateCartTotal()
+        }
+
+        function updateCartTotal(){
+            // function updates the cart total price once item is removed
+            //variable below is the products container
+            var cartItemContainer = document.querySelectorAll('.productContainer')[0]
+            cartItemContainer.querySelectorAll('.wrapperContainer')
+            var total = 0
+            for (var i = 0; i < wrapperContainer.length; i++){
+                var wrapperContainer = wrapperContainer[i]
+                var priceElement = wrapperContainer.querySelectorAll('priceResult.resultContainer')[0]
+                var quantityElement = wrapperContainer.querySelectorAll('quantityResult.resultContainer')[0]
+
+                var price = parseFloat(priceElement.innerText.replace('£', ' '))
+                var quantity = quantityElement.value
+                total = total + (price * quantity)
+            }
+            document.querySelectorAll('h1.totalContainer')[0].innerText = '£' + total
+        }
+    }
+
     function filterProducts() {
         const productCells = document.querySelectorAll('.product-cell');
-      
+
         // Get the selected price range
         const priceFilter = document.getElementById('filter-price').value;
-      
+
         productCells.forEach((productCell) => {
-          const productPrice = productCell.querySelector('#product-price');
-          const priceText = productPrice.textContent;
-          const shoe_price = parseFloat(priceText.replace('£', ''));
-      
-          // Show or hide product cells based on the selected price range
-          if (priceFilter === 'all' || (priceFilter === '0-50' && shoe_price <= 50) || (priceFilter === '50-100' && shoe_price > 50 && shoe_price <= 100)) {
-            productCell.style.display = '';
-          } else {
-            productCell.style.display = 'none';
-          }
+            const productPrice = productCell.querySelector('#product-price');
+            const priceText = productPrice.textContent;
+            const shoe_price = parseFloat(priceText.replace('£', ''));
+
+            // Show or hide product cells based on the selected price range
+            if (priceFilter === 'all' || (priceFilter === '0-50' && shoe_price <= 50) || (priceFilter === '50-100' && shoe_price > 50 && shoe_price <= 100)) {
+                productCell.style.display = '';
+            } else {
+                productCell.style.display = 'none';
+            }
         });
-      }
-      
-      // Add event listener to the select element
-      const filterPrice = document.getElementById('filter-price');
-      filterPrice.addEventListener('change', filterProducts);
-      
-      // Call the filterProducts function initially to apply the default filter
-      filterProducts();
-      
+    }
+
+    // Add event listener to the select element
+    const filterPrice = document.getElementById('filter-price');
+    filterPrice.addEventListener('change', filterProducts);
+
+    // Call the filterProducts function initially to apply the default filter
+    filterProducts();
+
 }
