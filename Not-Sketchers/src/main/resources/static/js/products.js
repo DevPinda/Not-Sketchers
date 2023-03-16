@@ -189,20 +189,35 @@ window.onload = function () {
 
     function removeBasket() {
         const removeCartItemButton = document.querySelectorAll('button.buttonsContainer')
-        // prints remove button onto log, so it shows if it's the correct one
+
+
 
         // for each remove button has an event listener so if button is pressed then it removes product
         for (let i = 0; i < removeCartItemButton.length; i++){
             var button = removeCartItemButton[i]
+
             button.addEventListener('click',removeCartItem)
+            button.addEventListener('click', deleteItem)
         }
 
         function removeCartItem(event){
+
             // function removes cart item
             window.alert('FuncRemoveCartItemWorks')
             var buttonClicked = event.target
             buttonClicked.parentElement.parentElement.remove()
+
+
+
             updateCartTotal()
+        }
+
+        function deleteItem(index){
+            const existingItems = JSON.parse(localStorage.getItem("shoe_items"));
+            existingItems.splice(index,1)
+            localStorage.setItem("shoe_items", JSON.stringify(existingItems))
+
+
         }
 
         function updateCartTotal(){
