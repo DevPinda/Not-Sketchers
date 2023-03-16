@@ -203,7 +203,6 @@ window.onload = function () {
         function removeCartItem(event){
 
             // function removes cart item
-            window.alert('FuncRemoveCartItemWorks')
             var buttonClicked = event.target
             buttonClicked.parentElement.parentElement.remove()
 
