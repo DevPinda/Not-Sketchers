@@ -8,13 +8,21 @@
     <script th:src="@{/js/products.js}" async></script>
     <script th:src="@{https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js}"></script>
     <script th:inline="javascript">
+
+    $(function() {
+
+    $("#navbar").load("/nav");
+
+    });
         $(function(){
             $("#footer").load("/footer");
         });
     </script>
-    <title>Products | !Sketchers</title>
+    <title>Products | SoleSource</title>
+    
 </head>
 <body>
+    <div id="navbar"></div>
     <main>
     <!-- Product page header -->
     <div class="products-header">
@@ -22,7 +30,7 @@
     </div>
 
     <div class="products-banner">
-        <h1 class="products-banner"><b id="men-label">Men</b><b id="women-label">Women</b></h1>
+        
     </div>    
 
     <!-- Product page container -->
@@ -36,16 +44,17 @@
                 <h3>Size</h3>
             </div>
             <div class="product-sidebar-subcategories">
-                <button class="filter-buttons" id="size5-btn">UK 5</button>
-                <button class="filter-buttons" id="size6-btn">UK 6</button>
-                <br>
-                <br>
-                <button class="filter-buttons" id="size7-btn">UK 7</button>
-                <button class="filter-buttons" id="size8-btn">UK 8</button>
-                <br>
-                <br>
-                <button class="filter-buttons" id="size9-btn">UK 9</button>
-                <button class="filter-buttons" id="size10-btn">UK 10</button>
+                <select class="filter-buttons">
+
+                    <option class="filter-buttons">All Sizes</option>
+                    <option class="filter-buttons">UK 5</option>
+                    <option class="filter-buttons">UK 6</option>
+                    <option class="filter-buttons">UK 7</option>
+                    <option class="filter-buttons">UK 8</option>
+                    <option class="filter-buttons">UK 9</option>
+                    <option class="filter-buttons">UK 10</option>
+                
+                </select>
             </div>
 
             <br>
@@ -55,10 +64,14 @@
                 <h3>Price</h3>
             </div>
             <div class="product-sidebar-subcategories">
-                <button class="filter-buttons" id="fifty-to-hundred-pounds-btn">£50 - £100</button>
-                <br>
-                <br>
-                <button class="filter-buttons" id="hundred-to-twohundred-pounds-btn">£100 - £200</button>
+
+                <select class="filter-buttons" id="filter-price">
+                    
+                    <option class="filter-buttons" value="all">All Prices</option>
+                    <option class="filter-buttons" value="0-50">£0 - £50</option>
+                    <option class="filter-buttons" value="50-100">£50 - £100</option>
+                    
+                </select>
             </div>
 
             <br>
@@ -68,10 +81,13 @@
                 <h3>Gender</h3>
             </div>
             <div class="product-sidebar-subcategories">
-                <button class="filter-buttons" id="men-btn">Men</button>
-                <br>
-                <br>
-                <button class="filter-buttons" id="women-btn">Women</button>
+                <select class="filter-buttons">
+
+                    <option class="filter-buttons">Both</option>
+                    <option class="filter-buttons">Men</option>
+                    <option class="filter-buttons">Women</option>
+                
+                </select>
             </div>
         </div>
 
@@ -81,13 +97,13 @@
                 <div th:each="product : ${products}" class="product-cell">
                     <!-- Product Information -->
                     <div class="product-img">
-                        <img class="product-img" th:src="@{${product.productImageFilePath}}" alt="Placeholder Image">
+                        <img class="product-img" id="product-image" th:src="@{${product.productImageFilePath}}" alt="Placeholder Image">
                     </div>
                     <div class="product-info">
                         <h2 class="product-info" th:text="${product.productName}" id="product-name"></h2>
-                        <p class="product-info" th:text="${product.productCategory}"  id="gender"></p>
-                        <p class="product-info" id="colour"></p>
-                        <p class="product-info" id="shoe-size"></p>
+                        <p class="product-info" th:text="${product.gender}" id="gender"></p>
+                        <p class="product-info" th:text="${product.productCategory}" id="colour"></p>
+                        <p class="product-info" th:text="${product.shoeSize}" id="shoe-size"></p>
                         <br>
                         <p class="product-info" th:text="'£' + ${product.productPrice}" id="product-price"></p>
                         <br>
@@ -108,32 +124,32 @@
         <div id="images-container">
             <div class="top-pick-container">
                 <img class="top-pick-container" th:src="@{/img/football-boots-5.jpg}" alt="">
-                <h2 class="top-pick-container">!Sketchers Air</h2>
-                <p class="top-pick-container">Women's</p>
-                <p class="top-pick-container">1 Colour</p>
-                <p class="top-pick-container">UK 8</p>
+                <h2 class="top-pick-container">SoleSource Football Boots 5</h2>
+                <p class="top-pick-container">Men's</p>
+                <p class="top-pick-container">Football Boots</p>
+                <p class="top-pick-container">UK 5</p>
                 <br>
-                <p id="price"><b>£95</b></p>
+                <p id="price"><b>£94.00</b></p>
             </div>
 
             <div class="top-pick-container">
                 <img class="top-pick-container" th:src="@{/img/football-boots-3.jpg}" alt="">
-                <h2 class="top-pick-container">!Sketchers Air</h2>
-                <p class="top-pick-container">Women's</p>
-                <p class="top-pick-container">1 Colour</p>
+                <h2 class="top-pick-container">SoleSource Football Boots 3</h2>
+                <p class="top-pick-container">Men's</p>
+                <p class="top-pick-container">Football Boots</p>
                 <p class="top-pick-container">UK 8</p>
                 <br>
-                <p id="price"><b>£95</b></p>
+                <p id="price"><b>£90.00</b></p>
             </div>
 
             <div class="top-pick-container">
                 <img class="top-pick-container" th:src="@{/img/football-boots-1.jpg}" alt="">
-                <h2 class="top-pick-container">!Sketchers Air</h2>
-                <p class="top-pick-container">Women's</p>
-                <p class="top-pick-container">1 Colour</p>
+                <h2 class="top-pick-container">SoleSource Football Boots 1</h2>
+                <p class="top-pick-container">Men's</p>
+                <p class="top-pick-container">Football Boots</p>
                 <p class="top-pick-container">UK 8</p>
                 <br>
-                <p id="price"><b>£95</b></p>
+                <p id="price"><b>£67.00</b></p>
             </div>
         </div>
     </div>

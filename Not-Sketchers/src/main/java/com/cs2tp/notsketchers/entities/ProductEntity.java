@@ -2,6 +2,9 @@ package com.cs2tp.notsketchers.entities;
 
 import jakarta.persistence.*;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+
 @Entity
 @Table(name = "Product")
 public class ProductEntity {
@@ -17,13 +20,19 @@ public class ProductEntity {
     private String productCategory;
 
     @Column(name = "Product_Price")
-    private double productPrice;
+    private BigDecimal productPrice;
 
     @Column(name = "Product_StockCount")
     private int productStockCount;
 
     @Column(name = "Product_ImageFilePath")
     private String productImageFilePath;
+
+    @Column(name = "Gender")
+    private String gender;
+
+    @Column(name = "Size")
+    private String shoeSize;
 
     public int getProductId(){
         return productId;
@@ -37,8 +46,8 @@ public class ProductEntity {
         return productCategory;
     }
 
-    public double getProductPrice(){
-        return productPrice;
+    public BigDecimal getProductPrice(){
+        return productPrice.setScale(2, RoundingMode.HALF_UP);
     }
 
     public int getStockCount(){
@@ -48,4 +57,8 @@ public class ProductEntity {
     public String getProductImageFilePath(){
         return productImageFilePath;
     }
+
+    public String getGender() { return gender; }
+
+    public String getShoeSize() { return shoeSize; }
 }

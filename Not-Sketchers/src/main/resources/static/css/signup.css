@@ -5,30 +5,196 @@
 }
 
 main {
-    height: 100vh;
     display: flex;
-    align-items: center;
     justify-content: center;
-    background: #363232;
+    align-items: center;
+    min-height: 100vh;
+    background: black;
 }
 
-.login {
-    width: 360px;
-    height: min-content;
-    padding: 20px;
-    border-radius: 12px;
-    background: #ffffff;
+.box {
+    position: relative;
+    width: 70vh;
+    height: 70vh;
+    background: #191919;
+    border-radius: 8px;
+    overflow: hidden;
 }
 
-.login form {
-    font-size: 20px;
+.form::-webkit-scrollbar {
+    width: 1vw;
 }
 
-.login form .form-group {
-    margin-bottom: 12px;
+.form::-webkit-scrollbar-thumb {
+    background: #28292d;
+    border-radius: 100vw;
 }
 
-.login form input[type="submit"] {
-    font-size: 20px;
-    margin-top: 15px;
+.form::-webkit-scrollbar-track {
+    background: black;
+    border-radius: 100vw;
+    margin-block: 0.5em;
+    
+}
+
+.box::before {
+    content: '';
+    position: absolute;
+    left: -50%;
+    top: -50%;
+    width: 70vh;
+    height: 70vh;
+    background: linear-gradient(0deg, transparent, #4aac3d, #4aac3d);
+    animation: animate 6s linear infinite;
+    transform-origin: bottom right;
+}
+
+.box::after {
+    content: '';
+    position: absolute;
+    left: -50%;
+    top: -50%;
+    width: 70vh;
+    height: 70vh;
+    background: linear-gradient(0deg, transparent, #4aac3d, #4aac3d);
+    animation: animate 6s linear infinite;
+    transform-origin: bottom right;
+    animation-delay: -3s;
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.form {
+    position: absolute;
+    inset: 2px;
+    border-radius: 8px;
+    background: #28292d;
+    z-index: 10;
+    padding: 50px 40px;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.form h2 {
+    color: #4aac3d;
+    font-weight: 500;
+    font-size: 3em;
+    text-align: center;
+    padding-bottom: 2px;
+}
+
+input[type=date]:required:invalid::-webkit-datetime-edit {
+    color: transparent;
+}
+input[type=date]:focus::-webkit-datetime-edit {
+    color: black !important;
+}
+
+input {
+    color-scheme: dark;
+  }
+
+input[type=radio] {
+    transform: scale(2);
+    margin-right: 1.5em;
+    margin-left: 1.5em;
+    display: none;
+}
+
+label {
+    position: relative;
+    color: #4aac3d;
+    font-size: 1.75em;
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+    padding: 10px 50px;
+    margin-top: 5%;
+    display: flex;
+}
+
+label:before {
+    content: "";
+    height: 10%;
+    width: 10%;
+    border: 2% solid #4aac3d;
+}
+
+input[type="radio"]:checked + label {
+    background-color: #4aac3d;
+    color: white;
+}
+
+input[type="radio"]:checked + label:before {
+    height: 5%;
+    width: 5%;
+    border: 5% solid white;
+    background-color: #4aac3d;
+}
+
+.links {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5em;
+}
+
+input[type="submit"] {
+    display: flex;
+    justify-content: center;
+    font-size: 2em;
+    margin-left: 30%;
+}
+
+.inputbox {
+    position: relative;
+    width: 60vh;
+    margin-top: 10%;
+}
+
+.inputbox input {
+    position: relative;
+    width: 60vh;
+    padding: 20px 10px 10px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #162eb8;
+    font-size: 1.5em;
+    letter-spacing: 0.05em;
+    
+}
+
+.inputbox span {
+    position: absolute;
+    left: 0;
+    padding: 5px 5px 5px;
+    font-size: 1.5em;
+    color: #4aac3d;
+    pointer-events: none;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+}
+
+.inputbox input:valid ~ span,
+.inputbox input:focus ~ span {
+    color: #4aac3d;
+    transform: translateY(-8px);
+    font-size: 1em;
+}
+
+.inputbox i {
+    position: absolute;
+    display: flex;
+    left: 0;
+    bottom: 0;
+    width: 60vh;
+    height: 2px;
+    background: #4aac3d;
 }

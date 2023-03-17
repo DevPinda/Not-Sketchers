@@ -1,15 +1,22 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
+
 <head>
-    <title>Sign Up Page</title>
+    <title>Sign Up | SoleSource</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-            crossorigin="anonymous"></script>
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
     <link th:href="@{/css/signup.css}" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
     <script>
+
+        $(function () {
+
+            $("#navbar").load("/nav");
+
+        });
         $(function () {
             $("#footer").load("/footer");
         });
@@ -18,55 +25,71 @@
 </head>
 
 <body>
+    <div id="navbar"></div>
     <main>
-
-        <div class="login col col-lg-4">
-            <div class="button-box">
-                <div id="btn">
+        <div class="box">
+            <div class="form">
+                <h2>Sign up</h2>
+                <div class="inputbox">
+                    <input type="text" required="required">
+                    <span>First Name</span>
+                    <i></i>
                 </div>
+
+                <div class="inputbox">
+                    <input type="text" required="required">
+                    <span>Last Name</span>
+                    <i></i>
+                </div>
+
+                <div class="inputbox">
+                    <input type="email" required="required">
+                    <span>Email</span>
+                    <i></i>
+                </div>
+
+                <div class="inputbox">
+                    <input type="password" required="required">
+                    <span>Password</span>
+                    <i></i>
+                </div>
+
+                <div class="inputbox">
+                    <input type="text" required="required">
+                    <span>Contact Number</span>
+                    <i></i>
+                </div>
+
+                <div class="inputbox">
+                    <input type="date" id="date of birth" name="date of birth" required="required">
+                    <span>Date of Birth</span>
+                    <i></i>
+                </div>
+
+                
+                <input type="radio" name="user_sex" id="rad1" value="Male">
+                <label for="rad1">Male</label>
+
+                <input type="radio" name="user_sex" id="rad2" value="Female">
+                <label for="rad2">Female</label>
+
+
+                <div class="links">
+                <a href="login.html">Already have an account?</a>
+                </div>
+                
+                <input type="submit" value="Sign Up">
+                
             </div>
-            <h1 class="text-center">Sign Up</h1>
-            <form id="login" class="needs-validation">
-                <div class="form-group">
-                    <label class="form-label" for="Fname">First Name</label>
-                    <input class="form-control" type="text" id="Fname" required>
-                </div>
-
-                <div class="form-group">
-                    <label class="form-label" for="Lname">Last Name</label>
-                    <input class="form-control" type="text" id="Lname" required>
-                </div>
-
-                <div class="form-group">
-                    <label class="form-label" for="email">Email address</label>
-                    <input class="form-control" type="email" id="email" required>
-                </div>
 
 
-                <div class="form-group">
-                    <label class="form-label" for="Password">Password</label>
-                    <input class="form-control" type="password" id="password" required>
-                    <div class="invalid-feedback">
-                        Please enter your password
-                    </div>
-                </div>
-
-                <label class="radio-inline px-2">
-                    <input type="radio" name="user_sex" value="Male"> Male
-                </label>
-                <label class="radio-inline px-2">
-                    <input type="radio" name="user_sex" value="Female"> Female
-                </label>
-                <input class="btn btn-success w-100" type="submit" value="SIGN IN">
-
-                <li><a href="#login.html">already have an account?</a></li>
-            </form>
         </div>
+
     </main>
 
     <footer>
         <div id="footer"></div>
-        
+
     </footer>
 
 

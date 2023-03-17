@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" lang="en">
     <head>
-        <title>Basket Page</title>
+        <title>Basket | SoleSource</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="UTF-8">
         <link rel="stylesheet" th:href="@{/css/basket.css}">
@@ -10,59 +10,47 @@
         <script th:src="@{https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js}"></script>
         <script th:inline="javascript">
         /* Load footer.html using jQuery */
+
+        $(function() {
+
+        $("#navbar").load("/nav");
+
+        });
+        
         $(function(){
-            $("#footer").load("footer.html");
+            $("#footer").load("/footer");
         });
         </script>
     </head>
 
     <body>
+        <div id="navbar"></div>
         <main>
-        <div class="mainHeading">
-            <h1 class="mainHeading">Your Basket</h1>
-        </div>
-        <div class="secondaryHeading">
-            <h2 class="secondaryHeading">Number of Items | Total Price</h2>
-        </div>
-        <div class="basketContainer">
-            <!-- <div class="imageContainer">
-                <img class="imageContainer" src="../static/img/temp-image-1.png" alt="Image Placeholder Text">
-            </div> -->
-            <div id="productContainer">
-                <!-- <div id="productHeadingContainer">
-                    <h1 id="productHeading">!Sketchers</h1>
-                </div> -->
-                <!-- <div id="wrapperContainer">
-                    <div class="titleContainer" id="titleContainer">
-                        <p class="titleContainer" id="itemTitle">Men's</p>
-                        <p class="titleContainer" id="sizeTitle">Size</p>
-                        <p class="titleContainer" id="quantityTitle">Quantity</p>
-                    </div>
-                    <div class="resultContainer" id="resultContainer">
-                        <p class="resultContainer" id="priceResult">£100</p>
-                        <p class="resultContainer" id="sizeResult">UK8</p>
-                        <p class="resultContainer" id="quantityResult">1</p>
-                    </div>
-                    <div class="buttonsContainer">
-                        <button class="buttonsContainer"></button>    
-                    </div>
-                </div> -->
+            <div class="mainHeading">
+                <h1 class="mainHeading">Your Basket</h1>
             </div>
-        </div>
-        <div class="lineContainer">
-            <hr class="lineContainer">
-        </div>
-        <div id="finalContainer">
-            <!-- <div class="totalContainer">
-                <h1 class="totalContainer">Total: £100</h1>
-            </div> -->
-            <div class="checkoutContainer">
-                <button class="checkoutContainer">Continue to Checkout</button>
+            <div class="secondaryHeading">
+                <h2 class="secondaryHeading">Number of Items | Total Price</h2>
             </div>
-        </div>
-    </main>
-    <footer>
-        <div id="footer"></div>
-    </footer>
+            <div class="basketContainer">
+                <div id="productContainer">
+                    <!-- Dynamic content -->
+                </div>
+            </div>
+            <div class="lineContainer">
+                <hr class="lineContainer">
+            </div>
+            <div id="finalContainer">
+                <div class="totalContainer">
+                    <h1 class="totalContainer"></h1>
+                </div>
+                <div class="checkoutContainer">
+                    <button class="checkoutContainer">Continue to Checkout</button>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div id="footer"></div>
+        </footer>
     </body>
 </html>

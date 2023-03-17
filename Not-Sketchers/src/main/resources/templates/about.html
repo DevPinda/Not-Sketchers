@@ -1,11 +1,19 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>About Us - Footwear Company</title>
+    <title>About Us | SoleSource</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" th:href="@{/css/about.css}">
     <script th:src="@{https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js}"></script>
+    <script>
+
+        $(function() {
+
+            $("#navbar").load("/nav");
+
+        });
+    </script>
     <script th:inline="javascript">
         /* Load footer.html using jQuery */
         $(function(){
@@ -15,6 +23,7 @@
 </head>
 <main>
 <body>
+<div id="navbar"></div>
     <h2>About Us</h2>
     <div class="content">
         <div class="text-container">
@@ -25,10 +34,10 @@
             <p>Our shoes are made using the finest materials and the latest technology to ensure that they are not only comfortable but also durable and long-lasting. We offer a wide range of styles and colors to suit every taste and occasion.</p>
         </div>
         <div class="box">
-            <p>At !Sketchers, we are committed to providing excellent customer service. Our friendly and knowledgeable staff are always available to answer any questions or concerns you may have about our products.</p>
+            <p>At SoleSource, we are committed to providing excellent customer service. Our friendly and knowledgeable staff are always available to answer any questions or concerns you may have about our products.</p>
         </div>
         <div class="box">
-            <p>Thank you for choosing !Sketchers for your footwear needs. We look forward to serving you.</p>
+            <p>Thank you for choosing SoleSource for your footwear needs. We look forward to serving you.</p>
         </div>
         </div>
     <img th:src="@{/img/location.jpg}"  alt="Map of location" class="right-image">

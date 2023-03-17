@@ -41,16 +41,6 @@ h1.products-header {
     align-items: center;
 }
 
-h1.products-banner {
-    display: flex;
-    color: white;
-    text-align: center;
-    text-transform: uppercase;
-    text-decoration: underline;
-    font-size: 1.75vw;
-    text-align: center;
-}
-
 #men-label {
     margin-top: 4vw;
     margin-left: 5vw;
@@ -75,13 +65,13 @@ h1.products-banner {
 /* Sidebar for the products page to filter out products */
 .product-filter-sidebar {
     height: 100%;
-    width: 20vw;
+    width: 19vw;
     position: relative;
     left: 0;
     top: 0;
     padding-top: 10px;
     padding-bottom: 15%;
-    background-color: rgb(66, 66, 66);
+    background-color: black;
     overflow-x: hidden;
     border: 2.5px solid white;
 }
@@ -91,6 +81,12 @@ h1.products-banner {
     padding-left: 20px;
     padding-top: 30px;
     padding-bottom: 30px;
+    font-size: 2vw;
+}
+
+div.product-sidebar-categories h3 {
+    font-size: 1.5vw;
+    text-align: center;
 }
 
 .product-filter-sidebar .product-sidebar-subcategories {
@@ -104,30 +100,35 @@ h1.products-banner {
     padding-left: 20px;
     padding-right: 20px;
     color: white;
-    background-color: rgb(66, 66, 66);
+    background-color: rgb(8, 142, 8);
     border: 2px white solid;
     font-weight: bold;
     padding-top: 20px;
     padding-bottom: 20px;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 15px;
 }
 
 .product-filter-sidebar .product-sidebar-subcategories .filter-buttons:hover {
     background-color: white;
-    color: rgb(66, 66, 66);
+    color: black;
     transition-duration: 0.3s;
+    box-shadow: 0 5px 25px rgb(8, 142, 8);
 }
 
 #size5-btn, #size6-btn, #size7-btn, #size8-btn, #size9-btn, #size10-btn {
-    width: 100px;
+    width: 90px;
+}
+
+#size5-btn, #size7-btn, #size9-btn {
+    margin-right: 1.5vw;
 }
 
 .product-sidebar-subcategories {
     padding-left: 40px;
 }
 
-#fifty-to-hundred-pounds-btn, #hundred-to-twohundred-pounds-btn, #men-btn, #women-btn {
+#zero-to-fifty-pounds-btn, #fifty-to-hundred-pounds-btn, #men-btn, #women-btn {
     width: 200px;
 }
 
@@ -136,7 +137,7 @@ h1.products-banner {
 }
 
 .product-filter-sidebar .product-sidebar-categories {
-    background-color: rgb(66, 66, 66);
+    background-color: rgb(8, 142, 8);
     color: white;
     padding-left: 15px;
     padding-top: 15px;
@@ -217,7 +218,7 @@ h2.product-info {
     text-align: center;
     justify-self: center;
     align-self: center;
-    font-size: 1.9vw;
+    font-size: 1.5vw;
 }
 
 p.product-info {
@@ -232,6 +233,7 @@ p.product-info {
     font-weight: bold;
 }
 
+/* Add To Basket Button div */
 .basket-btn {
     padding-left: 70px;
     padding-right: 50px;
@@ -239,7 +241,7 @@ p.product-info {
 
 .add-to-basket-btn {
     padding: 10px 0;
-    color: black;
+    color: white;
     outline: none;
     background-color: rgb(8, 142, 8);
     border: 2px solid black;
@@ -300,6 +302,7 @@ img.top-pick-container {
     display: flex;
     flex-direction: row !important;
     overflow: hidden;
+    height: 30vh;
 }
 
 h2.top-pick-container {
@@ -313,6 +316,8 @@ h2.top-pick-container {
 p.top-pick-container {
     color: white;
     font-size: 0.95vw;
+    margin-top: 0vw;
+    margin-bottom: 0.25vw;
 }
 
 #price {

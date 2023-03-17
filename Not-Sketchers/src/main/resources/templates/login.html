@@ -1,63 +1,48 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
-
-<head>
-    <title>Log In Page</title>
-    <link rel="stylesheet" th:href="@{https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css}"
-          integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
-          crossorigin="anonymous">
-    <script th:src="@{https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js}"
-            integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-            crossorigin="anonymous"></script>
-    <link rel="stylesheet" th:href="@{/css/signup.css}">
-    <script th:src="@{https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js}"></script>
-    <script th:inline="javascript">
-        $(function () {
+<html lang="en">
+    <head>
+        <title>Login | SoleSource</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+        <link rel="stylesheet" th:href="@{/css/login.css}">
+        <script th:src="@{https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js}"></script>
+        <script>
+        $(function() {
+            $("#navbar").load("/nav");
+        });
+        </script>
+        <script th:inline="javascript">
+        /* Load footer.html using jQuery */
+        $(function(){
             $("#footer").load("/footer");
         });
-    </script>
-</head>
-
-
-<body>
-    <main>
-
-        <div class="login col col-lg-4 ">
-            <div class="button-box">
-                <div id="btn">
-                </div>
+        </script>
+        </head>
+        <body>
+        <div id="navbar"></div>
+        <!--Login Section--> 
+        <div class="column">
+        <h1>Login</h1>
+        <form method="post" th:action="@{/login}">
+            <div class="collection">
+                <input type="text" id="fname" name="email" placeholder="Email..."required>
+                <label for="fname"></label>
             </div>
-            <h1 class="text-center">Log In</h1>
-            <form id="login" class="needs-validation">
-                <div class="form-group">
-                    <label class="form-label" for="email">Email address</label>
-                    <input class="form-control" type="email" id="email" required>
-                </div>
 
-
-                <div class="form-group">
-                    <label class="form-label" for="Password">Password</label>
-                    <input class="form-control" type="password" id="password" required>
-                    <div class="invalid-feedback">
-                        Please enter your password
-                    </div>
-                </div>
-
-                <div class="form-group form-check">
-                    <input class="form-check-input" type="checkbox" id="check">
-                    <label class="form-check-label" for="check">Remember me</label>
-                </div>
-                <input class="btn btn-success w-100" type="submit" value="SIGN IN">
-
-                <li><a href="#signup.html">need to create an account?</a></li>
-
-                
-            </form>
-
-    </main>
-    <footer>
-        <div id="footer"></div>
-    </footer>
-</body>
-
+            <div class="collection">
+                <input type="password" id="lname" name="password" placeholder="Password..."required>
+                <label for="lname"></label>
+            </div>
+            <div class="collection">
+                <button type= "login" > Login </button>
+        </form>
+        <div class="Register">
+        <a th:href="@{/signup}" style="color:#ffffff;">Haven't got an account? Register Here</a>
+        </div>`
+        </div>
+        <footer>
+            <div id="footer"></div>
+        </footer>
+    </body>
 </html>
