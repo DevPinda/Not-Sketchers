@@ -101,9 +101,9 @@
                     </div>
                     <div class="product-info">
                         <h2 class="product-info" th:text="${product.productName}" id="product-name"></h2>
-                        <p class="product-info" id="gender"></p>
+                        <p class="product-info" th:text="${product.gender}" id="gender"></p>
                         <p class="product-info" th:text="${product.productCategory}" id="colour"></p>
-                        <p class="product-info" id="shoe-size"></p>
+                        <p class="product-info" th:text="${product.shoeSize}" id="shoe-size"></p>
                         <br>
                         <p class="product-info" th:text="'£' + ${product.productPrice}" id="product-price"></p>
                         <br>

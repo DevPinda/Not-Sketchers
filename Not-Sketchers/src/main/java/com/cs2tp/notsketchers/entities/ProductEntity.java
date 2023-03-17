@@ -28,6 +28,12 @@ public class ProductEntity {
     @Column(name = "Product_ImageFilePath")
     private String productImageFilePath;
 
+    @Column(name = "Gender")
+    private String gender;
+
+    @Column(name = "Size")
+    private String shoeSize;
+
     public int getProductId(){
         return productId;
     }
@@ -51,4 +57,8 @@ public class ProductEntity {
     public String getProductImageFilePath(){
         return productImageFilePath;
     }
+
+    public String getGender() { return gender; }
+
+    public String getShoeSize() { return shoeSize; }
 }
