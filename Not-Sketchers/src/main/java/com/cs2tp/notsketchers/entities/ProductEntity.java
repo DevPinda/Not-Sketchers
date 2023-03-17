@@ -58,7 +58,11 @@ public class ProductEntity {
         return productImageFilePath;
     }
 
-    public String getGender() { return gender; }
+    public String getGender() {
+        return gender;
+    }
 
-    public String getShoeSize() { return shoeSize; }
+    public String getShoeSize() {
+        return shoeSize;
+    }
 }
