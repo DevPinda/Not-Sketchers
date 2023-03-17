@@ -242,25 +242,40 @@ window.onload = function () {
         const productCells = document.querySelectorAll('.product-cell');
 
         // Get the selected price range
+        const sizeFilter = document.getElementById('filter-size').value;
         const priceFilter = document.getElementById('filter-price').value;
+        const genderFilter = document.getElementById('filter-gender').value;
+        
 
         productCells.forEach((productCell) => {
+            const shoeSize = productCell.querySelector('#shoe-size');
+            const sizeText = shoeSize.textContent;
             const productPrice = productCell.querySelector('#product-price');
             const priceText = productPrice.textContent;
             const shoe_price = parseFloat(priceText.replace('£', ''));
+            const gender = productCell.querySelector('#gender');
+            const genderText = gender.textContent;
 
-            // Show or hide product cells based on the selected price range
-            if (priceFilter === 'all' || (priceFilter === '0-50' && shoe_price <= 50) || (priceFilter === '50-100' && shoe_price > 50 && shoe_price <= 100)) {
+            if ((sizeFilter === 'all-sizes' || sizeText === sizeFilter) &&
+            (priceFilter === 'all-prices' || (priceFilter === '0-50' && shoe_price <= 50) || (priceFilter === '50-100' && shoe_price > 50 && shoe_price <= 100)) &&
+            (genderFilter === 'show-all' || ((genderText === genderFilter || genderText === 'Both') && ((genderFilter === 'Male' && genderText === 'Male') || (genderFilter === 'Female' && genderText === 'Female') || genderFilter === 'Both')))) {
                 productCell.style.display = '';
             } else {
                 productCell.style.display = 'none';
             }
+            
         });
     }
 
     // Add event listener to the select element
     const filterPrice = document.getElementById('filter-price');
     filterPrice.addEventListener('change', filterProducts);
+    
+    const filterSize = document.getElementById('filter-size');
+    filterSize.addEventListener('change',filterProducts);
+
+    const filterGender = document.getElementById('filter-gender');
+    filterGender.addEventListener('change',filterProducts);
 
     // Call the filterProducts function initially to apply the default filter
     filterProducts();
