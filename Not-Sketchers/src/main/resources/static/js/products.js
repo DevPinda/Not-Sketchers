@@ -92,21 +92,21 @@ window.onload = function () {
             // Total Price Expression
             total_price += formattedPrice * item.number_of_items;
 
+            // Wrapper container
+            const wrapperContainer = document.createElement("div");
+            wrapperContainer.id = "wrapperContainer";
+            productContainer.appendChild(wrapperContainer);
+
             // Product heading container
             const productHeadingContainer = document.createElement("div");
             productHeadingContainer.id = "productHeadingContainer";
-            productContainer.appendChild(productHeadingContainer);
+            wrapperContainer.appendChild(productHeadingContainer);
 
             // Product name heading
             const productHeading = document.createElement("h1");
             productHeading.id = "productHeading";
             productHeading.textContent = item.title;
             productHeadingContainer.appendChild(productHeading);
-
-            // Wrapper container
-            const wrapperContainer = document.createElement("div");
-            wrapperContainer.id = "wrapperContainer";
-            productContainer.appendChild(wrapperContainer);
 
             // Image container
             const imageContainer = document.createElement("div");
