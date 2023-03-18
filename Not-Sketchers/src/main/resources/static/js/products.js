@@ -197,7 +197,13 @@ window.onload = function () {
             var button = removeCartItemButton[i]
 
             button.addEventListener('click',removeCartItem)
+            button.addEventListener('click',pgReload)
             button.addEventListener('click', deleteItem)
+        }
+
+        function pgReload(event){
+
+            location.reload()
         }
 
         function removeCartItem(event){
@@ -208,7 +214,7 @@ window.onload = function () {
 
 
 
-            updateCartTotal()
+
         }
 
         function deleteItem(index){
@@ -217,24 +223,29 @@ window.onload = function () {
             localStorage.setItem("shoe_items", JSON.stringify(existingItems))
 
 
+
         }
 
-        function updateCartTotal(){
+        function updateCartTotal(event){
             // function updates the cart total price once item is removed
-            //variable below is the products container
-            var cartItemContainer = document.querySelectorAll('.productContainer')[0]
-            cartItemContainer.querySelectorAll('.wrapperContainer')
-            var total = 0
-            for (var i = 0; i < wrapperContainer.length; i++){
-                var wrapperContainer = wrapperContainer[i]
-                var priceElement = wrapperContainer.querySelectorAll('priceResult.resultContainer')[0]
-                var quantityElement = wrapperContainer.querySelectorAll('quantityResult.resultContainer')[0]
 
-                var price = parseFloat(priceElement.innerText.replace('£', ' '))
-                var quantity = quantityElement.value
-                total = total + (price * quantity)
-            }
-            document.querySelectorAll('h1.totalContainer')[0].innerText = '£' + total
+
+            var cartRow = event.target.parentElement.parentElement
+            var total = 0
+
+            var priceElement = cartRow.querySelectorAll('resultContainer.priceResult')[0]
+            var quantityElement = cartRow.querySelectorAll('resultContainer.quantityResult')[0]
+
+
+
+            var price = parseFloat(priceElement.innerText.replace('£', ''))
+            var quantity = quantityElement.value
+            total = total - (price * quantity)
+            console.log(total)
+
+
+            document.querySelectorAll('h1.totalContainer')[0].innerText = 'Total Price £' + total
+
         }
     }
 
