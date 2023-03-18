@@ -3,7 +3,7 @@ package com.cs2tp.notsketchers.entities;
 import jakarta.persistence.*;
 
     @Entity
-    @Table(name = "Customer_Orders")
+    @Table(name = "customer_orders")
     public class CustomerOrdersEntity {
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)
