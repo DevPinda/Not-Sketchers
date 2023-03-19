@@ -1,5 +1,6 @@
 package com.cs2tp.notsketchers.entities;
 
+import com.cs2tp.notsketchers.config.CustomerPasswordEncoder;
 import jakarta.persistence.*;
 
 @Entity
@@ -77,8 +78,41 @@ public class CustomerEntity {
         return customerIsAdmin;
     }
 
+    public void setCustomerForeName(String customerForename){
+        this.customerForename = customerForename;
+    }
+
+    public void setCustomerLastName(String customerLastname){
+        this.customerLastname = customerLastname;
+    }
+
+    public void setCustomerEmail(String customerEmail){
+        this.customerEmail = customerEmail;
+    }
+
+    public void setCustomerPassword(String customerPassword){
+        CustomerPasswordEncoder customerPasswordEncoder = new CustomerPasswordEncoder(12);
+        this.customerPassword = customerPasswordEncoder.encode(customerPassword);
+    }
+
+    public void setCustomerContactNumber(String customerPhoneNumber){
+        this.customerPhoneNumber = customerPhoneNumber;
+    }
+
+    public void setCustomerAddressLine1(String addressLine1){
+        this.customerAddressLine1 = addressLine1;
+    }
+
+    public void setCustomerAddressLine2(String addressLine2){
+        this.customerAddressLine2 = addressLine2;
+    }
+
+    public void setCustomerPostcode(String postcode){
+        this.customerPostcode = postcode;
+    }
+
     public boolean isCustomerIsAdmin() {
-        Boolean isAdmin = false;
+        boolean isAdmin = false;
         if (customerIsAdmin == 1) {
             isAdmin = true;
         } else if (customerIsAdmin == 0) {

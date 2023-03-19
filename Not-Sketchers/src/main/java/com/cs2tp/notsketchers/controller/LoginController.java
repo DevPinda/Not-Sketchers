@@ -1,6 +1,7 @@
 package com.cs2tp.notsketchers.controller;
 
 
+import com.cs2tp.notsketchers.config.CustomerPasswordEncoder;
 import com.cs2tp.notsketchers.entities.CustomerEntity;
 import com.cs2tp.notsketchers.repository.CustomerRepository;
 import jakarta.servlet.http.HttpServletRequest;
@@ -24,12 +25,11 @@ public class LoginController{
 
     @PostMapping("/login")
     public String login(@RequestParam("email") String email, @RequestParam("password") String password) {
-        String Customer_Email = email;
-        String Customer_Password = password;
-        CustomerEntity customerLogin = customerRepository.findByCustomerEmailAndCustomerPassword(Customer_Email, Customer_Password);
+        CustomerEntity customerLogin = customerRepository.findByCustomerEmail(email);
         HttpSession session = request.getSession();
+        CustomerPasswordEncoder passwordEncoder = new CustomerPasswordEncoder(12);
 
-        if (customerLogin != null) {
+        if (customerLogin != null && passwordEncoder.matches(password, customerLogin.getCustomerPassword())) {
             session.setAttribute("customer", customerLogin);
             if (customerLogin.isCustomerIsAdmin()) {
                 return "redirect:/admin";
