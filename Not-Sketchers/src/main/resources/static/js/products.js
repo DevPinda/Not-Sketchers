@@ -197,13 +197,8 @@ window.onload = function () {
             var button = removeCartItemButton[i]
 
             button.addEventListener('click',removeCartItem)
-            button.addEventListener('click',pgReload)
+            button.addEventListener('click',updateCartTotal)
             button.addEventListener('click', deleteItem)
-        }
-
-        function pgReload(event){
-
-            location.reload()
         }
 
         function removeCartItem(event){
@@ -228,7 +223,7 @@ window.onload = function () {
 
         function updateCartTotal(event){
             // function updates the cart total price once item is removed
-
+            
 
             var cartRow = event.target.parentElement.parentElement
             var total = 0
