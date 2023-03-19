@@ -70,7 +70,7 @@ h1.products-header {
     left: 0;
     top: 0;
     padding-top: 10px;
-    padding-bottom: 15%;
+    padding-bottom: 100%;
     background-color: black;
     overflow-x: hidden;
     border: 2.5px solid white;
@@ -86,7 +86,7 @@ h1.products-header {
 
 div.product-sidebar-categories h3 {
     font-size: 1.5vw;
-    text-align: center;
+    text-align: left;
 }
 
 .product-filter-sidebar .product-sidebar-subcategories {
@@ -97,14 +97,14 @@ div.product-sidebar-categories h3 {
 
 /* Buttons to filter the categories */
 .product-filter-sidebar .product-sidebar-subcategories .filter-buttons {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 0.5vw;
+    padding-right: 1.5vw;
     color: white;
     background-color: rgb(8, 142, 8);
-    border: 2px white solid;
+    border: 0.2vw white solid;
     font-weight: bold;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 1.5vw;
+    padding-bottom: 1.5vw;
     cursor: pointer;
     font-size: 15px;
 }
@@ -116,28 +116,12 @@ div.product-sidebar-categories h3 {
     box-shadow: 0 5px 25px rgb(8, 142, 8);
 }
 
-#size5-btn, #size6-btn, #size7-btn, #size8-btn, #size9-btn, #size10-btn {
-    width: 90px;
-}
-
-#size5-btn, #size7-btn, #size9-btn {
-    margin-right: 1.5vw;
-}
-
 .product-sidebar-subcategories {
     padding-left: 40px;
 }
 
-#zero-to-fifty-pounds-btn, #fifty-to-hundred-pounds-btn, #men-btn, #women-btn {
-    width: 200px;
-}
-
-#men-btn, #women-btn {
-    text-transform: uppercase;
-}
-
 .product-filter-sidebar .product-sidebar-categories {
-    background-color: rgb(8, 142, 8);
+    background-color: black;
     color: white;
     padding-left: 15px;
     padding-top: 15px;
@@ -188,6 +172,7 @@ div.product-cell {
     padding-bottom: 2.5vw;
     margin-top: 1vw;
     margin-bottom: 1vw;
+    border: 0.2vw solid black;
 }
 
 div.product-img {
