@@ -197,15 +197,14 @@ window.onload = function () {
             var button = removeCartItemButton[i]
 
             button.addEventListener('click',removeCartItem)
-            button.addEventListener('click',pgReload)
+            button.addEventListener('click', pageReload)
             button.addEventListener('click', deleteItem)
         }
 
-        function pgReload(event){
+        function pageReload (){
 
-            location.reload()
+            location.reload();
         }
-
         function removeCartItem(event){
 
             // function removes cart item
