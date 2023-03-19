@@ -1,8 +1,10 @@
-# Not-Sketchers
+# SoleSource
 
 ## Description
 
-This repository holds the source code for the full-stack e-commerce platform "Not Sketchers" that is built around the Java Spring Boot Framework and is used to handle an inventory management system and sales for a business.
+This repository holds the source code for the full-stack e-commerce platform "SoleSource" that is built around the Java Spring Boot Framework and is used to handle an inventory management system and sales for a business.
+
+**DISCLAIMER: Our brand name was originally "Not-Sketchers". Due to issues with search engine optimisation we have renamed our brand to "SoleSource".**
 
 ## Contributors
 
