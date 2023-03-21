@@ -30,7 +30,9 @@ hr {
 	text-align: center;
 	padding: 115px 0;
 }
-
+.single-box{
+	margin-left: 40px;
+}
 .single-box p {
 	color: #fff;
     font-size: 22px;
