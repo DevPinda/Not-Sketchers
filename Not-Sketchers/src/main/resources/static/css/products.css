@@ -6,7 +6,7 @@
     overflow-x: hidden;
 }
 
-body {
+.products-page body {
     width: 100vw;
     height: fit-content;
 }

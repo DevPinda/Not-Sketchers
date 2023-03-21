@@ -20,26 +20,28 @@
         </script>
         </head>
         <body>
-        <div id="navbar"></div>
-        <!--Login Section--> 
-        <div class="column">
-            <h1>Login</h1>
-            <form method="post" th:action="@{/login}">
-                <div class="collection">
-                    <input type="text" id="fname" name="email" placeholder="Email..."required>
-                    <label for="fname"></label>
-                </div>
+        <div class="login">
+            <div id="navbar"></div>
+            <!--Login Section--> 
+            <div class="column">
+                <h1>Login</h1>
+                <form method="post" th:action="@{/login}">
+                    <div class="collection">
+                        <input type="text" id="fname" name="email" placeholder="Email..."required>
+                        <label for="fname"></label>
+                    </div>
 
-                <div class="collection">
-                    <input type="password" id="lname" name="password" placeholder="Password..."required>
-                    <label for="lname"></label>
+                    <div class="collection">
+                        <input type="password" id="lname" name="password" placeholder="Password..."required>
+                        <label for="lname"></label>
+                    </div>
+                    <div class="collection">
+                        <button type= "login" > Login </button>
+                    </div>
+                </form>
+                <div class="Register">
+                <a th:href="@{/signup}" style="color:#ffffff;">Haven't got an account? Register Here</a>
                 </div>
-                <div class="collection">
-                    <button type= "login" > Login </button>
-                </div>
-            </form>
-            <div class="Register">
-            <a th:href="@{/signup}" style="color:#ffffff;">Haven't got an account? Register Here</a>
             </div>
         </div>
         <footer>

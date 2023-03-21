@@ -5,7 +5,7 @@
     box-sizing: border-box;
   }
   
-  h1 {
+  .login h1 {
     max-width: 600px;
     position: absolute;
     width: 500px;
@@ -31,7 +31,7 @@
     justify-content: center;
   }
   /* Style form formate */
-  form {
+  .login form {
     max-width: 600px;
     margin: auto;
     width: 50%;
@@ -49,8 +49,8 @@
     position: relative;
   }
   /* Style Text Area/input */
-  input,
-  textarea {
+  .login input,
+  .logintextarea {
     width: 100%;
     padding: 10px;
     outline: 0;
@@ -61,7 +61,7 @@
   }
   
   /* Style Button */
-  button {
+  .login button {
     padding: 10px 0;
     color: #000000;
     outline: none;
