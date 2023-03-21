@@ -1,141 +1,140 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-sherif;
-}
-
-.contact {
-  position: relative;
-  min-height: 100vh;
-  padding: 100px 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background-color: #000000;
-  background-size: cover;
-}
-.contact .content {
-  max-width: 800px;
-  text-align: center;
-}
-.contact .content h2 {
-  font-size: 36px;
-  font-weight: 500;
-  color: #fff;
-  top: 300px;
-  margin-bottom: 10px;
-}
-.contact .content p {
-  font-weight: 300;
-  color: #fff;
-}
-.contain {
-  width: 100%;
-  display: flex;
-  left: 0;
-  margin-left: 200px;
-  justify-content: center;
-  align-items: center;
-  margin-top: 700px;
-  padding: 20px;
-}
-.contain .contactData {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-}
-
-.contain .contactData .box {
-  position: relative;
-  padding: 10px 0;
-  display: flex;
-  width: 100%;
-}
-.contain .contactData .box .icon {
-  min-width: 60px;
-  height: 60px;
-  background: #1d5f00;
-  color: rgb(255, 255, 255);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 75%;
-  font-size: 22px;
-}
-.contain .contactData .box .text {
-  display: flex;
-  margin-left: 30px;
-  font-size: 14px;
-  color: #fff;
-  flex-direction: column;
-  font-weight: 20px;
-  width: 50%;
-  max-width: 800px;
-}
-
-@media screen and (max-width: 768px) {
-  .container .contactData .box .text {
-    width: 100%; /* set the width to 100% on smaller screens */
-    max-width: none;
-  }
-}
-
-.contain .contactData .box .text h3 {
-  font-weight: 900;
-  font-size: 20px;
-  color: #fff;
-  margin-bottom: 10px;
-}
-.column {
-  width: 100%;
-  height: 100vh;
+body {
   background-color: black;
-  background-size: cover;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+header {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  font-family: monospace;
+  padding: 20px;
+  font-size: 19px;
+}
+.container {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  height: 80vh;
+  margin-top: -50px;
 }
 
-/* Style form formate */
 form {
-  max-width: 600px;
-  margin: auto;
-  width: 50%;
-  border: 3px solid #000000;
-  padding: 10px;
-  position: absolute;
-  max-inline-size: 600px;
-  top: 261px;
+  background-color: #000;
+  border: 1px solid rgb(36, 36, 36);
+  border-radius: 50px;
+  padding: 30px;
+  width: 30%;
+  height: 70%;
+  display: inline-block;
+}
 
-  background: #000000;
+.form-group {
+  margin-bottom: 20px;
 }
-/* Style  */
-.collection {
-  margin-bottom: 40px;
-  position: relative;
+
+label {
+  display: block;
 }
-/* Style Text Area/input */
-input,
+
+input {
+  background-color: transparent;
+  border: 1px solid rgb(56, 53, 53);
+  color: white;
+  padding: 25px;
+  width: 90%;
+  border-radius: 15px;
+}
+
 textarea {
-  width: 100%;
-  padding: 10px;
-  outline: 0;
-  border: 1px solid rgb(100, 97, 97);
-  color: rgb(255, 255, 255);
-  background: transparent;
+  height: 100px;
+  resize: none;
+  background-color: transparent;
+  border: 1px solid rgb(56, 53, 53);
+  color: white;
+  padding: 25px;
+  width: 90%;
+  border-radius: 15px;
+}
+h4 {
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+}
+button {
+  background-color: #1d5f00;
+  border: none;
+  color: black;
+  padding: 15px 40px;
+  border-radius: 10%;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
   font-size: 15px;
 }
 
-/* Style Button */
-button {
-  padding: 10px 0;
-  color: #fff;
-  outline: none;
-  background: #1d5f00;
-  border: 1px #000000;
-  width: 100%;
-  cursor: pointer;
-  font-size: 20px;
+button:hover {
+  background-color: #1d5f00;
+  color: white;
 }
+
+.contactInfo-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contactInfo-buttons button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 30px;
+  padding: 20px;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  color: #fff;
+  width: 20%;
+  background-color: #000;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.contactInfo-buttons button i {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.contactInfo-buttons button:hover,
+.contactInfo-buttons button:focus {
+  background-color: #1d5f00;
+  color: #fff;
+  cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  .container {
+    height: auto;
+    margin-top: 0;
+    flex-direction: column;
+  }
+
+  form {
+    width: 90%;
+    height: auto;
+    margin-top: 20px;
+  }
+
+  input,
+  textarea {
+    padding: 15px;
+    font-size: 14px;
+  }
+}
+@media (max-width: 767px) {
+  .contactInfo-buttons button {
+    width: 40%;
+    margin: 10px;
+    padding: 10px;
+  }
+}
+
+  
