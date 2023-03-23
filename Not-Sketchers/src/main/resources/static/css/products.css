@@ -222,19 +222,18 @@ p.product-info {
 
 /* Add To Basket Button div */
 .basket-btn {
-    padding-left: 70px;
-    padding-right: 50px;
+    padding-left: 0.75vw;
 }
 
 .add-to-basket-btn {
-    padding: 10px 0;
+    padding: 0.5vw 0;
     color: white;
     outline: none;
     background-color: rgb(8, 142, 8);
-    border: 2px solid black;
-    width: 150px;
+    border: 0.15vw solid black;
+    width: 12.5vw;
     cursor: pointer;
-    font-size: 15px;
+    font-size: 1vw;
     border-radius: 30px;
     font-weight: bold;
 }
