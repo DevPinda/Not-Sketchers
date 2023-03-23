@@ -189,6 +189,7 @@ img.product-img {
     height: inherit;
     justify-self: center;
     align-self: center;
+    border: 0.2vw solid black;
 }
 
 div.product-info {
@@ -196,6 +197,7 @@ div.product-info {
     width: fit-content;
     height: auto;
     flex-direction: column;
+    margin-top: 0.75vw;
 }
 
 h2.product-info {
