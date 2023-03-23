@@ -2,25 +2,38 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Contact Us</title>
-    <link rel="stylesheet" href="contact.css" />
-      <script src="contact.js"></script>
-   
+    <title>Contact Us | SoleSource</title>
+    <link rel="stylesheet" th:href="@{/css/contact.css}" />
+    <script th:src="@{/js/contact.js}"></script>
+    <script th:src="@{https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js}"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script th:src="@{https://kit.fontawesome.com/a076d05399.js}"></script>
+    <script th:inline="javascript">
+
+      $(function() {
+
+        $("#navbar").load("/nav");
+
+      });
+      $(function(){
+        $("#footer").load("/footer");
+      });
+    </script>
   </head>
-  <header>
-    <h1>Contact Us</h1>
-    <p> 
-      We're here to help! Contact us by filling out the form, calling, or
-      visiting us in person. Our team is dedicated to providing you with
-      exceptional customer service and we'll get back to you promptly.
-    </p>
-  </header>
+
   <body>
+    <div id="navbar"></div>
+    <header>
+      <h1>Contact Us</h1>
+      <p>
+        We're here to help! Contact us by filling out the form, calling, or
+        visiting us in person. Our team is dedicated to providing you with
+        exceptional customer service and we'll get back to you promptly.
+      </p>
+    </header>
     <div class="contactInfo-buttons">
       <button onclick="window.location.href='https://www.google.com/maps?q= Aston St, Birmingham B4 7ET'">
         <i class="fa fa-map-marker"></i> Aston St, Birmingham B4 7ET
