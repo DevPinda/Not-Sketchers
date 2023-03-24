@@ -13,6 +13,14 @@ footer {
 	top: 100%;
 }
 
+h2 {
+	padding: 10px;
+}
+
+h3 {
+	padding: 10px;
+}
+
 h6 {
     writing-mode: vertical-rl;
     font-size: 70px;
