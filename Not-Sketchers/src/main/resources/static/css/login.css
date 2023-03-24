@@ -15,8 +15,7 @@ main {
 .box {
     display: flex;
     position: relative;
-    width: 68vh;
-
+    width: 70vh;
     background: #191919;
     border-radius: 8px;
     overflow: hidden;
@@ -87,7 +86,7 @@ main {
 }
 
 .form h2 {
-    color: #4aac3d;
+    color: greenyellow;
     font-weight: 500;
     font-size: 2.7em;
     text-align: center;
@@ -114,7 +113,7 @@ input[type=radio] {
 
 label {
     position: relative;
-    color: #4aac3d;
+    color: greenyellow;
     font-size: 1.75em;
     border: 2px solid #ffffff;
     border-radius: 5px;
@@ -127,11 +126,11 @@ label:before {
     content: "";
     height: 10%;
     width: 10%;
-    border: 2% solid #4aac3d;
+    border: 2% solid greenyellow;
 }
 
 input[type="radio"]:checked + label {
-    background-color: #4aac3d;
+    background-color: greenyellow;
     color: white;
 }
 
@@ -139,7 +138,7 @@ input[type="radio"]:checked + label:before {
     height: 5%;
     width: 5%;
     border: 5% solid white;
-    background-color: #4aac3d;
+    background-color: greenyellow;
 }
 
 .links {
@@ -186,7 +185,7 @@ input[type="submit"] {
     left: 0;
     padding: 5px 5px 5px;
     font-size: 1.5em;
-    color: #4aac3d;
+    color: greenyellow;
     pointer-events: none;
     letter-spacing: 0.05em;
     transition: 0.5s;
@@ -194,7 +193,7 @@ input[type="submit"] {
 
 .inputbox input:valid ~ span,
 .inputbox input:focus ~ span {
-    color: #4aac3d;
+    color: greenyellow;
     transform: translateY(-8px);
     font-size: 1em;
 }
