@@ -7,24 +7,18 @@
 
         <title>Home | SoleSource</title>
         <link rel="stylesheet" th:href="@{/css/home.css}">
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-<script>
-
-$(function() {
-
-$("#navbar").load("/nav");
-
-});
-
-</script> 
         <script th:src="@{https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js}"></script>
-        
         <script th:inline="javascript">
-        $(function(){
-            $("#footer").load("footer.html");
+    
+        $(function() {
+    
+        $("#navbar").load("/nav");
+    
         });
-        </script> 
+            $(function(){
+                $("#footer").load("/footer");
+            });
+        </script>
     </head>
     <body>
         <main>
@@ -56,18 +50,17 @@ $("#navbar").load("/nav");
                 <div class="collection-container-div">
                     <div class="collection-container-mini">
                         <img th:src="@{/img/homepmen.jpg}" alt="">
-                        <button>SHOP MEN</button>
+                        <button id="menb">SHOP MEN</button>
                     </div>
                     <div class="collection-container-mini">
                         <img th:src="@{/img/homepagewomen.jpg}" alt="">
-                        <button>SHOP WOMEN</button>
+                        <button id="womenb">SHOP WOMEN</button>
                     </div>
                 </div>
             </div>
         </main>
-        <footer>
-            <div id="footer"></div>
-        </footer>
+       
     </body>
+  
     
 </html>
