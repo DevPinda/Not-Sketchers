@@ -13,9 +13,10 @@ main {
 }
 
 .box {
+    display: flex;
     position: relative;
-    width: 70vh;
-    height: 70vh;
+    width: 68vh;
+    height: 90vh;
     background: #191919;
     border-radius: 8px;
     overflow: hidden;
@@ -40,8 +41,8 @@ main {
 .box::before {
     content: '';
     position: absolute;
-    left: -50%;
-    top: -50%;
+    left: -10%;
+    top: -10%;
     width: 70vh;
     height: 70vh;
     background: linear-gradient(0deg, transparent, #4aac3d, #4aac3d);
@@ -52,8 +53,8 @@ main {
 .box::after {
     content: '';
     position: absolute;
-    left: -50%;
-    top: -50%;
+    left: -10%;
+    top: -10%;
     width: 70vh;
     height: 70vh;
     background: linear-gradient(0deg, transparent, #4aac3d, #4aac3d);
@@ -73,12 +74,14 @@ main {
 }
 
 .form {
-    position: absolute;
+    position: relative;
+    align-items: center;
+    justify-content: center;
     inset: 2px;
     border-radius: 8px;
     background: #28292d;
     z-index: 10;
-    padding: 50px 40px;
+    padding: 30px 40px;
     flex-wrap: wrap;
     flex-direction: column;
 }
@@ -86,9 +89,9 @@ main {
 .form h2 {
     color: #4aac3d;
     font-weight: 500;
-    font-size: 3em;
+    font-size: 2.7em;
     text-align: center;
-    padding-bottom: 2px;
+    padding: 20px 0px 10px;
 }
 
 input[type=date]:required:invalid::-webkit-datetime-edit {
@@ -146,14 +149,21 @@ input[type="radio"]:checked + label:before {
 }
 
 input[type="submit"] {
+    position: relative;
     display: flex;
+    flex-direction: row;
     justify-content: center;
+    align-items: center;
     font-size: 2em;
-    margin-left: 30%;
+    margin-top: 5px;
+    padding: 5px;
+    
 }
 
 .inputbox {
     position: relative;
+    align-items: center;
+    justify-content: center;
     width: 60vh;
     margin-top: 10%;
 }

@@ -1,88 +1,210 @@
-* {
+  * {
     margin: 0;
     padding: 0;
-    font-family: "poppins", sans-serif;
     box-sizing: border-box;
-  }
-  
-  .login h1 {
-    max-width: 600px;
-    position: absolute;
-    width: 500px;
-    height: 84px;
-    max-inline-size: 120px;
-    top: 200px;
-    align-items: center;
-    font-family: "Italiana";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 40px;
-    line-height: 47px;
-    color: #fefcfc;
-  }
-  
+}
 
-  .column {
-    width: 100%;
-    height: 100vh;
-    background-color: black;
+main {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: black;
+}
+
+.box {
+    display: flex;
+    position: relative;
+    width: 68vh;
+
+    background: #191919;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.form::-webkit-scrollbar {
+    width: 1vw;
+}
+
+.form::-webkit-scrollbar-thumb {
+    background: #28292d;
+    border-radius: 100vw;
+}
+
+.form::-webkit-scrollbar-track {
+    background: black;
+    border-radius: 100vw;
+    margin-block: 0.5em;
+    
+}
+
+.box::before {
+    content: '';
+    position: absolute;
+    left: -10%;
+    top: -10%;
+    width: 70vh;
+    height: 70vh;
+    background: linear-gradient(0deg, transparent, #4aac3d, #4aac3d);
+    animation: animate 6s linear infinite;
+    transform-origin: bottom right;
+}
+
+.box::after {
+    content: '';
+    position: absolute;
+    left: -10%;
+    top: -10%;
+    width: 70vh;
+    height: 70vh;
+    background: linear-gradient(0deg, transparent, #4aac3d, #4aac3d);
+    animation: animate 6s linear infinite;
+    transform-origin: bottom right;
+    animation-delay: -3s;
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.form {
+    position: relative;
     align-items: center;
     justify-content: center;
-  }
-  /* Style form formate */
-  .login form {
-    max-width: 600px;
-    margin: auto;
-    width: 50%;
-    border: 3px solid rgb(0, 3, 0);
-    padding: 10px;
-    position: absolute;
-    max-inline-size: 600px;
-    top: 261px;
-  
-    background: #000000;
-  }
-  /* Style  */
-  .collection {
-    margin-bottom: 30px;
-    position: relative;
-  }
-  /* Style Text Area/input */
-  .login input,
-  .logintextarea {
-    width: 100%;
-    padding: 10px;
-    outline: 0;
-    border: 1px solid rgb(250, 247, 247);
-    color: rgb(255, 255, 255);
-    background: transparent;
-    font-size: 15px;
-  }
-  
-  /* Style Button */
-  .login button {
-    padding: 10px 0;
-    color: #000000;
-    outline: none;
-    background: rgb(8, 142, 8);
-    border: 1px solid#000000;
-    width: 100%;
-    cursor: pointer;
-    font-size: 20px;
-  }
-  .Register {
-    font-size: 25px;
-    position: absolute;
-    top: 160px;
-    left: 50%;
-    width: 700px;
-    transform: translateX(-50%);
-    text-align: center;
-    color: white;
-  }
-  
+    inset: 2px;
+    border-radius: 8px;
+    background: #28292d;
+    z-index: 10;
+    padding: 30px 40px;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
 
-  .Register {
-    color: #fefcfc;
+.form h2 {
+    color: #4aac3d;
+    font-weight: 500;
+    font-size: 2.7em;
+    text-align: center;
+    padding: 20px 0px 10px;
+}
+
+input[type=date]:required:invalid::-webkit-datetime-edit {
+    color: transparent;
+}
+input[type=date]:focus::-webkit-datetime-edit {
+    color: black !important;
+}
+
+input {
+    color-scheme: dark;
   }
+
+input[type=radio] {
+    transform: scale(2);
+    margin-right: 1.5em;
+    margin-left: 1.5em;
+    display: none;
+}
+
+label {
+    position: relative;
+    color: #4aac3d;
+    font-size: 1.75em;
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+    padding: 10px 50px;
+    margin-top: 5%;
+    display: flex;
+}
+
+label:before {
+    content: "";
+    height: 10%;
+    width: 10%;
+    border: 2% solid #4aac3d;
+}
+
+input[type="radio"]:checked + label {
+    background-color: #4aac3d;
+    color: white;
+}
+
+input[type="radio"]:checked + label:before {
+    height: 5%;
+    width: 5%;
+    border: 5% solid white;
+    background-color: #4aac3d;
+}
+
+.links {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5em;
+}
+
+input[type="submit"] {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    margin-top: 5px;
+    padding: 5px;
+    
+}
+
+.inputbox {
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    width: 60vh;
+    margin-top: 10%;
+}
+
+.inputbox input {
+    position: relative;
+    width: 60vh;
+    padding: 20px 10px 10px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #162eb8;
+    font-size: 1.5em;
+    letter-spacing: 0.05em;
+    
+}
+
+.inputbox span {
+    position: absolute;
+    left: 0;
+    padding: 5px 5px 5px;
+    font-size: 1.5em;
+    color: #4aac3d;
+    pointer-events: none;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+}
+
+.inputbox input:valid ~ span,
+.inputbox input:focus ~ span {
+    color: #4aac3d;
+    transform: translateY(-8px);
+    font-size: 1em;
+}
+
+.inputbox i {
+    position: absolute;
+    display: flex;
+    left: 0;
+    bottom: 0;
+    width: 60vh;
+    height: 2px;
+    background: #4aac3d;
+}
