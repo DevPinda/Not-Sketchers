@@ -33,7 +33,7 @@ $("#navbar").load("/nav");
                 <div class="display-paragraph">
                     <p>Step Into Comfort,</p>
                     <p id="green-color">Stay In Style.</p>
-                    <center><button>Buy Now</button></center>
+                    <center><a th:href="@{/products}"><button>Buy Now</button></a></center>
                 </div>
                 <div class="display-image">
                     <img th:src="@{/img/homeshoe.JPG}" alt="homeshoe">
@@ -44,9 +44,9 @@ $("#navbar").load("/nav");
                     <p>Trending This Week</p>
                 </div>
                 <div class="trending-product-imgs">
-                    <img th:src="@{/img/homeshoe.JPG}" alt="homeshoe">
-                    <img th:src="@{/img/homeshoe.JPG}" alt="homeshoe">
-                    <img th:src="@{/img/homeshoe.JPG}" alt="homeshoe">
+                    <img th:src="@{/img/homepage2.jpg}" alt="homeshoe">
+                    <img th:src="@{/img/trending4.jpg}" alt="homeshoe">
+                    <img th:src="@{/img/trending5.jpg}" alt="homeshoe">
                 </div>
             </div>
             <div class="trending-container collection-container">
@@ -55,18 +55,19 @@ $("#navbar").load("/nav");
                 </div> 
                 <div class="collection-container-div">
                     <div class="collection-container-mini">
-                        <img th:src="@{/img/homeshoe.JPG}" alt="">
+                        <img th:src="@{/img/homepmen.jpg}" alt="">
                         <button>SHOP MEN</button>
                     </div>
                     <div class="collection-container-mini">
-                        <img th:src="@{/img/homeshoe.JPG}" alt="">
+                        <img th:src="@{/img/homepagewomen.jpg}" alt="">
                         <button>SHOP WOMEN</button>
                     </div>
                 </div>
             </div>
         </main>
+        <footer>
+            <div id="footer"></div>
+        </footer>
     </body>
-    <footer>
-        <div id="footer"></div>
-    </footer>
+    
 </html>
