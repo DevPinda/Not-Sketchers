@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <link rel="stylesheet" th:href="@{/css/admin.css}"/>
+    <title>Admin | SoleSource</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}"/>
+    <script th:src="@{https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js}"></script>
+    <link rel="icon" th:href="@{/favicon.ico}" type="image/x-icon"/>
+    <script th:src="@{/js/jquery.min.js}"></script>
+    <script>
+        $(function () {
+            $("#navbar").load("/nav");
+        });
+        $(function () {
+            $("#footer").load("/footer");
+        });
+    </script>
+</head>
+<body>
+<div id="navbar"></div>
+<main>
+    <!--Side Bar/Page Title-->
+    <div th:replace="admin :: nav"></div>
+
+    <div th:with="orders=${orders}" th:replace="/admin/fragments/ordertable"></div>
+</main>
+<!--Footer-->
+<div id="footer"></div>
+</body>
+</html>

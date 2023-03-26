@@ -63,7 +63,14 @@ window.onload = function () {
 
     // Basket Page onload
     function onLoadFunction2() {
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        if (urlParams.get('confirm') === '1') {
+            localStorage.setItem("shoe_items", "[]");
+        }
+
         let basket_data = localStorage.getItem("shoe_items");
+        document.getElementById("basketData").value = basket_data;
         let parsedData = JSON.parse(basket_data);
         let stringJSON = JSON.stringify(parsedData);
         let total_price = 0;

@@ -19,7 +19,7 @@
         });
     </script>
     <title>Products | SoleSource</title>
-    
+
 </head>
 <div class="products-page">
     <body>
@@ -31,8 +31,8 @@
         </div>
 
         <div class="products-banner">
-            
-        </div>    
+
+        </div>
 
         <!-- Product page container -->
         <div class="product-container">
@@ -54,7 +54,7 @@
                         <option class="filter-buttons" value="UK 8">UK 8</option>
                         <option class="filter-buttons" value="UK 9">UK 9</option>
                         <option class="filter-buttons" value="UK 10">UK 10</option>
-                    
+
                     </select>
                 </div>
 
@@ -67,11 +67,11 @@
                 <div class="product-sidebar-subcategories">
 
                     <select class="filter-buttons" id="filter-price">
-                        
+
                         <option class="filter-buttons" value="all-prices">All Prices</option>
                         <option class="filter-buttons" value="0-50">£0 - £50</option>
                         <option class="filter-buttons" value="50-100">£50 - £100</option>
-                        
+
                     </select>
                 </div>
 
@@ -87,7 +87,7 @@
                         <option class="filter-buttons" value="Both">Both</option>
                         <option class="filter-buttons" value="Male">Men</option>
                         <option class="filter-buttons" value="Female">Women</option>
-                    
+
                     </select>
                 </div>
             </div>
@@ -106,6 +106,12 @@
                             <p class="product-info" th:text="${product.productCategory}" id="colour"></p>
                             <p class="product-info" th:text="${product.shoeSize}" id="shoe-size"></p>
                             <br>
+                            <div th:switch="${product.getSupply()}">
+                                <p th:case="${T(com.cs2tp.notsketchers.entities.StockSupply).IN_STOCK}" style="color:green;">In stock</p>
+                                <p th:case="${T(com.cs2tp.notsketchers.entities.StockSupply).LOW_STOCK}" style="color:darkorange;">Almost out of stock</p>
+                                <p th:case="${T(com.cs2tp.notsketchers.entities.StockSupply).OUT_OF_STOCK}" style="color:red">Out of stock</p>
+                                <p th:case="*">Unexpected supply value: <span th:text="${product.getSupply()}"></span></p>
+                            </div>
                             <p class="product-info" th:text="'£' + ${product.productPrice}" id="product-price"></p>
                             <br>
                             <div class="basket-btn">

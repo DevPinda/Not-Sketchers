@@ -22,32 +22,31 @@
     <body>
         <div id="navbar"></div>
         <main>
-            <!--Side Bar/Page Title-->
             <nav>
                 <div id="mySidebar" class="sidebar">
                     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-                    <a class="sideButtonContainer" href="#">
+                    <a class="sideButtonContainer" href="/admin">
                         <div class="sideButtonContainer">
                             <img th:src="@{/img/adminDashboardImg.svg}" class="sideButtonContainer">
                             <p class="sideButtonContainer">DASHBOARD</p>
                         </div>
                     </a>
-                    <a class="sideButtonContainer" href="#">
+                    <a class="sideButtonContainer" href="/admin/sales">
                         <div class="sideButtonContainer">
                             <img th:src="@{/img/adminSalesImg.svg}" class="sideButtonContainer">
                             <p class="sideButtonContainer">SALES</p>
                         </div>
                     </a>
-                    <a class="sideButtonContainer" href="#">
-                        <div class="sideButtonContainer">
-                            <img th:src="@{/img/adminStockImg.svg}" class="sideButtonContainer">
-                            <p class="sideButtonContainer">STOCK</p>
-                        </div>
-                    </a>
-                    <a class="sideButtonContainer" href="#">
+                    <a class="sideButtonContainer" href="/admin/products">
                         <div class="sideButtonContainer">
                             <img th:src="@{/img/adminProductsImg.svg}" class="sideButtonContainer">
                             <p class="sideButtonContainer">PRODUCTS</p>
+                        </div>
+                    </a>
+                    <a class="sideButtonContainer" href="/admin/add">
+                        <div class="sideButtonContainer">
+                            <img th:src="@{/img/adminStockImg.svg}" class="sideButtonContainer">
+                            <p class="sideButtonContainer">ADD</p>
                         </div>
                     </a>
                 </div>
@@ -56,54 +55,37 @@
                 </div>
                 <script>
                     function openNav() {
-                      document.getElementById("mySidebar").style.width = "13vw";
-                      document.getElementById("main").style.marginLeft = "13vw";
+                        document.getElementById("mySidebar").style.width = "13vw";
+                        document.getElementById("main").style.marginLeft = "13vw";
                     }
-                    
+
                     function closeNav() {
-                      document.getElementById("mySidebar").style.width = "0";
-                      document.getElementById("main").style.marginLeft = "0";
+                        document.getElementById("mySidebar").style.width = "0";
+                        document.getElementById("main").style.marginLeft = "0";
                     }
                 </script>
             </nav>
-            <!--Admin Table-->
-            <div class="filter"></div>
-            <table>
+
+            <h1>
+                Hello <span th:text="${loggedInUser.getCustomerForeName()}" />
+            </h1>
+
+            <p>
+                There are currently <span th:text="${lowStockProducts.size()}" /> products due for restocking.
+            </p>
+
+            <table th:if="${lowStockProducts.size() > 0}">
                 <tr>
                     <th>Image</th>
                     <th>Product Name</th>
                     <th>Product Code</th>
                     <th>Stock Count</th>
-                    <th>Edit</th>
                 </tr>
-                </div>
-                <tr>
-                    <td><img id="tableImage" src="img/Productimg.png" /></td>
-                    <td>Women</td>
-                    <td>056789</td>
-                    <td>!Sketchers Air</td>
-                    <td><button id="updateButton">UPDATE</button></td>
-                </tr>
-                <tr>
-                    <td><img id="tableImage" src="img/Productimg.png" /></td>
-                    <td>Men</td>
-                    <td>098785</td>
-                    <td>!Sketchers Pro</td>
-                    <td><button id="updateButton">UPDATE</button></td>
-                </tr>
-                <tr>
-                    <td><img id="tableImage" src="img/Productimg.png" /></td>
-                    <td>Women</td>
-                    <td>065968</td>
-                    <td>!Sketchers Pro</td>
-                    <td><button id="updateButton">UPDATE</button></td>
-                </tr>
-                <tr>
-                    <td><img id="tableImage" src="img/Productimg.png" /></td>
-                    <td>Men</td>
-                    <td>078356</td>
-                    <td>!Sketchers Catch</td>
-                    <td><button id="updateButton">UPDATE</button></td>
+                <tr th:each="product : ${lowStockProducts}">
+                    <td><img id="tableImage" th:src="@{${product.productImageFilePath}}" /></td>
+                    <td th:text="${product.productName}"></td>
+                    <td th:text="${product.productId}"></td>
+                    <td th:text="${product.stockCount}"></td>
                 </tr>
             </table>
         </main>

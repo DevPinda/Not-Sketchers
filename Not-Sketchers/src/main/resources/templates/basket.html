@@ -45,7 +45,10 @@
                     <h1 class="totalContainer"></h1>
                 </div>
                 <div class="checkoutContainer">
-                    <button class="checkoutContainer">Continue to Checkout</button>
+                    <form th:action="@{/checkout}" method="post">
+                        <input type="hidden" name="data" id="basketData" />
+                        <button type="submit" class="checkoutContainer">Continue to Checkout</button>
+                    </form>
                 </div>
             </div>
         </main>
