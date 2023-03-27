@@ -32,7 +32,7 @@ window.onload = function () {
                         gender_style: e.target.parentElement.parentElement.children[1].textContent,
                         shoe_category: e.target.parentElement.parentElement.children[2].textContent,
                         size: e.target.parentElement.parentElement.children[3].textContent,
-                        price: e.target.parentElement.parentElement.children[5].textContent,
+                        price: e.target.parentElement.parentElement.children[6].textContent,
                         image: e.target.parentElement.parentElement.parentElement.children[0].children[0].src,
                         number_of_items: 1
                     };
