@@ -1,0 +1,22 @@
+{
+  "name": "not-sketchers",
+  "version": "1.0.0",
+  "description": "This repository holds the source code for the full-stack e-commerce platform \"SoleSource\" that is built around the Java Spring Boot Framework and is used to handle an inventory management system and sales for a business.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DevPinda/Not-Sketchers.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DevPinda/Not-Sketchers/issues"
+  },
+  "homepage": "https://github.com/DevPinda/Not-Sketchers#readme",
+  "dependencies": {
+    "bootstrap": "^5.2.3"
+  }
+}

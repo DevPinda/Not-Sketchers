@@ -1,0 +1,60 @@
+<style>
+    .popup-menu {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        padding: 20px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    }
+</style>
+
+<table>
+    <tr>
+        <th>Image</th>
+        <th>Product Name</th>
+        <th>Product Code</th>
+        <th>Stock Count</th>
+        <th>Edit</th>
+    </tr>
+    <tr th:each="product : ${products}">
+        <td><img id="tableImage" th:src="@{${product.productImageFilePath}}" /></td>
+        <td th:text="${product.productName}"></td>
+        <td th:text="${product.productId}"></td>
+        <td th:text="${product.stockCount}"></td>
+        <td>
+            <button id="updateButton" th:attr="data-product-id=${product.productId}, data-product-name=${product.productName}, data-product-stockCount=${product.stockCount}" onclick="showPopup(this)">UPDATE</button>
+        </td>
+    </tr>
+</table>
+
+<div class="popup-menu" id="updatePopup">
+    <form th:action="@{/admin/product/update}" method="post">
+        <input type="hidden" name="productId" id="popupProductId" />
+
+        <label for="popupProductName">Product Name:</label>
+        <input type="text" name="productName" id="popupProductName" required />
+
+        <label for="popupStockCount">Stock Count:</label>
+        <input type="number" name="stockCount" id="popupStockCount" required />
+
+        <button type="submit">Update</button>
+    </form>
+</div>
+
+<script>
+    function showPopup(button) {
+        if (document.getElementById("updatePopup").style.display === "none") {
+            document.getElementById("popupProductId").value = button.getAttribute("data-product-id");
+            document.getElementById("popupProductName").value = button.getAttribute("data-product-name");
+            document.getElementById("popupStockCount").value = button.getAttribute("data-product-stockCount");
+
+            document.getElementById("updatePopup").style.display = "block";
+        }
+        else {
+            document.getElementById("updatePopup").style.display = "none";
+        }
+    }
+</script>

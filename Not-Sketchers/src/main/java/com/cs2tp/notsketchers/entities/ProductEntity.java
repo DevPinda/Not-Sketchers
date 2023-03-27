@@ -65,4 +65,36 @@ public class ProductEntity {
     public String getShoeSize() {
         return shoeSize;
     }
+
+    public StockSupply getSupply() {
+        return StockSupply.getBasedOnStock(this.getStockCount());
+    }
+
+    public void setProductName(String productName) {
+        this.productName = productName;
+    }
+
+    public void setProductCategory(String productCategory) {
+        this.productCategory = productCategory;
+    }
+
+    public void setProductPrice(BigDecimal productPrice) {
+        this.productPrice = productPrice;
+    }
+
+    public void setProductStockCount(int productStockCount) {
+        this.productStockCount = productStockCount;
+    }
+
+    public void setProductImageFilePath(String productImageFilePath) {
+        this.productImageFilePath = productImageFilePath;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public void setShoeSize(String shoeSize) {
+        this.shoeSize = shoeSize;
+    }
 }

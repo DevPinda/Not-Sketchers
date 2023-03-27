@@ -1,0 +1,68 @@
+<style>
+    .popup-menu {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        padding: 20px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    }
+    table {
+        padding-top: 20vh;
+        padding-bottom: 20vh;
+    }
+</style>
+
+<table>
+    <tr>
+        <th>Order code</th>
+        <th>Customer id</th>
+        <th>Product name</th>
+        <th>Quantity</th>
+        <th>Date</th>
+        <th>Status</th>
+        <th>Update</th>
+    </tr>
+    <tr th:each="order : ${orders}">
+        <td th:text="${order.Order_ID}"></td>
+        <td th:text="${order.Customer_ID}"></td>
+        <td th:text="${order.Product_Name}"></td>
+        <td th:text="${order.Quantity}"></td>
+        <td th:text="${order.Order_Date}"></td>
+        <td th:text="${order.orderStatus}"></td>
+        <td>
+            <button id="updateButton" th:attr="data-order-id=${order.Order_ID}, data-order-status=${order.orderStatus}" onclick="showPopup(this)">UPDATE</button>
+        </td>
+    </tr>
+</table>
+
+<div class="popup-menu" id="updatePopup">
+    <form th:action="@{/admin/order/update}" method="post">
+        <input type="hidden" name="orderId" id="popupOrderId" />
+
+        <label for="popupOrderStatus">Order status:</label>
+        <select name="orderStatus" id="popupOrderStatus" required>
+            <option value="PROCESSED">Processed</option>
+            <option value="SHIPPED">Shipped</option>
+            <option value="DONE">Done</option>
+        </select>
+
+        <button type="submit">Update</button>
+    </form>
+</div>
+
+<script>
+    function showPopup(button) {
+        if (document.getElementById("updatePopup").style.display === "none") {
+            document.getElementById("popupOrderId").value = button.getAttribute("data-order-id");
+            document.getElementById("popupOrderStatus").value = button.getAttribute("data-order-status");
+
+            document.getElementById("updatePopup").style.display = "block";
+        }
+        else {
+            document.getElementById("updatePopup").style.display = "none";
+        }
+    }
+</script>
