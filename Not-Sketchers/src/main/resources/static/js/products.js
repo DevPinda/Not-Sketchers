@@ -291,3 +291,10 @@ window.onload = function () {
     filterProducts();
 
 }
+if (localStorage.getItem("selectedGender")) {
+    var selectedGender = localStorage.getItem("selectedGender");
+    document.getElementById("x").textContent = "The button was clicked!";
+    var select = document.getElementById("filter-gender");
+    select.value = selectedGender;
+    localStorage.removeItem("selectedGender");
+  }

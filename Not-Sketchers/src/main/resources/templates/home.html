@@ -8,6 +8,7 @@
         <title>Home | SoleSource</title>
         <link rel="stylesheet" th:href="@{/css/home.css}">
         <script th:src="@{https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js}"></script>
+        <script th:src="@{/js/home.js}"></script>
         <script th:inline="javascript">
     
         $(function() {
@@ -50,11 +51,11 @@
                 <div class="collection-container-div">
                     <div class="collection-container-mini">
                         <img th:src="@{/img/homepmen.jpg}" alt="">
-                        <button id="menb">SHOP MEN</button>
+                        <button id="menb" onclick="genderButtonPressed('Male')">SHOP MEN</button>
                     </div>
                     <div class="collection-container-mini">
                         <img th:src="@{/img/homepagewomen.jpg}" alt="">
-                        <button id="womenb">SHOP WOMEN</button>
+                        <button id="womenb" onclick="genderButtonPressed('Female')">SHOP WOMEN</button>
                     </div>
                 </div>
             </div>
