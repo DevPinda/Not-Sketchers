@@ -201,7 +201,7 @@ window.onload = function () {
             button.appendChild(binImg);
 =======
             binImg.classList.add("button");
-            binImg.setAttribute('src', "static/img/binImg.png");
+            binImg.setAttribute('src', "resources/static/img/binImg.png");
             buttonsContainer.appendChild(binImg);
 >>>>>>> 721537afb525f7e480f56754ace7bb11dbb79c9a
 
