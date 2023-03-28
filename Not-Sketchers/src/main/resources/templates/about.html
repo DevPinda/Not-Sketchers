@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
   <head>
     <meta charset="UTF-8" />
@@ -6,19 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About Us | SoleSource</title>
     <link rel="stylesheet" th:href="@{/css/about.css}" />
+    <script th:src="@{https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js}"></script>
+    <script th:inline="javascript">
+    
+      $(function() {
+  
+      $("#navbar").load("/nav");
+  
+      });
+          $(function(){
+              $("#footer").load("/footer");
+          });
+      </script>
   </head>
   <body>
-    <script>
-      $(function () {
-        $("#navbar").load("/nav");
-      });
-    </script>
-    <script th:inline="javascript">
-      /* Load footer.html using jQuery */
-      $(function () {
-        $("#footer").load("/footer");
-      });
-    </script>
     <div id="navbar"></div>
     <div class="main-about-us-page">
       <div class="main-information-container-about-us">
