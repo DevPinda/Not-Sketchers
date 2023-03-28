@@ -196,8 +196,8 @@ window.onload = function () {
 
             const binImg = document.createElement("img");
             binImg.classList.add("buttonsContainer");
-            binImg.setAttribute('src', "static/img/binImg.png");
-            imageContainer.appendChild(binImg);
+            binImg.setAttribute('src', "img/binImg.png");
+            button.appendChild(binImg);
 
 
             // Total Container
