@@ -13,6 +13,21 @@
         padding-top: 20vh;
         padding-bottom: 20vh;
     }
+    form {
+        background-color: white;
+    }
+    #popupOrderStatusTitle {
+        background-color: white;
+    }
+    #popupOrderStatus {
+        background-color: white;
+    }
+    #popupOrderStatus option {
+        background-color: white;
+    }
+    #popupOrderStatusUpdateBtn {
+        background-color: white;
+    }
 </style>
 
 <table>
@@ -42,14 +57,14 @@
     <form th:action="@{/admin/order/update}" method="post">
         <input type="hidden" name="orderId" id="popupOrderId" />
 
-        <label for="popupOrderStatus">Order status:</label>
+        <label for="popupOrderStatus" id="popupOrderStatusTitle">Order status:</label>
         <select name="orderStatus" id="popupOrderStatus" required>
             <option value="PROCESSED">Processed</option>
             <option value="SHIPPED">Shipped</option>
             <option value="DONE">Done</option>
         </select>
 
-        <button type="submit">Update</button>
+        <button type="submit" id="popupOrderStatusUpdateBtn">Update</button>
     </form>
 </div>
 
