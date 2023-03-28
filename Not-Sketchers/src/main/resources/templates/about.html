@@ -1,71 +1,90 @@
-<!DOCTYPE html>
-<html lang="en"  xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About Us | SoleSource</title>
-    <link rel="stylesheet" th:href="@{/css/about.css}">
-</head>
+    <link rel="stylesheet" th:href="@{/css/about.css}" />
+  </head>
+  <body>
     <script>
-
-        $(function() {
-
-            $("#navbar").load("/nav");
-
-        });
+      $(function () {
+        $("#navbar").load("/nav");
+      });
     </script>
     <script th:inline="javascript">
-        /* Load footer.html using jQuery */
-        $(function(){
-            $("#footer").load("/footer");
-        });
+      /* Load footer.html using jQuery */
+      $(function () {
+        $("#footer").load("/footer");
+      });
     </script>
-<body>
-    
     <div id="navbar"></div>
     <div class="main-about-us-page">
-        <div class="main-information-container-about-us">
+      <div class="main-information-container-about-us">
+        <div class="about-us-sub-container-1">
         <div class="about-us-sub-container">
-            <p class="heading-about-us">About Us</p>
-            <p>
-                We are a footwear company that specializes in creating comfortable and stylish shoes for people of all ages. Our mission is to provide our customers with high-quality footwear that they can wear all day long without any discomfort or pain.
+          <p class="heading-about-us">About Us</p>
+          <p>
+            We are a footwear company that specializes in creating comfortable
+            and stylish shoes for people of all ages. Our mission is to provide
+            our customers with high-quality footwear that they can wear all day
+            long without any discomfort or pain. Our shoes are made using the
+            finest materials and the latest technology to ensure that they are
+            not only comfortable but also durable and long-lasting. We offer a
+            wide range of styles and colors to suit every taste and occasion. At
+            SoleSource, we are committed to providing excellent customer
+            service. Our friendly and knowledgeable staff are always available
+            to answer any questions or concerns you may have about our products.
+            Thank you for choosing SoleSource for your footwear needs. We look
+            forward to serving you.
+          </p>
 
-            Our shoes are made using the finest materials and the latest technology to ensure that they are not only comfortable but also durable and long-lasting. We offer a wide range of styles and colors to suit every taste and occasion.
-
-            At SoleSource, we are committed to providing excellent customer service. Our friendly and knowledgeable staff are always available to answer any questions or concerns you may have about our products.
-
-            Thank you for choosing SoleSource for your footwear needs. We look forward to serving you.
-            </p>
+          
+        </div>
+        <div class="main-google-img-container">
+            <img
+              th:src="@{/img/googleMap.jpg}"
+              alt="Map of location"
+              class="right-image"
+              src="googleMap.png"
+            />
+          </div>
         </div>
 
-        <div class="faq-sub-container">
+        <div class="about-us-sub-container-2">
+          <div class="faq-sub-container">
             <p class="heading-about-us">FAQs</p>
-            <p>Have a question? Check out our frequently asked questions below:</p>
+            <p>
+              Have a question? Check out our frequently asked questions below:
+            </p>
             <ul>
-                <li><a href="">How long does shipping take?</a></li>
-                <li><a href="">What is your return policy?</a></li>
-                <li><a href="">Do you offer international shipping?</a></li>
-                <li><a href="">What payment methods do you accept?</a></li>
+              <li><a href="">How long does shipping take?</a></li>
+              <li><a href="">What is your return policy?</a></li>
+              <li><a href="">Do you offer international shipping?</a></li>
+              <li><a href="">What payment methods do you accept?</a></li>
             </ul>
-        </div>
-        <div class="returns-sub-container">
+          </div>
+          <div class="returns-sub-container">
             <p class="heading-about-us">Returns</p>
-            <p>If you are not completely satisfied with your purchase, you can return it to us for a full refund within 30 days of purchase.</p>
-        </div>
-
-        <div class="shipping-and-delivery-sub-container">
+            <p>
+              If you are not completely satisfied with your purchase, you can
+              return it to us for a full refund within 30 days of purchase.
+            </p>
+          </div>
+          <div class="shipping-and-delivery-sub-container">
             <p class="heading-about-us">Shipping And Delivery Info</p>
-            <p>We offer free standard shipping on all orders over £50. Standard shipping takes 3-5 business days. We also offer expedited shipping for an additional fee.</p>
+            <p>
+              We offer free standard shipping on all orders over £50. Standard
+              shipping takes 3-5 business days. We also offer expedited shipping
+              for an additional fee.
+            </p>
+          </div>
         </div>
+      </div>
     </div>
-    <div class="main-google-img-container">
-        <img th:src="@{/img/googleMap.png}"  alt="Map of location" class="right-image" >
-    </div>
-</div>
-<footer>
-    <div id="footer"></div>
-</footer>
-    
-</body>
+    <footer>
+      <div id="footer"></div>
+    </footer>
+  </body>
 </html>
