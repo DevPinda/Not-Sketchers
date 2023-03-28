@@ -196,7 +196,7 @@ window.onload = function () {
 
             const binImg = document.createElement("img");
             binImg.classList.add("button");
-            binImg.setAttribute('src', "static/img/binImg.png");
+            binImg.setAttribute('src', "resources/static/img/binImg.png");
             buttonsContainer.appendChild(binImg);
 
 
