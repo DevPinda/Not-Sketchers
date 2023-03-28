@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <link rel="stylesheet" th:href="@{/css/admin.css}"/>
     <title>Admin | SoleSource</title>
-    <link rel="stylesheet" th:href="@{/css/style.css}"/>
     <script th:src="@{https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js}"></script>
     <link rel="icon" th:href="@{/favicon.ico}" type="image/x-icon"/>
     <script th:src="@{/js/jquery.min.js}"></script>
@@ -30,45 +29,47 @@
             <h2>Add new product</h2>
             <form method="post" th:action="@{/admin/add}">
                 <div class="inputbox">
-                    <input type="text" name="productName" required="required">
-                    <span>Product name</span>
+                    <input type="text" name="productName" placeholder="Product name" required="required">
+                    
                     <i></i>
                 </div>
                 <div class="inputbox">
-                    <input type="text" name="productCategory" required="required">
-                    <span>Category</span>
+                    <input type="text" name="productCategory" placeholder="Category"  required="required">
+                   
                     <i></i>
                 </div>
                 <div class="inputbox">
-                    <input type="text" name="productPrice" required="required">
-                    <span>Price</span>
+                    <input type="text" name="productPrice" placeholder="Price" required="required">
+                    
                     <i></i>
                 </div>
                 <div class="inputbox">
-                    <input type="number" name="productStockCount" required="required">
-                    <span>Stock Count</span>
+                    <input type="number" name="productStockCount" placeholder="Stock count" required="required">
+                   
                     <i></i>
                 </div>
                 <div class="inputbox">
-                    <input type="url" name="productImageFilePath" required="required">
-                    <span>Image file path</span>
+                    <input type="url" name="productImageFilePath" placeholder="Image file path" required="required">
+                    
                     <i></i>
                 </div>
                 <div class="inputbox">
+                    <input type="number" name="shoeSize"placeholder="Shoe size"  required="required">
+                    
+                    <i></i>
+                </div>
+                <div class="inputbox">
+                    <span>Gender</span>
+                    <i></i><br></br>
                     <select name="gender" required="required">
                         <option value="Male">Male</option>
                         <option value="Female">Female</option>
                         <option value="Both">Both</option>
                         <option value="Other">Other</option>
                     </select>
-                    <span>Gender</span>
-                    <i></i>
-                </div>
-                <div class="inputbox">
-                    <input type="number" name="shoeSize" required="required">
-                    <span>Shoe size</span>
-                    <i></i>
-                </div>
+                    
+                </div><br></br>
+                
                 <input type="submit" value="Add">
             </form>
         </div>
