@@ -106,7 +106,7 @@ label:before {
 .links {
     display: flex;
     justify-content: space-between;
-    font-size: 1.5em;
+    font-size: 1em;
     padding-top: 5px;
     padding-bottom: 5px;
 }
@@ -167,17 +167,4 @@ input[type="submit"] {
     width: 60vh;
     height: 2px;
     background: greenyellow;
-}
-
-.error {
-    color: #af4242;
-    background-color: #fde8ec;
-    padding: 10px;
-    display: none;
-}
-
-.error.display-error {
-    display: block;
-    margin-bottom: 20px;
-    transform: translateY(-20px);
 }
