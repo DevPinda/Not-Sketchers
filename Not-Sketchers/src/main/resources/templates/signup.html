@@ -9,6 +9,7 @@
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
     <link th:href="@{/css/signup.css}" rel="stylesheet">
+    <script th:src="@{/js/signup.js}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
     <script>
         $(function () {
@@ -26,10 +27,11 @@
     <div class="box">
         <div class="form">
             <h2>Sign up</h2>
-            <form method="post" th:action="@{/signup}">
+            <form name="register-form" method="post" th:action="@{/signup}">
                 <div class="inputbox">
                     <input type="text" name="firstName" required="required">
                     <span>First Name</span>
+                    <p class="error firstName-error"></p>
                     <i></i>
                 </div>
                 <div class="inputbox">

@@ -16,18 +16,27 @@ body {
   
   .container {
 	display: flex;
+	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: center;
 	align-items: flex-start;
   }
+
+  @media (max-width: 800px) {
+	.container {
+	  flex-direction: column;
+	}
+ }
   
   .row {
 	display: flex;
 	justify-content: space-between;
+	flex-direction: row;
+	flex-wrap: wrap;
   }
   
   .col {
-	width: 400px;
+	width: 500px;
 	margin: 20px;
   }
   
