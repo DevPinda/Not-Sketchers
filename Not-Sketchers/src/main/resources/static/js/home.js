@@ -1,24 +1,11 @@
-// get men and women buttons and add event listener
-const menbutton= document.getElementById("menb");
-menbutton.addEventListener();
-const  womenbutton= document.getElementById("womenb");
-menbutton.addEventListener();
-
-
-
-function genderButtonPressed(gender){
-    if (gender == "Male"){
+window.onload = function() {
     document.getElementById("menb").addEventListener("click", function() {
-        window.location.href = "http://localhost:8080/products";
-        localStorage.setItem("selectedGender", gender);
-        });
-
-    }else{
-        document.getElementById("womenb").addEventListener("click", function() {
-            window.location.href = "http://localhost:8080/products";
-            localStorage.setItem("selectedGender", gender);
-            });
-    }
-    
-    
-}
+      localStorage.setItem("selectedGender", "Male");
+      window.location.href = "http://localhost:8080/products";
+    });
+  
+    document.getElementById("womenb").addEventListener("click", function() {
+      localStorage.setItem("selectedGender", "Female");
+      window.location.href = "http://localhost:8080/products";
+    });
+  };
