@@ -9,26 +9,24 @@
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
+      />
     <script th:src="@{https://kit.fontawesome.com/a076d05399.js}"></script>
     <script th:inline="javascript">
-
       $(function() {
-
+      
         $("#navbar").load("/nav");
-
+      
       });
       $(function(){
         $("#footer").load("/footer");
       });
     </script>
   </head>
-
   <body>
     <div id="navbar"></div>
     <header>
-      <h1>Contact Us</h1>
-      <p>
+      <h1 id="headerHeading">Contact Us</h1>
+      <p id="headerText">
         We're here to help! Contact us by filling out the form, calling, or
         visiting us in person. Our team is dedicated to providing you with
         exceptional customer service and we'll get back to you promptly.
@@ -36,20 +34,18 @@
     </header>
     <div class="contactInfo-buttons">
       <button onclick="window.location.href='https://www.google.com/maps?q= Aston St, Birmingham B4 7ET'">
-        <i class="fa fa-map-marker"></i> Aston St, Birmingham B4 7ET
+      <i class="fa fa-map-marker"></i> Aston St, Birmingham B4 7ET
       </button>
       <button onclick="call()">
-        <i class="fa fa-phone"></i>  (+44) 121 204 3000
+      <i class="fa fa-phone"></i>  (+44) 121 204 3000
       </button>
       <button onclick="emailUs()">
-        <i class="fa fa-envelope"></i> enquiry@solesource.co.uk
+      <i class="fa fa-envelope"></i> enquiry@solesource.co.uk
       </button>
     </div>
-
-   
-  <div class="container">
-    <form onsubmit="sendEmail();rest();return false;">
-      <h4> Please fill out the form, and we'll be in touch</h4>
+    <div class="container">
+      <form onsubmit="sendEmail();rest();return false;">
+        <h4> Please fill out the form, and we'll be in touch</h4>
         <div class="form-group">
           <label for="name"></label>
           <input
@@ -58,7 +54,7 @@
             name="name"
             placeholder="Your name .."
             required
-          />
+            />
         </div>
         <div class="form-group">
           <label for="email"></label>
@@ -68,7 +64,7 @@
             name="email"
             placeholder="Your email.."
             required
-          />
+            />
         </div>
         <div class="form-group">
           <label for="phone"></label>
@@ -78,7 +74,7 @@
             name="phone"
             placeholder="Your Phone number.."
             required
-          />
+            />
         </div>
         <div class="form-group">
           <label for="message"></label>
@@ -87,15 +83,12 @@
             name="message"
             placeholder="Your message .."
             required
-    ></textarea>
-        
- 
-        <div class="form-group">
-        <button type="submit">Send</button>
+            ></textarea>
+          </div>
+          <div class="form-group">
+            <button id="sendButton" type="submit">Send</button>
+          </div>
       </form>
-    </div>
-    
-      </div>
     </div>
     <footer>
       <div id="footer"></div>
