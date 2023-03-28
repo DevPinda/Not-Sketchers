@@ -1,28 +1,9 @@
-function showError(errorElement, errorMessage) {
-    document.querySelector("."+errorElement).classList.add("display-error");
-    document.querySelector("."+errorElement).innerHTML = errorMessage;
-}
-
-function clearError() {
-    let errors = document.querySelectorAll(".error");
-    for(let error of errors) {
-        error.classList.remove("display-error")
+document.forms['register-form'].onsubmit = function(event){
+   
+    if(this.username.value.trim() === ""){
+       document.querySelector(".firstName-error").innerHTML = "Please enter your firstName";
+       document.querySelector(".firstName-error").style.display = "block";
+       event.preventDefault();
+       return false;
     }
-}
-
-
-let form = document.forms['register-form'];
-form.onsubmit = function(event) {
-
-    clearError();
-
-
-    if (form.firstName.value === "") {
-        showError ("email-error", "You have to enter your email");
-        return false;
-    }
-
-
-
-    event.preventDefault();
 }
