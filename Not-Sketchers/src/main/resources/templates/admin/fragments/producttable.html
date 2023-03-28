@@ -9,6 +9,24 @@
         padding: 20px;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     }
+    form {
+        background-color: white;
+    }
+    #popupProductNameTitle {
+        background-color: white;
+    }
+    #popupProductName {
+        background-color: white;
+    }
+    #popupStockCount {
+        background-color: white;
+    }
+    #popupStockCountTitle {
+        background-color: white;
+    }
+    #popupStockUpdateBtn {
+        background-color: white;
+    }
 </style>
 
 <table>
@@ -34,13 +52,13 @@
     <form th:action="@{/admin/product/update}" method="post">
         <input type="hidden" name="productId" id="popupProductId" />
 
-        <label for="popupProductName">Product Name:</label>
+        <label for="popupProductName" id="popupProductNameTitle">Product Name:</label>
         <input type="text" name="productName" id="popupProductName" required />
 
-        <label for="popupStockCount">Stock Count:</label>
+        <label for="popupStockCount" id="popupStockCountTitle">Stock Count:</label>
         <input type="number" name="stockCount" id="popupStockCount" required />
 
-        <button type="submit">Update</button>
+        <button type="submit" id="popupStockUpdateBtn">Update</button>
     </form>
 </div>
 
