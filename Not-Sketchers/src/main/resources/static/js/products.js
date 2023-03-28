@@ -6,10 +6,12 @@ window.onload = function () {
     } else if (currentUrl.indexOf("basket.html") !== -1 || currentUrl.indexOf("basket") !== -1) {
         onLoadFunction2();
         removeBasket();
+        checkoutBasket();
     } else {
         window.alert("Failed to find URL to HTML file");
     }
 
+    
     // Products Page onload
     function onLoadFunction1() {
         basket_btn = document.getElementsByClassName('basket-button');
@@ -21,8 +23,8 @@ window.onload = function () {
         for (let i = 0; i < basket_btn.length; i++) {
             basket_btn[i].addEventListener("click", function (e) {
                 basketItemsAmount += 1;
-                console.log(basketItemsAmount);
-                console.log(e.target.parentElement.parentElement.children[5].textContent);
+                //console.log(basketItemsAmount);
+                //console.log(e.target.parentElement.parentElement.children[5].textContent);
 
                 // Using JSON and local storage to store the product in local storage
                 if (typeof(Storage) !== 'undefined') {
@@ -61,6 +63,7 @@ window.onload = function () {
         }
     }
 
+
     // Basket Page onload
     function onLoadFunction2() {
         const queryString = window.location.search;
@@ -85,7 +88,7 @@ window.onload = function () {
         json.forEach((item) => {
             for (const key in item) {
                 if (key !== 'id') {
-                    console.log(key + ': ' + item[key]);
+                    //console.log(key + ': ' + item[key]);
                 }
             }
         });
@@ -194,10 +197,9 @@ window.onload = function () {
         });
     }
 
+
     function removeBasket() {
         const removeCartItemButton = document.querySelectorAll('button.buttonsContainer')
-
-
 
         // for each remove button has an event listener so if button is pressed then it removes product
         for (let i = 0; i < removeCartItemButton.length; i++){
@@ -247,13 +249,14 @@ window.onload = function () {
             var price = parseFloat(priceElement.innerText.replace('£', ''))
             var quantity = quantityElement.value
             total = total - (price * quantity)
-            console.log(total)
+            //console.log(total)
 
 
             document.querySelectorAll('h1.totalContainer')[0].innerText = 'Total Price £' + total
 
         }
     }
+
 
     function filterProducts() {
         const productCells = document.querySelectorAll('.product-cell');
@@ -284,6 +287,7 @@ window.onload = function () {
         });
     }
 
+
     // Add event listener to the select element
     const filterPrice = document.getElementById('filter-price');
     filterPrice.addEventListener('change', filterProducts);
@@ -297,11 +301,32 @@ window.onload = function () {
     // Call the filterProducts function initially to apply the default filter
     filterProducts();
 
+    if (localStorage.getItem("selectedGender")) {
+        var selectedGender = localStorage.getItem("selectedGender");
+        document.getElementById("x").textContent = "The button was clicked!";
+        var select = document.getElementById("filter-gender");
+        select.value = selectedGender;
+        localStorage.removeItem("selectedGender");
+      }
+    
+        function checkoutBasket(){
+    
+            const checkoutBtn = document.querySelector('.checkoutContainer button');
+    
+            checkoutBtn.addEventListener('click', () => {
+                let products = JSON.parse(localStorage.getItem('shoe_items'));
+    
+                fetch('/checkout', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(products)
+                })
+    
+                .catch(error => {
+                    console.error('Error: ', error);
+                });
+            });
+        }
 }
-if (localStorage.getItem("selectedGender")) {
-    var selectedGender = localStorage.getItem("selectedGender");
-    document.getElementById("x").textContent = "The button was clicked!";
-    var select = document.getElementById("filter-gender");
-    select.value = selectedGender;
-    localStorage.removeItem("selectedGender");
-  }
