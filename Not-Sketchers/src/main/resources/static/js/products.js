@@ -3,6 +3,8 @@ window.onload = function () {
     if (currentUrl.indexOf("products.html") !== -1 || currentUrl.indexOf("products") !== -1) {
         onLoadFunction1();
         filterProducts();
+        filterEventListener();
+        genderButtonFilter();
     } else if (currentUrl.indexOf("basket.html") !== -1 || currentUrl.indexOf("basket") !== -1) {
         onLoadFunction2();
         removeBasket();
@@ -293,27 +295,27 @@ window.onload = function () {
         });
     }
 
-
+    function filterEventListener(){
     // Add event listener to the select element
     const filterPrice = document.getElementById('filter-price');
     filterPrice.addEventListener('change', filterProducts);
-    
+        
     const filterSize = document.getElementById('filter-size');
     filterSize.addEventListener('change',filterProducts);
 
     const filterGender = document.getElementById('filter-gender');
     filterGender.addEventListener('change',filterProducts);
+    }
 
-    // Call the filterProducts function initially to apply the default filter
-    filterProducts();
-
-    if (localStorage.getItem("selectedGender")) {
-        var selectedGender = localStorage.getItem("selectedGender");
-        document.getElementById("x").textContent = "The button was clicked!";
-        var select = document.getElementById("filter-gender");
-        select.value = selectedGender;
-        localStorage.removeItem("selectedGender");
-      }
+    function genderButtonFilter(){
+        if (localStorage.getItem("selectedGender")) {
+            var selectedGender = localStorage.getItem("selectedGender");
+            var select = document.getElementById("filter-gender");
+            select.value = selectedGender;
+            localStorage.removeItem("selectedGender");
+            filterProducts();
+        }
+    }
     
         function checkoutBasket(){
     
@@ -335,4 +337,6 @@ window.onload = function () {
                 });
             });
         }
+
+        
 }
