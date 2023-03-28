@@ -1,45 +1,89 @@
-*{
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    }
-    body{
-        background-color: black;
-        color: white;
-    }
-    .heading-about-us{
-        font-size: 2vmax;
-        font-weight: bold;
-        color: aliceblue;
-    }
-    .main-about-us-page{
-        display: flex;
-        align-items: center;
-        align-content: center;
-        justify-content: center;
-        flex-wrap: wrap;
+ * {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+      sans-serif;
+  }
+  body {
+    background-color: black;
+    color: white;
+  }
+  .heading-about-us {
+    font-size: 2vmax;
+    font-weight: bold;
+    color: aliceblue;
+    text-transform: uppercase;
+  }
+  .main-about-us-page {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .main-information-container-about-us {
+   width: 100%;
+  }
+  .main-google-img-container img {
+    filter: opacity(75%);
+    border-radius: 5vmax;
+    width: 40vmax;
+    padding: 2vmax 2vmax;
+  }
+  .faq-sub-container ul li a {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .about-us-sub-container-2 div {
 
+    width: 26%;
+    
+    padding: 1vmax 1vmax;
+    display: flex;
+    flex-direction: column;
+    min-height: 25vmax;
+    max-height: fit-content;
+   
+    margin: 1vmax 1vmax;
+    border: 1px solid white;
+  }
+  .about-us-sub-container-2 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    justify-content: center;
+  }
+  .about-us-sub-container{
+    width: 35%;
+  }
+  .about-us-sub-container-1{
+   
+    display: flex;
+    padding-bottom: 5vmax;
+    flex-wrap: wrap;
+   flex-direction: row;
+   align-items: center;
+   align-content: center;
+   justify-items: center;
+   justify-content: center;
+  
+  }
+  
+  @media only screen and (max-width: 864px) {
+    .main-google-img-container img {
+      filter: opacity(75%);
+      border-radius: 2vmax;
+      width: 100%;
+      
+        border-radius: 5vmax;
     }
-    .main-information-container-about-us{
-        width: 50vmax;
-    }
-    .main-google-img-container img{
-       
-        
-        filter: opacity(75%);
-        border-radius: 2vmax;
-        width: 40vmax;
-    }
-    .faq-sub-container ul li a{
-        color: white;
-        text-decoration: none;
-        cursor: pointer;
-    }
-    @media only screen and (max-width: 864px)  {
-
-        .main-google-img-container img{
-       
-        
-        filter: opacity(75%);
-        border-radius: 2vmax;
+    .about-us-sub-container{
         width: 100%;
+      }
+    .about-us-sub-container-2 div {
+        width: 100%;
+        height: 30vmax;
     }
-    }
+  }
