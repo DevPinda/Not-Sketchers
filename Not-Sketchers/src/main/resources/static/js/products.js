@@ -192,6 +192,12 @@ window.onload = function () {
             button.classList.add("buttonsContainer");
             buttonsContainer.appendChild(button);
 
+            const binImg = document.createElement("img");
+            binImg.classList.add("buttonsContainer");
+            binImg.setAttribute('src', "static/img/binImg.png");
+            imageContainer.appendChild(binImg);
+
+
             // Total Container
             totalPrice.textContent = "Total Price: £" + total_price.toFixed(2);
         });
