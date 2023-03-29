@@ -64,12 +64,12 @@
                         document.getElementById("main").style.marginLeft = "0";
                     }
                 </script>
+ 
+            </nav>
+
                 <h1>
                 Hello <span th:text="${loggedInUser.getCustomerForeName()}" />
             </h1>
-            </nav>
-
-            
 
             <p>
                 There are currently <span th:text="${lowStockProducts.size()}" /> products due for restocking.
