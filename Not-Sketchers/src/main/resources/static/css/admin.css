@@ -25,6 +25,11 @@ h1 {
   flex-grow: 1;
   font-size: 35px;
 }
+
+h1 span {
+  background-color: #1d5f00;
+}
+
 p {
   color: white;
   padding: 20px;
