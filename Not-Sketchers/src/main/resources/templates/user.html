@@ -25,8 +25,8 @@
     <div class="main-dashboard-cotnainer">
         <div class="main-dashboard-sub-container">
             <div class="avatar-container">
-                <img th:src="@{/img/adminStockImg.svg}"  alt=""> <span> Hi Customer!</span>
-
+                <img th:src="@{/img/adminStockImg.svg}" alt="">
+                <span th:text="'Hi ' + ${customer.customerForename} + '!'"></span>
             </div>
             <div class="function-list">
                 <div class="function">
@@ -43,25 +43,22 @@
             <center><div class="Customer-dashboard">
                 Customer Dashboard
             </div></center>
-            <div class="display-picture">
-                <img src="avatar-3814049_1280.png" alt=""> 
-            </div>
             <div class="description-container-cus">
                 <div class="description-container-sub">
                     <label for="firstname">First Name</label>
-                    <input type="text" value="Rabia" id="firstname">
-                    <label for="dob">Date of Birth</label>
-                    <input type="text" value="03/04/2002" id="dob">
-                    <label for="address">Address (optional)</label>
-                    <input type="text" value="Birmingham" id="address">
+                    <input type="text" id="firstname" th:value="${customer.customerForename}">
+                    <label for="postcode">Postcode</label>
+                    <input type="text" id="postcode" th:value="${customer.customerPostcode}">
+                    <label for="address">Address Line 1</label>
+                    <input type="text" id="address" th:value="${customer.customerAddressLine1}">
                 </div>
                 <div class="description-container-sub">
                     <label for="lastname">Last Name</label>
-                    <input type="text" value="Fatima" id="lastname">
-                    <label for="gender">Gender(Optional)</label>
-                    <input type="text" value="female" id="gender">
-                    <label for="mobilenumber">Mobile Number (optional)</label>
-                    <input type="text" value="07467494739" id="mobilenumber">
+                    <input type="text" id="lastname" th:value="${customer.customerLastname}">
+                    <label for="address2">Address Line 2</label>
+                    <input type="text" id="address2" th:value="${customer.customerAddressLine2}">
+                    <label for="mobilenumber">Mobile Number</label>
+                    <input type="text" id="mobilenumber"  th:value="${customer.customerPhoneNumber}">
                 </div>
             </div>
             <div class="description-container-cus-login-details">
@@ -70,13 +67,11 @@
                 </div>
                 <div class="login-details-description">
                     <label for="email" margin="0%">Email</label>
-                    <input type="text" value="Rabia" id="email">
-                    <label for="key">Password</label>
-                    <input type="password" value="qwerty12@" id="key">
+                    <input type="text" th:value="${customer.getCustomerEmail}" id="email">
                 </div>
             </div>
             <div class="logout-button">
-                <button>Log Out</button>
+                <a th:href="@{/logout}"><button>Log Out</button></a>
             </div>
         </div>
 </div>

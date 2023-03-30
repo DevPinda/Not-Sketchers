@@ -49,7 +49,7 @@ public class SignUpController{
 
     private boolean validateInputs(String firstName, String lastName, String email, String password, String contactNumber, String addressLine1, String addressLine2, String postcode, CustomerEntity customer) {
         if (firstName != null && firstName.matches("^[a-zA-Z]+$")) {
-            customer.setCustomerForeName(firstName);
+            customer.setCustomerForename(firstName);
         } else {
             return false;
         }

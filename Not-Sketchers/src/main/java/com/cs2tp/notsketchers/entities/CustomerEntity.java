@@ -42,11 +42,11 @@ public class CustomerEntity {
         return customerId;
     }
 
-    public String getCustomerForeName(){
+    public String getCustomerForename(){
         return customerForename;
     }
 
-    public String getCustomerLastName(){
+    public String getCustomerLastname(){
         return customerLastname;
     }
 
@@ -70,7 +70,7 @@ public class CustomerEntity {
         return customerAddressLine2;
     }
 
-    public String getCustomer_Postcode(){
+    public String getCustomerPostcode(){
         return customerPostcode;
     }
 
@@ -78,7 +78,7 @@ public class CustomerEntity {
         return customerIsAdmin;
     }
 
-    public void setCustomerForeName(String customerForename){
+    public void setCustomerForename(String customerForename){
         this.customerForename = customerForename;
     }
 
@@ -121,5 +121,11 @@ public class CustomerEntity {
             isAdmin = false;
         }
         return isAdmin;
+    }
+
+    public boolean isCustomerUser(){
+        boolean isUser = false;
+        isUser = customerIsAdmin == 0 || customerIsAdmin == 1;
+        return isUser;
     }
 }
