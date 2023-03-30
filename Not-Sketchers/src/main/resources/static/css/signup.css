@@ -132,9 +132,12 @@ input[type="submit"] {
     align-items: center;
     font-size: 1.75em;
     margin-top: 5px;
+    background-color: greenyellow;
+    color: black;
 }
 
 input[type="submit"]:hover {
+    background-color: black;
     color: greenyellow;
 }
 
