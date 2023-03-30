@@ -9,6 +9,7 @@ main {
     justify-content: center;
     align-items: center;
     background: black;
+    padding-bottom: 100px;
 }
 
 .box {
