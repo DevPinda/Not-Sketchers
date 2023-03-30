@@ -192,7 +192,7 @@ button.checkoutContainer{
     border-radius: 2vw;
     color: #1D5F00;
     font-size: .7vw;
-    background: #23BC45;
+    background: rgb(5, 139, 5);
     border: none;
     font-weight: 900;
 }

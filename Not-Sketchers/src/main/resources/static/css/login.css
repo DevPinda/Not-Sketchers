@@ -31,7 +31,7 @@ main {
     top: -10%;
     width: 70vh;
     height: 70vh;
-    background: linear-gradient(0deg, transparent, #4aac3d, #4aac3d);
+    background: linear-gradient(0deg, transparent, rgb(5, 139, 5), rgb(5, 139, 5));
     animation: animate 6s linear infinite;
     transform-origin: bottom right;
 }
@@ -73,7 +73,7 @@ main {
 }
 
 .form h2 {
-    color: greenyellow;
+    color: rgb(5, 139, 5);
     font-weight: 400;
     font-size: 2.5em;
     text-align: center;
@@ -86,7 +86,7 @@ input {
 
 label {
     position: relative;
-    color: greenyellow;
+    color: rgb(5, 139, 5);
     font-size: 1.75em;
     border: 2px solid #ffffff;
     border-radius: 5px;
@@ -99,7 +99,7 @@ label:before {
     content: "";
     height: 10%;
     width: 10%;
-    border: 2% solid greenyellow;
+    border: 2% solid rgb(5, 139, 5);
 }
 
 .links {
@@ -120,7 +120,7 @@ A:visited {
 }
 
 A:hover {
-    color: greenyellow;
+    color: rgb(5, 139, 5);
 }
 
 input[type="submit"] {
@@ -131,13 +131,13 @@ input[type="submit"] {
     align-items: center;
     font-size: 1.75em;
     margin-top: 5px;
-    background-color: greenyellow;
+    background-color: rgb(5, 139, 5);
     color: black;
 }
 
 input[type="submit"]:hover {
     background-color: black;
-    color: greenyellow;
+    color: rgb(5, 139, 5);
 }
 
 .inputbox {
@@ -166,7 +166,7 @@ input[type="submit"]:hover {
     left: 0;
     padding: 5px 5px 5px;
     font-size: 1.5em;
-    color: greenyellow;
+    color: rgb(5, 139, 5);
     pointer-events: none;
     letter-spacing: 0.05em;
     transition: 0.5s;
@@ -174,7 +174,7 @@ input[type="submit"]:hover {
 
 .inputbox input:valid ~ span,
 .inputbox input:focus ~ span {
-    color: greenyellow;
+    color: rgb(5, 139, 5);
     transform: translateY(-8px);
     font-size: 1em;
 }

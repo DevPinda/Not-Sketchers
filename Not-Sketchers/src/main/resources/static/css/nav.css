@@ -95,7 +95,7 @@ li.nav-links {
 }
 
 li.nav-links:hover a{
-    color: greenyellow;
+    color: rgb(5, 139, 5);
 }
 
 a.nav-links {
@@ -128,7 +128,7 @@ svg.nav-link-buttons {
 }
 
 svg.nav-link-buttons:hover {
-    color: greenyellow;
+    color: rgb(5, 139, 5);
 }
 
 img.nav-link-buttons {
@@ -140,6 +140,6 @@ img.nav-link-buttons {
 }
 
 img.nav-link-buttons:hover {
-    fill: greenyellow;
+    fill: rgb(5, 139, 5);
     filter: brightness(0) invert(1);
 }

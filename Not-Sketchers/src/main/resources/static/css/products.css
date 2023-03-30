@@ -15,7 +15,7 @@
 div.products-header {
     width: 100vw;
     display: flex;
-    background-color: rgb(8, 142, 8);
+    background-color: rgb(5, 139, 5);
     padding-top: 2.25vh;
     padding-bottom: 2.25vh;
     justify-content: center;
@@ -100,7 +100,7 @@ div.product-sidebar-categories h3 {
     padding-left: 0.5vw;
     padding-right: 1.5vw;
     color: white;
-    background-color: rgb(8, 142, 8);
+    background-color: rgb(5, 139, 5);
     border: 0.2vw white solid;
     font-weight: bold;
     padding-top: 1.5vw;
@@ -113,7 +113,7 @@ div.product-sidebar-categories h3 {
     background-color: white;
     color: black;
     transition-duration: 0.3s;
-    box-shadow: 0 5px 25px rgb(8, 142, 8);
+    box-shadow: 0 5px 25px rgb(5, 139, 5);
 }
 
 .product-sidebar-subcategories {
@@ -229,7 +229,7 @@ p.product-info {
     padding: 0.5vw 0;
     color: white;
     outline: none;
-    background-color: rgb(8, 142, 8);
+    background-color: rgb(5, 139, 5);
     border: 0.15vw solid black;
     width: 12.5vw;
     cursor: pointer;
@@ -262,7 +262,7 @@ div.top-picks {
 
 .top-picks-heading h1 {
     text-align: center;
-    color: rgb(8, 142, 8);
+    color: rgb(5, 139, 5);
     text-transform: uppercase;
     font-weight: bold;
 }

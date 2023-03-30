@@ -52,7 +52,7 @@ h4 {
 }
 
 button {
-  background: #1d5f00;
+  background: rgb(5, 139, 5);
   border: none;
   color: white;
   padding: 12px 20px;
@@ -63,7 +63,7 @@ button {
 }
 
 button:hover {
-  background-color: #1d5f00;
+  background-color: rgb(5, 139, 5);
   color: white;
 }
 
@@ -96,7 +96,7 @@ button:hover {
 
 .contactInfo-buttons button:hover,
 .contactInfo-buttons button:focus {
-  background-color: #1d5f00;
+  background-color: rgb(5, 139, 5);
   color: #fff;
   cursor: pointer;
 }
