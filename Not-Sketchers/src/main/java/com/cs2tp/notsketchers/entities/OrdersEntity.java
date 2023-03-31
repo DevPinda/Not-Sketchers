@@ -13,7 +13,7 @@ public class OrdersEntity {
     private int Order_ID;
 
     @Column(name = "Customer_ID")
-    private int Customer_ID;
+    private int customerId;
 
     @Column(name = "Product_Name")
     private String Product_Name;
@@ -37,11 +37,11 @@ public class OrdersEntity {
     }
 
     public int getCustomer_ID() {
-        return Customer_ID;
+        return customerId;
     }
 
     public void setCustomer_ID(int customer_ID) {
-        Customer_ID = customer_ID;
+        customerId = customer_ID;
     }
 
     public String getProduct_Name() {

@@ -31,6 +31,7 @@ public class LoginController{
 
         if (customerLogin != null && passwordEncoder.matches(password, customerLogin.getCustomerPassword())) {
             session.setAttribute("customer", customerLogin);
+            session.setAttribute("customerId", customerLogin.getCustomerId());
             if (customerLogin.isCustomerIsAdmin()) {
                 return "redirect:/admin";
             } else {

@@ -16,26 +16,19 @@
 <body>
     <div id="navbar"></div>
     <table class="order-table">
-      <tr class="order-tr">
-        <th class="order-th">Order ID</th>
-        <th class="order-th">Product Name</th>
-        <th class="order-th">Quantity</th>
-        <th class="order-th">Order Date</th>
-        <th class="order-th">Order Status</th>
-      </tr>
-      <tr class="order-tr">
-        <td class="order-td"><p>1</p></td>
-        <td class="order-td"><p>Test Product</p></td>
-        <td class="order-td"><p>2</p></td>
-        <td class="order-td"><p>15/3/2023</p></td>
-        <td class="order-td"><p>Shipped</p></td>
-      </tr>
         <tr class="order-tr">
-            <td class="order-td"><p>1</p></td>
-            <td class="order-td"><p>Test Product</p></td>
-            <td class="order-td"><p>2</p></td>
-            <td class="order-td"><p>15/3/2023</p></td>
-            <td class="order-td"><p>Shipped</p></td>
+            <th class="order-th">Order ID</th>
+            <th class="order-th">Product Name</th>
+            <th class="order-th">Quantity</th>
+            <th class="order-th">Order Date</th>
+            <th class="order-th">Order Status</th>
+        </tr>
+        <tr th:each="order : ${orders}" class="order-tr">
+            <td class="order-td"><p th:text="${order.order_ID}"></p></td>
+            <td class="order-td"><p th:text="${order.product_Name}"></p></td>
+            <td class="order-td"><p th:text="${order.quantity}"></p></td>
+            <td class="order-td"><p th:text="${order.order_Date}"></p></td>
+            <td class="order-td"><p th:text="${order.orderStatus}"></p></td>
         </tr>
     </table>
 </body>
