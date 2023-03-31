@@ -6,7 +6,6 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <link rel="stylesheet" th:href="@{/css/admin.css}" />
         <title>Admin | SoleSource</title>
-        <link rel="stylesheet" th:href="@{/css/style.css}" />
         <script th:src="@{https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js}"></script>
         <link rel="icon" th:href="@{/favicon.ico}" type="image/x-icon" />
         <script th:src="@{/js/jquery.min.js}"></script>
@@ -20,8 +19,8 @@
         </script>
     </head>
     <body>
-        <div id="navbar"></div>
         <main>
+            <div id="navbar"></div>
             <nav>
                 <div id="mySidebar" class="sidebar">
                     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
@@ -64,16 +63,17 @@
                         document.getElementById("main").style.marginLeft = "0";
                     }
                 </script>
- 
+
             </nav>
 
                 <h1>
-                    Hello <span th:text="${loggedInUser.getCustomerForeName()}" />
+                    Hello <span th:text="${loggedInUser.getCustomerForename()}" />
                 </h1>
-
-            <p>
-                There are currently <span th:text="${lowStockProducts.size()}" /> products due for restocking.
-            </p>
+            <div id="stock-text-div">
+                <p id="stock-products-paragraph">
+                    There are currently <span th:text="${lowStockProducts.size()}" /> products due for restocking.
+                </p>
+            </div>
 
             <table th:if="${lowStockProducts.size() > 0}">
                 <tr>

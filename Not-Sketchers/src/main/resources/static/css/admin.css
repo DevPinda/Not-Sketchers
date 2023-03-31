@@ -2,7 +2,6 @@
   overflow-x: hidden;
   padding: 0;
   margin: 0;
-  background-color: #000;
 }
 
 nav {
@@ -30,9 +29,20 @@ h1 span {
   background-color: #1d5f00;
 }
 
-p {
+#stock-text-div {
+  display: flex;
+  width: 100vw;
+  height: fit-content;
+  justify-items: center;
+}
+
+#stock-products-paragraph {
+  display: flex;
+  background-color: black;
   color: white;
-  padding: 20px;
+  font-size: 1.5vw;
+  width: 100vw;
+  height: fit-content;
 }
 
 div.sidebar {
