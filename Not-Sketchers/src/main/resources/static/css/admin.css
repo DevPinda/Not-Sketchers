@@ -274,6 +274,7 @@ td {
 .inputbox input[type="text"],
 .inputbox input[type="url"],
 .inputbox select {
+  background-color:#000;
   width: 97%;
   height: 75%;
   color: #fff;
