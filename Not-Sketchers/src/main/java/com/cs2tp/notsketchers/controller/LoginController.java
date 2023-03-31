@@ -33,7 +33,11 @@ public class LoginController{
             session.setAttribute("customer", customerLogin);
             session.setAttribute("customerId", customerLogin.getCustomerId());
             if (customerLogin.isCustomerIsAdmin()) {
+                System.out.println("Admin Login");
                 return "redirect:/admin";
+            } else if (customerLogin.isCustomerUser()) {
+                System.out.println("User Login");
+                return "redirect:/user";
             } else {
                 return "redirect:/home";
             }

@@ -4,6 +4,10 @@
   margin: 0;
 }
 
+body {
+  background: black;
+}
+
 nav {
   display: flex;
   background-color: black;
@@ -14,15 +18,16 @@ nav {
   width: 100vw;
   color: #fff;
   display: flex;
+  margin-bottom: 5vh;
 }
 h1 {
   color: #fff;
   background-color: #1d5f00;
   text-align: center;
   margin: 0;
-  text-align: center;
   flex-grow: 1;
   font-size: 35px;
+  padding: .75vw;
 }
 
 h1 span {
@@ -34,6 +39,9 @@ h1 span {
   width: 100vw;
   height: fit-content;
   justify-items: center;
+  justify-content: center;
+  background-color: black;
+  padding: 3vw;
 }
 
 #stock-products-paragraph {
@@ -41,7 +49,7 @@ h1 span {
   background-color: black;
   color: white;
   font-size: 1.5vw;
-  width: 100vw;
+  width: fit-content;
   height: fit-content;
 }
 
@@ -163,11 +171,11 @@ table {
   text-align: center;
   border-collapse: collapse;
   border-spacing: 0;
-  margin: 0;
   padding: 0;
   align-items: center;
   flex-direction: column;
   background-color: white;
+  margin: 0 0 14vh;
 }
 
 tbody {
@@ -219,6 +227,7 @@ td {
   display: flex;
   width: 8vw;
   height: 18.5vh;
+  background-color: white;
 }
 
 #updateButton {
