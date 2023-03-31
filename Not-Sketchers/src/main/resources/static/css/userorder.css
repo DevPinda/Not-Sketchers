@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
 }
-table {
+table.order-table {
     display: flex;
     width: 100vw;
     height: fit-content;
@@ -16,7 +16,7 @@ table {
     background-color: white;
 }
 
-tr {
+tr.order-tr {
     display: flex;
     width: 100vw;
     height: fit-content;
@@ -25,7 +25,7 @@ tr {
     margin-bottom: 0.25vh;
 }
 
-th {
+th.order-th {
     display: flex;
     background: black;
     color: white;
@@ -39,7 +39,7 @@ th {
     padding-bottom: 0.5vw;
 }
 
-td {
+td.order-td {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
