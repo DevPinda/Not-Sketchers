@@ -19,12 +19,24 @@ public class UserController{
     private CustomerRepository customerRepository;
 
     @GetMapping("/user")
-    public String returnSignUp(Model model) {
+    public String returnUser(Model model) {
         if (this.isUser()) {
             CustomerEntity customer = this.getLoggedInUser();
             if (customer != null) {
                 model.addAttribute("customer", customer);
                 return "user";
+            }
+        }
+        return "home";
+    }
+
+    @GetMapping("/userorder")
+    public String returnUserOrder(Model model) {
+        if (this.isUser()) {
+            CustomerEntity customer = this.getLoggedInUser();
+            if (customer != null) {
+                model.addAttribute("customer", customer);
+                return "userorder";
             }
         }
         return "home";
