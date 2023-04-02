@@ -68,3 +68,15 @@ This repository holds the source code for the full-stack e-commerce platform "So
 
 ### 6. Run the application:
 - In IntelliJ IDEA Ultimate Edition, run the application by clicking the green play button at the top right of the screen, otherwise locate the main class ```NotSketchersApplication.java``` and run it.
+
+## Additional Information
+
+### 1. Elevating User Privileges to Admin from User:
+- To elevate a user to admin, you must first create a user account from the Sign Up Page and then change the ```Customer_IsAdmin``` column in the ```customer``` table to the value ```1``` from ```0```.
+- User and Admin are implemented in a Boolean standard in which ```0``` is ```User``` and ```1``` is ```Admin```.
+
+### 2. Required Sign Up Security Considerations:
+- The First and Last Name can be A-Z and a-z characters only.
+- The password must be at least 8 characters long. 
+- The email must be a valid email address.
+- Two different Address Lines are required.
