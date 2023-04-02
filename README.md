@@ -12,15 +12,15 @@ This repository holds the source code for the full-stack e-commerce platform "So
 
 ## Contributors
 
-<b> 1. DevPinda (Parminder Singh)
-2. kaziarham (Kazi Arham)
-3. rabiafatima1 (Fatima Rabia)
-4. AishaArwo (Aisha Arwo)
-5. DaanyaalChughtai (Daanyaal Chughtai)
-6. FreshPrinceTom (Thomas Merricks)
-7. HassanAliCS1 (Hassan Ali)
-8. hussainahmed02 (Hussain Ahmed)
-9. Shoka-San (Aaron Willis) </b>
+<b> 1. DevPinda (Parminder Singh) </b> <br>
+<b> 2. kaziarham (Kazi Arham) </b> <br>
+<b> 3. rabiafatima1 (Fatima Rabia) </b> <br>
+<b> 4. AishaArwo (Aisha Arwo) </b> <br>
+<b> 5. DaanyaalChughtai (Daanyaal Chughtai) </b> <br>
+<b> 6. FreshPrinceTom (Thomas Merricks) </b> <br>
+<b> 7. HassanAliCS1 (Hassan Ali) </b> <br>
+<b> 8. hussainahmed02 (Hussain Ahmed) </b> <br>
+<b> 9. Shoka-San (Aaron Willis) </b>
 
 ## Pre-requisites
 
