@@ -33,7 +33,7 @@ This repository holds the source code for the full-stack e-commerce platform "So
 ## Installation
 
 ### 1. Clone the repository: 
-- Run the command below in <b>Git Bash</b> at your desired directory: ```https://github.com/DevPinda/Not-Sketchers.git```
+- Run the command below in <b>Git Bash</b> at your desired directory: ```git clone https://github.com/DevPinda/Not-Sketchers.git```
 
 ### 2. Open the project in IntelliJ IDEA Ultimate Edition:
 - Navigate to the directory where you cloned the repository and open the project in <b>IntelliJ IDEA Ultimate Edition</b>.
